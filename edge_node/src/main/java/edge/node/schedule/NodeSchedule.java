@@ -47,7 +47,7 @@ public class NodeSchedule {
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             System.out.println(line);
-            //去掉空格  获取各个字段的值
+            //去掉空格   获取各个字段的值
             String[] sp = line.split("\\s+ ");
             for(String str : sp)
                System.out.println(str);

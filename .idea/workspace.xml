@@ -264,7 +264,7 @@
       <workItem from="1593683664065" duration="6023000" />
       <workItem from="1593752099685" duration="6691000" />
       <workItem from="1594021279247" duration="18387000" />
-      <workItem from="1594050626502" duration="47000" />
+      <workItem from="1594050626502" duration="258000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -280,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594048459612</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="边缘节点管理系统">
+      <created>1594050721272</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594050721272</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +311,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="边缘节点管理系统" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="219" y="71" key="#Deployment" timestamp="1594050993351">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="219" y="71" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1594050993351" />
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1593675742666">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -320,10 +331,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="230" y="6" key="CommitChangelistDialog2" timestamp="1594048457802">
+    <state x="272" y="6" key="CommitChangelistDialog2" timestamp="1594051043043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="230" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594048457802" />
+    <state x="272" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594051043043" />
     <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1594047276243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
