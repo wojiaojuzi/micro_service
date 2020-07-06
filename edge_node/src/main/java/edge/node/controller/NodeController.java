@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/node")
 @EnableAutoConfiguration
-@Api(tags = "Node", description = "边缘节点相关操作")
+@Api(tags = "Node")
 public class NodeController {
     private final NodeService nodeService;
 
