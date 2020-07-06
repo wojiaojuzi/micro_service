@@ -1,0 +1,37 @@
+
+server:
+  port: 2999
+spring:
+  application:
+    name: gateway-zuul
+  datasource:
+    url: jdbc:mysql://localhost:3306/my?serverTimezone=UTC
+    username: root
+    password: a128263
+
+eureka:
+  instance:
+    hostname: zuul
+  client:
+    service-url:
+      defaultZone: http://localhost:2998/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+ribbon:
+  ReadTimeout: 2000
+  ConnectTimeout: 2000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000

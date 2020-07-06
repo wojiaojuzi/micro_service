@@ -1,0 +1,101 @@
+version: '3'
+services:
+  eureka1:
+    container_name: eureka1
+    image: eureka:latest
+    ports:
+      - 10000:10000
+    networks:
+      - netName1
+  zuul1:
+    container_name: zuul1
+    image: zuul:latest
+    ports:
+      - 10001:10001
+    networks:
+      - netName1
+    depends_on:
+      - eureka1
+    links:
+      - eureka1:eureka-server
+  user1:
+    container_name: user1
+    image: user:latest
+    ports:
+      - 10002:10002
+    depends_on:
+      - eureka1
+    networks:
+      - netName1
+    links:
+      - eureka1:eureka-server
+      - zuul1:zuul
+      - mysql1:mysql
+  device1:
+    container_name: device1
+    image: device:latest
+    ports:
+      - 10003:10003
+    depends_on:
+      - eureka1
+    networks:
+      - netName1
+    links:
+      - eureka1:eureka-server
+      - zuul1:zuul
+      - mysql1:mysql
+  bracelet1:
+    container_name: bracelet1
+    image: bracelet:latest
+    ports:
+      - 10004:10004
+    depends_on:
+      - eureka1
+    networks:
+      - netName1
+    links:
+      - eureka1:eureka-server
+      - zuul1:zuul
+      - mysql1:mysql
+  prisoner1:
+    container_name: prisoner1
+    image: prisoner:latest
+    ports:
+      - 10005:10005
+    depends_on:
+      - eureka1
+    networks:
+      - netName1
+    links:
+      - eureka1:eureka-server
+      - zuul1:zuul
+      - mysql1:mysql
+  task1:
+    container_name: task1
+    image: task:latest
+    ports:
+      - 10006:10006
+    depends_on:
+      - eureka1
+    networks:
+      - netName1
+    links:
+      - eureka1:eureka-server
+      - zuul1:zuul
+      - mysql1:mysql
+  mysql1:
+    image: mysql:latest
+    container_name: mysql1
+    environment:
+      MYSQL_ROOT_PASSWORD: a128263
+    ports:
+      - 10007:3306
+    volumes:
+      - './database/db1/db:/var/lib/mysql'
+      - './database/db1/conf/my.cnf:/etc/my.cnf'
+      - './database/db1/init:/docker-entrypoint-initdb.d/'
+    networks:
+      - netName1
+networks:
+  netName1:
+    driver: bridge

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka_server" />
+        <module name="edge_node" />
+        <module name="logger" />
+        <module name="manager" />
+        <module name="gateway_zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="edge_node" target="1.8" />
+      <module name="eureka_server" target="1.8" />
+      <module name="gateway_zuul" target="1.8" />
+      <module name="logger" target="1.8" />
+      <module name="manager" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="edge_node" options="-parameters" />
+      <module name="eureka_server" options="-parameters" />
+      <module name="gateway_zuul" options="-parameters" />
+      <module name="logger" options="-parameters" />
+      <module name="manager" options="-parameters" />
+    </option>
+  </component>
+</project>

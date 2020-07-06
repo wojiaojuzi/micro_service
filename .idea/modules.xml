@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/edge_node/.mvn/.mvn.iml" filepath="$PROJECT_DIR$/edge_node/.mvn/.mvn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edge_node/edge_node.iml" filepath="$PROJECT_DIR$/edge_node/edge_node.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka_server/eureka_server.iml" filepath="$PROJECT_DIR$/eureka_server/eureka_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway_zuul/gateway_zuul.iml" filepath="$PROJECT_DIR$/gateway_zuul/gateway_zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loger/logger.iml" filepath="$PROJECT_DIR$/loger/logger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edge_node/src/main/main.iml" filepath="$PROJECT_DIR$/edge_node/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manager/manager.iml" filepath="$PROJECT_DIR$/manager/manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/micro_service.iml" filepath="$PROJECT_DIR$/.idea/micro_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edge_node/src/test/test.iml" filepath="$PROJECT_DIR$/edge_node/src/test/test.iml" />
+    </modules>
+  </component>
+</project>

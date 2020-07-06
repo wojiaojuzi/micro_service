@@ -1,0 +1,12 @@
+D:\micro_service\manager\src\main\java\com\manager\model\Admin.java
+D:\micro_service\manager\src\main\java\com\manager\model\Exception\EdgeComputingServiceException.java
+D:\micro_service\manager\src\main\java\com\manager\model\Response\ResponseEnum.java
+D:\micro_service\manager\src\main\java\com\manager\service\AdminService.java
+D:\micro_service\manager\src\main\java\com\manager\application.java
+D:\micro_service\manager\src\main\java\com\manager\model\Request\LoginRequest.java
+D:\micro_service\manager\src\main\java\com\manager\utils\CommonUtil.java
+D:\micro_service\manager\src\main\java\com\manager\model\api\LogFeign.java
+D:\micro_service\manager\src\main\java\com\manager\mapper\AdminMapper.java
+D:\micro_service\manager\src\main\java\com\manager\controller\AdminController.java
+D:\micro_service\manager\src\main\java\com\manager\model\Request\UserRegisterRequest.java
+D:\micro_service\manager\src\main\java\com\manager\model\Response\HttpResponseContent.java
