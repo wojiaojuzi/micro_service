@@ -64,11 +64,10 @@ public class AdminController {
     @RequestMapping(path = "/register")
     @ResponseBody
     public HttpResponseContent adminRegister(@RequestParam(value = "account",required=false) String account,
-                                             @RequestParam(value = "password",required=false) String password,
-                                             @RequestParam(value = "adminName",required=false) String adminName)
+                                             @RequestParam(value = "password",required=false) String password)
             throws Exception {
         HttpResponseContent response = new HttpResponseContent();
-        if(adminService.adminRegister(account,password,adminName)=="error"){
+        if(adminService.adminRegister(account,password)=="error"){
             response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
             response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
         }
@@ -86,14 +85,6 @@ public class AdminController {
         return adminService.aboutInformationByToken(token);
     }
 
-
-    /*@ApiOperation(value = "修改昵称")
-    @RequestMapping(path = "/getAboutInformation", method = RequestMethod.GET)
-    @ResponseBody
-    public Admin alterAdminName(@RequestParam(value = "token") String token,RequestParam(value = "adminName") String adminName) {
-        String adminid = adminService.getAccountByToken();
-        Admin admin = adminService.aboutInformation(adminid);
-    }*/
 
     @ApiOperation(value = "修改密码")
     @RequestMapping(path = "/alterpassword")
@@ -116,9 +107,9 @@ public class AdminController {
         return response;
     }
 
-    @RequestMapping("/getAdminNameByAccount")
+   /* @RequestMapping("/getAdminNameByAccount")
     @ResponseBody
     public String getAdminNameByAccount(@RequestParam("account")String account){
         return adminService.getAdminNameByAccount(account);
-    }
+    }*/
 }

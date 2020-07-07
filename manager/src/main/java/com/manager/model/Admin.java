@@ -12,9 +12,6 @@ public class Admin {
     @ApiModelProperty(value = "管理员密码")
     private String password;
 
-    @ApiModelProperty(value = "管理员姓名")
-    private String adminName;
-
     @ApiModelProperty(value = "管理员创建日期")
     private String createAt;
 
@@ -54,14 +51,6 @@ public class Admin {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getAdminName() {
-        return adminName;
-    }
-
-    public void setAdminName(String adminName) {
-        this.adminName = adminName;
     }
 
     public String getAccount() { return account; }

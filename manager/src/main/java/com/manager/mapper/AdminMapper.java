@@ -39,11 +39,11 @@ public interface AdminMapper {
     @Select("SELECT password FROM admin WHERE account =#{account};")//账号获取密码
     String getPassWordByAccount(@Param("account")String account);
 
-    @Insert("INSERT INTO admin(id,account,password,adminName,LoginToken,tokenCreateAt,createAt)" +
-            "VALUES(#{id},#{account},#{password},#{adminName},#{LoginToken},#{tokenCreateAt},#{createAt});" )
+    @Insert("INSERT INTO admin(id,account,password,LoginToken,tokenCreateAt,createAt)" +
+            "VALUES(#{id},#{account},#{password},#{LoginToken},#{tokenCreateAt},#{createAt});" )
     void creatAdmin(@Param("id")String id,@Param("account")String account,
-                    @Param("password")String password,@Param("adminName")String adminName,
-                    @Param("LoginToken")String LoginToken,@Param("tokenCreateAt")String tokenCreateAt,
+                    @Param("password")String password, @Param("LoginToken")String LoginToken,
+                    @Param("tokenCreateAt")String tokenCreateAt,
                     @Param("createAt")String createAt);
     @Update("UPDATE admin SET password=#{newpassword} WHERE account=#{account};")
     void updatePassWordByAccount(@Param("account")String account,@Param("newpassword")String newpassword);

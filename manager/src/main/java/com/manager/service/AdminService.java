@@ -49,7 +49,7 @@ public class AdminService {
             admin.setToken(token);
             admin.setPassword(null);
             admin.setTokenCreateAt(null);
-            logFeign.addLog(admin.getAccount(),admin.getAdminName(),"管理员'"+admin.getAdminName()+"'登录");
+            logFeign.addLog(admin.getAccount(),"管理员'"+admin.getAccount()+"'登录");
         }
         return admin;
     }
@@ -64,13 +64,13 @@ public class AdminService {
             adminMapper.updateTokenCreateTimeByAccount(null, account);
             adminMapper.updateTokenByAccount(null,account);
 
-            logFeign.addLog(admin.getAccount(),admin.getAdminName(),"管理员'"+admin.getAdminName()+"'退出");
+            logFeign.addLog(admin.getAccount(), "管理员'"+admin.getAccount()+"'退出");
         }
     }
 
-    public String adminRegister(String account, String password, String adminName)
+    public String adminRegister(String account, String password)
             throws Exception{
-        if(account == null || adminName == null) {
+        if(account == null || password == null) {
             throw new EdgeComputingServiceException(ResponseEnum.LOGIN_FAILED.getCode(), ResponseEnum.LOGIN_FAILED.getMessage());
         } else {
             String name = adminMapper.getAdminNameFromAccount(account);
@@ -79,10 +79,10 @@ public class AdminService {
             } else {
                 Date createTime = new Date();
                 SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
-                adminMapper.creatAdmin(null, account, password, adminName, null, null,mysqlSdf.format(createTime));
+                adminMapper.creatAdmin(null, account, password, null, null,mysqlSdf.format(createTime));
 
                 /*----日志---*/
-                logFeign.addLog("","","注册账号:"+account);
+                logFeign.addLog("", "注册账号:"+account);
 
                 return  "success";
             }
@@ -100,7 +100,7 @@ public class AdminService {
                 if (password.equals(oldpassword)){//还要重新生成token
                     adminMapper.updatePassWordByAccount(account,newpassword);
 
-                    logFeign.addLog(admin.getAccount(),admin.getAdminName(),"管理员'"+admin.getAdminName()+"'修改密码");
+                    logFeign.addLog(admin.getAccount(),"管理员'"+admin.getAccount()+"'修改密码");
                     return "success";
                 }
                 else{

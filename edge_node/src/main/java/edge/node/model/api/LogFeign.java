@@ -7,6 +7,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name="loger",url="localhost:2999/loger/log")
 public interface LogFeign {
     @RequestMapping("/addLog")
-    public void addLog(@RequestParam("account") String account, @RequestParam("admin_name") String admin_name,
-                       @RequestParam("detail") String detail);
+    public void addLog(@RequestParam("account") String account, @RequestParam("detail") String detail);
 }

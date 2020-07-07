@@ -18,15 +18,14 @@ public class LogerService {
         this.logerMapper = logerMapper;
     }
 
-    public void addLog(String account, String admin_name, String detail){
+    public void addLog(String account, String detail){
         Date createTime = new Date();
         SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
         Loger log = new Loger();
         log.setAccount(account);
-        log.setAdmin_name(admin_name);
         log.setTime(mysqlSdf.format(createTime));
         log.setDetail(detail);
-        logerMapper.create_log(log.getTime(),log.getAccount(),log.getAdmin_name(),log.getDetail());
+        logerMapper.create_log(log.getTime(),log.getAccount(),log.getDetail());
     }
 
     public List<Loger> get_all(){ return logerMapper.get_all(); }

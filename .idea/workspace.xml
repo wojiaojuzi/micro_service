@@ -6,9 +6,20 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="边缘节点管理系统">
+    <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/api/AdminFeign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/api/LogFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/api/LogFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loger/src/main/java/com/loger/controller/LogerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/controller/LogerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loger/src/main/java/com/loger/mapper/LogerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/mapper/LogerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loger/src/main/java/com/loger/model/Loger.java" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/model/Loger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loger/src/main/java/com/loger/service/LogerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/service/LogerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/model/api/LogFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/model/api/LogFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/service/AdminService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,29 +79,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/edge_computing" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\micro_service" />
-      <recent name="D:\micro_service\edge_node\src\main\java\edge\node\model" />
-      <recent name="D:\micro_service\edge_node\src\test" />
-      <recent name="D:\micro_service\edge_node\src\test\java" />
-      <recent name="D:\micro_service\manager\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="gateways.zuul.filter" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\micro_service\edge_node" />
       <recent name="D:\micro_service\gateway_zuul" />
       <recent name="D:\micro_service\loger" />
       <recent name="D:\micro_service\manager" />
       <recent name="D:\micro_service\eureka_server" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="gateways.zuul.filter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\micro_service" />
+      <recent name="D:\micro_service\edge_node\src\main\java\edge\node\model" />
+      <recent name="D:\micro_service\edge_node\src\test" />
+      <recent name="D:\micro_service\edge_node\src\test\java" />
+      <recent name="D:\micro_service\manager\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.test">
@@ -264,7 +275,9 @@
       <workItem from="1593683664065" duration="6023000" />
       <workItem from="1593752099685" duration="6691000" />
       <workItem from="1594021279247" duration="18387000" />
-      <workItem from="1594050626502" duration="258000" />
+      <workItem from="1594050626502" duration="705000" />
+      <workItem from="1594085211126" duration="4492000" />
+      <workItem from="1594090163397" duration="4775000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -287,7 +300,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594050721272</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="边缘节点管理系统">
+      <created>1594051067882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594051067882</updated>
+    </task>
+    <task id="LOCAL-00005" summary="边缘节点管理系统">
+      <created>1594091196779</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1594091196779</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,14 +358,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="272" y="6" key="CommitChangelistDialog2" timestamp="1594051043043">
+    <state x="272" y="6" key="CommitChangelistDialog2" timestamp="1594091195041">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594051043043" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1594047276243">
+    <state x="272" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594091195041" />
+    <state x="410" y="150" key="FileChooserDialogImpl" timestamp="1594093720054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594047276243" />
+    <state x="410" y="150" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594093720054" />
     <state x="626" y="303" key="Github.ShareDialog" timestamp="1594048170147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -383,14 +410,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594046518741" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1594048490249">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1594091201539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1594048490249" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1594050632189">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1594091201539" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1594090164733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594050632189" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594090164733" />
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594046962694">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -26,10 +26,8 @@ public class LogerController {
     @ApiOperation(value = "添加日志记录")
     @RequestMapping(path = "/addLog")
     @CrossOrigin
-    public void addLog(@RequestParam("account") String account,
-                       @RequestParam("admin_name")String admin_name,
-                       @RequestParam("detail")String detail) {
-        logerService.addLog(account,admin_name,detail);
+    public void addLog(@RequestParam("account") String account, @RequestParam("detail")String detail) {
+        logerService.addLog(account, detail);
     }
 
     @ApiOperation(value = "获取所有日志记录")
