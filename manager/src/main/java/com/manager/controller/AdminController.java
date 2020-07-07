@@ -99,13 +99,13 @@ public class AdminController {
     @RequestMapping(path = "/alterpassword")
     @ResponseBody
     public HttpResponseContent alterPassword(@RequestParam(value = "account",required=false) String account,
-                                             @RequestParam(value = "oldpassword",required=false) String oldpassword,
-                                             @RequestParam(value = "newpassword",required=false) String newpassword)
+                                             @RequestParam(value = "oldPassword",required=false) String oldPassword,
+                                             @RequestParam(value = "newPassword",required=false) String newPassword)
         throws Exception{
         HttpResponseContent response = new HttpResponseContent();
-        if(adminService.alterPassword(account,oldpassword,newpassword)=="error"){
-            response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
-            response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
+        if(adminService.alterPassword(account,oldPassword,newPassword)=="error"){
+            response.setCode(ResponseEnum.ERROR.getCode());
+            response.setMessage(ResponseEnum.ERROR.getMessage());
         }
         else{
             Admin admin = adminService.aboutInformationByAccount(account);
