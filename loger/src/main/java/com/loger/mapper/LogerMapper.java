@@ -8,8 +8,8 @@ import java.util.List;
 
 @Mapper
 public interface LogerMapper {
-    @Insert("INSERT INTO log(time,account,adminName,detail) " +
-            "VALUES(#{time},#{account},#{adminName},#{detail})")
+    @Insert("INSERT INTO log(time,account,detail) " +
+            "VALUES(#{time},#{account},#{detail})")
     public void create_log(@Param("time")String time, @Param("account")String account, @Param("detail")String detail);
 
     @Select("SELECT * FROM log")

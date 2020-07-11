@@ -31,15 +31,15 @@ public class NodeService {
         SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
         node.setNodeCreateAt(mysqlSdf.format(createTime));
 
-        nodeMapper.create_node(node.getNode_name(),node.getLocation(),
-                                node.getNode_status(),node.getNodeCreateAt(),
+        nodeMapper.create_node(node.getNodeName(),node.getLocation(),
+                                node.getNodeStatus(),node.getNodeCreateAt(),
                                 node.getRunAt(),node.getEndLastAt(),
-                                node.getCpu(), node.getMemory());
-        Node test = nodeMapper.getNodeByNodeName(node.getNode_name());
+                                node.getCpu(), 0,node.getMemory(),0,"127.0.0.1");
+        Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
         if(test == null)
             return null;
         else {
-            logFeign.addLog(account,"注册节点:  节点名="+node.getNode_name()+" , 位置="+node.getLocation());
+            logFeign.addLog(account,"注册节点:  节点名="+node.getNodeName()+" , 位置="+node.getLocation());
             return test;
         }
     }
@@ -95,7 +95,7 @@ public class NodeService {
     }
 
     public boolean deploy(String node_name,String account) throws IOException {
-        boolean ans = nodeMapper.geNodeStatusByNodeName(node_name);
+      /*  boolean ans = nodeMapper.geNodeStatusByNodeName(node_name);
         if(ans == true){
             return false;
         }
@@ -111,11 +111,12 @@ public class NodeService {
 
             logFeign.addLog(account,"微服务部署:  节点名="+node_name);
             return true;
-        }
+        }*/
+      return true;
     }
 
     public boolean close(String node_name,String account) throws IOException {
-        boolean ans = nodeMapper.geNodeStatusByNodeName(node_name);
+       /* boolean ans = nodeMapper.geNodeStatusByNodeName(node_name);
         if(ans == false){
             return false;
         }
@@ -132,6 +133,7 @@ public class NodeService {
 
             logFeign.addLog(account,"取消微服务部署:  节点名="+node_name);
             return true;
-        }
+        }*/
+       return true;
     }
 }

@@ -41,11 +41,11 @@ public class PreRequestFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        RequestContext ctx = RequestContext.getCurrentContext();
-        HttpServletRequest request = ctx.getRequest();
-        if(uri.contains(request.getRequestURI()))
+        //RequestContext ctx = RequestContext.getCurrentContext();
+        //HttpServletRequest request = ctx.getRequest();
+        //if(uri.contains(request.getRequestURI()))
             return false;
-        return true;
+        //return true;
     }
 
     @Override

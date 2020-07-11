@@ -31,10 +31,10 @@ public enum ResponseEnum {
     DO_NOT_LOGIN(403, "您还未登陆，请先登陆"),
     INVALID_USER_TOKEN(403, "无效的token，请重新登陆"),
     EXPIRED_USER_TOKEN(403, "token已过期，请重新登陆"),
-    ALREADY_LOGIN(403, "您已经在其它地点登陆，请重新登陆"),
+    ALREADY_LOGIN(403, "您已经在其它地点登陆，请重新登陆");
 
-    DEVICE_NOT_EXIST(404, "请求的设备不存在"),
-    DEVICE_REGISTER_FAIL(400, "注册设备失败");
+    //DEVICE_NOT_EXIST(404, "请求的设备不存在"),
+    //DEVICE_REGISTER_FAIL(400, "注册设备失败");
 
     private Integer code;
     private String message;

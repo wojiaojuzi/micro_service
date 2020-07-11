@@ -3,10 +3,7 @@ package edge.node.model;
 import java.sql.Timestamp;
 
 public class Node {
-
-    private String id;
-
-    private String node_name;
+    private String nodeName;
 
     private String location;
 
@@ -22,10 +19,14 @@ public class Node {
 
     private String cpu;
 
+    private double cpuRate;
+
     private String memory;
 
-    public Node(String node_name, String location, String cpu, String memory/*, String ip*/){
-        this.node_name = node_name;
+    private double memRate;
+
+    public Node(String nodeName, String location, String cpu, String memory/*, String ip*/){
+        this.nodeName = nodeName;
         this.location = location;
         this.cpu = cpu;
         this.memory = memory;
@@ -37,22 +38,19 @@ public class Node {
     public String getLocation(){ return this.location; }
     public void setLocation(String location){ this.location = location; }
 
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public String getNodeName() { return this.nodeName; }
+    public void setNodeName(String nodeName) { this.nodeName = nodeName; }
 
-    public String getNode_name() { return node_name; }
-    public void setNode_name(String node_name) { this.node_name = node_name; }
+    public boolean getNodeStatus() { return this.nodeStatus; }
+    public void setNodeStatus(boolean node_status) { this.nodeStatus = node_status; }
 
-    public boolean getNode_status() { return nodeStatus; }
-    public void setNode_status(boolean node_status) { this.nodeStatus = node_status; }
-
-    public String getNodeCreateAt() { return nodeCreateAt; }
+    public String getNodeCreateAt() { return this.nodeCreateAt; }
     public void setNodeCreateAt(String nodeCreateAt) { this.nodeCreateAt = nodeCreateAt; }
 
-    public String getRunAt() { return runAt; }
+    public String getRunAt() { return this.runAt; }
     public void setRunAt(String runAt) { this.runAt = runAt; }
 
-    public String getEndLastAt() { return endLastAt; }
+    public String getEndLastAt() { return this.endLastAt; }
     public void setEndLastAt(String endLastAt) { this.endLastAt = endLastAt; }
 
     public String getCpu(){ return this.cpu; }
@@ -63,5 +61,21 @@ public class Node {
 
     public String getIp(){ return this.ip; }
     public void setIp(String ip){ this.ip = ip; }
+
+    public double getCpuRate() {
+        return this.cpuRate;
+    }
+
+    public void setCpuRate(double cpuRate) {
+        this.cpuRate = cpuRate;
+    }
+
+    public double getMemRate() {
+        return this.memRate;
+    }
+
+    public void setMemRate(double memRate) {
+        this.memRate = memRate;
+    }
 
 }

@@ -25,33 +25,33 @@ public class NodeController {
     }
 
     @ApiOperation(value = "节点注册")
-    @RequestMapping(path = "/register")
+    @RequestMapping(path = "/register", method = RequestMethod.POST)
     @CrossOrigin
     public HttpResponseContent nodeRegister(@RequestParam("nodeName") String node_name,
                                             @RequestParam("location") String location,
                                             @RequestParam("account") String account,
                                             @RequestParam("cpu") String cpu,
-                                            @RequestParam("memory") String memory) throws Exception {
+                                            @RequestParam("memory") String memory){
         HttpResponseContent response = new HttpResponseContent();
         Node node = new Node(node_name, location, cpu, memory);
-        Node test = nodeService.nodeRegister(node,account);
-        if (test == null) {
-            response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
-            response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
+        Node res = nodeService.nodeRegister(node,account);
+        if (res == null) {
+            response.setCode(ResponseEnum.ERROR.getCode());
+            response.setMessage(ResponseEnum.ERROR.getMessage());
         } else {
             response.setCode(ResponseEnum.SUCCESS.getCode());
             response.setMessage(ResponseEnum.SUCCESS.getMessage());
-            response.setData(test);
+            response.setData(res);
         }
         return response;
     }
 
     @ApiOperation(value = "节点删除")
-    @RequestMapping(path = "/delete")
+    @RequestMapping(path = "/delete", method = RequestMethod.POST)
     @CrossOrigin
-    public HttpResponseContent nodeDelete(@RequestParam("nodeName") String node_name,@RequestParam("account") String account) throws Exception {
+    public HttpResponseContent nodeDelete(@RequestParam("nodeName") String nodeName, @RequestParam("account") String account) {
         HttpResponseContent response = new HttpResponseContent();
-        nodeService.nodeDelete(node_name,account);
+        nodeService.nodeDelete(nodeName,account);
 
         response.setCode(ResponseEnum.SUCCESS.getCode());
         response.setMessage(ResponseEnum.SUCCESS.getMessage());
@@ -60,51 +60,51 @@ public class NodeController {
     }
 
     @ApiOperation(value = "查看节点信息")
-    @RequestMapping(path = "/get")
+    @RequestMapping(path = "/get", method = RequestMethod.GET)
     @CrossOrigin
-    public Node nodeGet(@RequestParam("nodeName") String node_name) throws Exception {
-        return nodeService.nodeGet(node_name);
+    public Node nodeGet(@RequestParam("nodeName") String nodeName) {
+        return nodeService.nodeGet(nodeName);
     }
 
     @ApiOperation(value = "查看所有节点")
-    @RequestMapping(path = "/getAll")
+    @RequestMapping(path = "/getAll", method = RequestMethod.GET)
     @CrossOrigin
-    public List<Node> get_all() throws Exception {
+    public List<Node> get_all() {
         return nodeService.get_all();
     }
 
     @ApiOperation(value = "查看节点数量")
     @RequestMapping(path = "/get_node_num")
     @CrossOrigin
-    public int get_node_num() throws Exception {
+    public int get_node_num() {
         return nodeService.get_all().size();
     }
 
     @ApiOperation(value = "查看正在运行节点数量")
     @RequestMapping(path = "/get_on_num")
     @CrossOrigin
-    public int get_on_num() throws Exception {
+    public int get_on_num() {
         return nodeService.get_on_num();
     }
 
     @ApiOperation(value = "查看所有节点位置")
     @RequestMapping(path = "/getAllLocation")
     @CrossOrigin
-    public List<return_location> get_all_location() throws Exception {
+    public List<return_location> get_all_location() {
         return nodeService.get_all_location();
     }
 
     @ApiOperation(value = "查看启动节点位置")
     @RequestMapping(path = "/getOnLocation")
     @CrossOrigin
-    public List<return_location> get_on_location() throws Exception {
+    public List<return_location> get_on_location() {
         return nodeService.get_on_location();
     }
 
     @ApiOperation(value = "查看关闭节点位置")
     @RequestMapping(path = "/getOffLocation")
     @CrossOrigin
-    public List<return_location> get_off_location() throws Exception {
+    public List<return_location> get_off_location(){
         return nodeService.get_off_location();
     }
 

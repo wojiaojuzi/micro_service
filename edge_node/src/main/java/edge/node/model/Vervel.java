@@ -2,9 +2,6 @@ package edge.node.model;
 
 import io.swagger.annotations.ApiModelProperty;
 
-/**
- * Created by Zhaoone on 2019/11/4
- **/
 public class Vervel {
 
     @ApiModelProperty(value = "手环编号")
