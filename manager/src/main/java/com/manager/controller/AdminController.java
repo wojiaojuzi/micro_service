@@ -31,7 +31,7 @@ public class AdminController {
 
 
     @ApiOperation(value = "管理员登陆")
-    @RequestMapping(path = "/login")
+    @RequestMapping(path = "/login", method = RequestMethod.POST)
     @ResponseBody
     //@PostMapping(path = "/login")
     public HttpResponseContent adminLogin(@RequestParam(value="account",required=false) String account, @RequestParam(value="password",required=false) String password)
@@ -50,7 +50,7 @@ public class AdminController {
     }
 
     @ApiOperation(value = "管理员登出")
-    @RequestMapping(path = "/logout")
+    @RequestMapping(path = "/logout", method = RequestMethod.POST)
     @ResponseBody
     public HttpResponseContent adminLogout(@RequestParam(value = "token",required=false) String token) throws Exception {
         HttpResponseContent response = new HttpResponseContent();
@@ -61,7 +61,7 @@ public class AdminController {
     }
 
     @ApiOperation(value = "管理员注册")
-    @RequestMapping(path = "/register")
+    @RequestMapping(path = "/register", method = RequestMethod.POST)
     @ResponseBody
     public HttpResponseContent adminRegister(@RequestParam(value = "account",required=false) String account,
                                              @RequestParam(value = "password",required=false) String password)
@@ -79,7 +79,7 @@ public class AdminController {
     }
 
     @ApiOperation(value = "管理员信息")
-    @RequestMapping(path = "/getAboutInformation")
+    @RequestMapping(path = "/getAboutInformation", method = RequestMethod.GET)
     @ResponseBody
     public Admin aboutInformation(@RequestParam(value = "token") String token){
         return adminService.aboutInformationByToken(token);
@@ -87,7 +87,7 @@ public class AdminController {
 
 
     @ApiOperation(value = "修改密码")
-    @RequestMapping(path = "/alterpassword")
+    @RequestMapping(path = "/alterpassword", method = RequestMethod.POST)
     @ResponseBody
     public HttpResponseContent alterPassword(@RequestParam(value = "account",required=false) String account,
                                              @RequestParam(value = "oldPassword",required=false) String oldPassword,

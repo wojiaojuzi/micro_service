@@ -4,6 +4,7 @@ package edge.node.controller;
 import edge.node.model.Node;
 import edge.node.model.Response.HttpResponseContent;
 import edge.node.model.Response.ResponseEnum;
+import edge.node.model.deployBody;
 import edge.node.model.return_location;
 import edge.node.service.NodeService;
 import io.swagger.annotations.Api;
@@ -73,6 +74,13 @@ public class NodeController {
         return nodeService.get_all();
     }
 
+    @ApiOperation(value = "查看服务信息")
+    @RequestMapping(path = "/getService", method = RequestMethod.GET)
+    @CrossOrigin
+    public Node nodeService(@RequestParam("nodeName") String nodeName) {
+        return nodeService.nodeGet(nodeName);
+    }
+
     @ApiOperation(value = "查看节点数量")
     @RequestMapping(path = "/get_node_num")
     @CrossOrigin
@@ -108,8 +116,8 @@ public class NodeController {
         return nodeService.get_off_location();
     }
 
-    @ApiOperation(value = "节点微服务部署")
-    @RequestMapping(path = "/deploy")
+    /*@ApiOperation(value = "节点微服务部署")
+    @RequestMapping(path = "/deploy", method = RequestMethod.POST)
     @CrossOrigin
     public HttpResponseContent serviceDeploy(@RequestParam("nodeName") String node_name,@RequestParam("account") String account) throws Exception {
         HttpResponseContent response = new HttpResponseContent();
@@ -123,10 +131,32 @@ public class NodeController {
         }
         return response;
 
+    }*/
+    @ApiOperation(value = "节点微服务部署")
+    @RequestMapping(path = "/deployTest", method = RequestMethod.POST)
+    @CrossOrigin
+    public HttpResponseContent serviceDeploy(@RequestParam(value = "nodeName") String nodeName,
+                                             @RequestParam(value = "serviceName") String[] serviceName,
+                                             @RequestParam(value = "account") String account) throws Exception {
+        HttpResponseContent response = new HttpResponseContent();
+        boolean ans = true;
+        System.out.println(nodeName+"  "+serviceName.length+"  "+"account");
+        for(String str : serviceName){
+            System.out.println(str);
+        }
+        if (ans == false) {
+            response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
+            response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
+        } else {
+            response.setCode(ResponseEnum.SUCCESS.getCode());
+            response.setMessage(ResponseEnum.SUCCESS.getMessage());
+        }
+        return response;
+
     }
 
     @ApiOperation(value = "节点微服务撤销部署")
-    @RequestMapping(path = "/close")
+    @RequestMapping(path = "/close", method = RequestMethod.POST)
     @CrossOrigin
     public HttpResponseContent serviceClose(@RequestParam("nodeName") String node_name,@RequestParam("account") String account) throws Exception {
         HttpResponseContent response = new HttpResponseContent();

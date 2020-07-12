@@ -32,11 +32,8 @@ public class NodeSchedule {
         //SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         //System.out.println(System.getProperty("cpu.name"));
         //System.out.println("当前时间:"+df.format(new Date()));
-        /*DockerClient dockerClient = DockerClientBuilder.getInstance("tcp://192.168.0.105:2375").build();
-        //
-        Info info = (Info) dockerClient.listImagesCmd();
-        System.out.println(info);*/
-        Process proc = null;
+
+        /*Process proc = null;
         String cmd = new String("docker -H 192.168.0.105:2375 images");
         proc = Runtime.getRuntime().exec(cmd);
 
@@ -52,7 +49,7 @@ public class NodeSchedule {
             for(String str : sp)
                System.out.println(str);
 
-        }
+        }*/
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         //System.out.println(System.getProperty("cpu.name"));
         System.out.println("当前时间:"+df.format(new Date()));
