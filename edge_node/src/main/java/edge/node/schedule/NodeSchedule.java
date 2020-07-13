@@ -2,9 +2,7 @@ package edge.node.schedule;
 
 import com.alibaba.fastjson.JSON;
 import edge.node.mapper.NodeMapper;
-import edge.node.model.CheckDevice;
-import edge.node.model.DeviceAndTask;
-import edge.node.model.Node;
+import edge.node.model.*;
 import org.omg.CORBA.portable.OutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -30,7 +28,6 @@ public class NodeSchedule {
     @Scheduled(fixedRate = 3000)
     private void test() throws IOException {
         //SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
-        //System.out.println(System.getProperty("cpu.name"));
         //System.out.println("当前时间:"+df.format(new Date()));
 
         /*Process proc = null;
@@ -51,8 +48,49 @@ public class NodeSchedule {
 
         }*/
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
-        //System.out.println(System.getProperty("cpu.name"));
         System.out.println("当前时间:"+df.format(new Date()));
+        //由Ip获取地理位置
+        //RestTemplate restTmpl = new RestTemplate();
+        //String url = "http://freeapi.ipip.net/123.161.151.72";
+        //String url = "http://ip-api.com/json/123.161.151.72?lang=zh-CN";
+        //ipApi str = restTmpl.getForObject(url, ipApi.class);
+        //System.out.println(str);
+
+        //getLocByGD("123.161.151.72");
+    }
+
+    private String getLocByFree(String ip){//简单的免费接口
+        RestTemplate restTmpl = new RestTemplate();
+        String url = "http://freeapi.ipip.net/"+ip;
+        String str = restTmpl.getForObject(url, String.class);
+        List<String> list = JSON.parseArray(str, String.class);
+        System.out.println("城市:"+list.get(2));
+        return list.get(2);
+    }
+
+    private LocBody getLocByIpApi(String ip){//ipApi接口
+        RestTemplate restTmpl = new RestTemplate();
+        //String url = "http://freeapi.ipip.net/123.161.151.72";
+        String url = "http://ip-api.com/json/"+ip+"?lang=zh-CN";
+        ipApi str = restTmpl.getForObject(url, ipApi.class);
+        System.out.println(str);
+        LocBody loc = new LocBody(str.regionName, str.city, str.lon, str.lat);
+        System.out.println(loc);
+        return loc;
+    }
+
+    private LocBody getLocByGD(String ip){
+        String key = "76388c9dc654c2c4df579c51bcf1984e";
+        RestTemplate restTmpl = new RestTemplate();
+        //https://restapi.amap.com/v3/ip?ip=123.161.150.106&key=76388c9dc654c2c4df579c51bcf1984e
+        //String url = "http://freeapi.ipip.net/123.161.151.72";
+        String url = "http://restapi.amap.com/v3/ip?ip="+ ip +"&key=" + key;
+        AmapBody str = restTmpl.getForObject(url, AmapBody.class);
+        System.out.println(str);
+        //LocBody loc = new LocBody(str.province, str.city, str.rectangle[0][0], str.rectangle[0][1]);
+        //System.out.println(loc);
+        //return loc;
+        return null;
     }
 
    // @Scheduled(fixedRate = 2000)

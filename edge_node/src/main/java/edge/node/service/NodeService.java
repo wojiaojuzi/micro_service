@@ -1,11 +1,15 @@
 package edge.node.service;
 
 
+import com.alibaba.fastjson.JSON;
 import edge.node.mapper.NodeMapper;
+import edge.node.model.LocBody;
 import edge.node.model.Node;
 import edge.node.model.api.LogFeign;
+import edge.node.model.ipApi;
 import edge.node.model.return_location;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,10 +35,19 @@ public class NodeService {
         SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
         node.setNodeCreateAt(mysqlSdf.format(createTime));
 
-        nodeMapper.create_node(node.getNodeName(),node.getLocation(),
-                                node.getNodeStatus(),node.getNodeCreateAt(),
+        //由Ip获取地理位置
+        //RestTemplate restTmpl = new RestTemplate();
+        //String url = "http://freeapi.ipip.net/"+node.getIp();
+        //String str = restTmpl.getForObject(url, String.class);
+        //List<String> list = JSON.parseArray(str, String.class);
+        LocBody loc = getLocByIpApi(node.getIp());
+        node.setLocation(loc.getCity());
+        node.setLon(loc.getLon());
+        node.setLat(loc.getLat());
+        nodeMapper.create_node(node.getNodeName(), node.getLocation(),node.getLon(),
+                                node.getLat(), node.getNodeStatus(),node.getNodeCreateAt(),
                                 node.getRunAt(),node.getEndLastAt(),
-                                node.getCpu(), 0,node.getMemory(),0,"127.0.0.1");
+                                node.getCpu(), 0,node.getMemory(),0, node.getIp());
         Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
         if(test == null)
             return null;
@@ -59,11 +72,13 @@ public class NodeService {
     public List<Node> get_all(){ return nodeMapper.get_all(); }
 
     public List<return_location> get_all_location(){
-        List<String> location = nodeMapper.get_all_location();
+        List<Node> list = nodeMapper.get_all();
         List<return_location> ans = new ArrayList<>();
-        for(int i=0;i<location.size();i++){
+        for(int i=0;i<list.size();i++){
             return_location p = new return_location();
-            p.setLocation(location.get(i));
+            p.setLocation(list.get(i).getLocation());
+            p.setLon(list.get(i).getLon());
+            p.setLat(list.get(i).getLat());
             p.setValue(20);
             ans.add(p);
         }
@@ -71,11 +86,13 @@ public class NodeService {
     }
 
     public List<return_location> get_on_location(){
-        List<String> location = nodeMapper.get_on_location();
+        List<Node> list = nodeMapper.get_on();
         List<return_location> ans = new ArrayList<>();
-        for(int i=0;i<location.size();i++) {
+        for(int i=0;i<list.size();i++) {
             return_location p = new return_location();
-            p.setLocation(location.get(i));
+            p.setLocation(list.get(i).getLocation());
+            p.setLon(list.get(i).getLon());
+            p.setLat(list.get(i).getLat());
             p.setValue(20);
             ans.add(p);
         }
@@ -83,11 +100,13 @@ public class NodeService {
     }
 
     public List<return_location> get_off_location(){
-        List<String> location = nodeMapper.get_off_location();
+        List<Node> list = nodeMapper.get_off();
         List<return_location> ans = new ArrayList<>();
-        for(int i=0;i<location.size();i++) {
+        for(int i=0;i<list.size();i++) {
             return_location p = new return_location();
-            p.setLocation(location.get(i));
+            p.setLocation(list.get(i).getLocation());
+            p.setLon(list.get(i).getLon());
+            p.setLat(list.get(i).getLat());
             p.setValue(20);
             ans.add(p);
         }
@@ -135,5 +154,28 @@ public class NodeService {
             return true;
         }*/
        return true;
+    }
+
+
+
+
+    private String getLocByFree(String ip){//简单的免费接口
+        RestTemplate restTmpl = new RestTemplate();
+        String url = "http://freeapi.ipip.net/"+ip;
+        String str = restTmpl.getForObject(url, String.class);
+        List<String> list = JSON.parseArray(str, String.class);
+        System.out.println("城市:"+list.get(2));
+        return list.get(2);
+    }
+
+    private LocBody getLocByIpApi(String ip){//ipApi接口
+        RestTemplate restTmpl = new RestTemplate();
+        //String url = "http://freeapi.ipip.net/123.161.151.72";
+        String url = "http://ip-api.com/json/"+ip+"?lang=zh-CN";
+        ipApi str = restTmpl.getForObject(url, ipApi.class);
+        System.out.println(str);
+        LocBody loc = new LocBody(str.regionName, str.city, str.lon, str.lat);
+        System.out.println(loc);
+        return loc;
     }
 }

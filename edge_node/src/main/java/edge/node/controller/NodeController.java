@@ -4,7 +4,6 @@ package edge.node.controller;
 import edge.node.model.Node;
 import edge.node.model.Response.HttpResponseContent;
 import edge.node.model.Response.ResponseEnum;
-import edge.node.model.deployBody;
 import edge.node.model.return_location;
 import edge.node.service.NodeService;
 import io.swagger.annotations.Api;
@@ -29,12 +28,12 @@ public class NodeController {
     @RequestMapping(path = "/register", method = RequestMethod.POST)
     @CrossOrigin
     public HttpResponseContent nodeRegister(@RequestParam("nodeName") String node_name,
-                                            @RequestParam("location") String location,
                                             @RequestParam("account") String account,
                                             @RequestParam("cpu") String cpu,
-                                            @RequestParam("memory") String memory){
+                                            @RequestParam("memory") String memory,
+                                            @RequestParam("ip") String ip){
         HttpResponseContent response = new HttpResponseContent();
-        Node node = new Node(node_name, location, cpu, memory);
+        Node node = new Node(node_name, cpu, memory,ip);
         Node res = nodeService.nodeRegister(node,account);
         if (res == null) {
             response.setCode(ResponseEnum.ERROR.getCode());

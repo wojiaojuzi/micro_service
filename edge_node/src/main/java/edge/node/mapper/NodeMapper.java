@@ -8,21 +8,22 @@ import java.util.List;
 
 @Mapper
 public interface NodeMapper {
-    @Insert("INSERT INTO node(nodeName,location,nodeStatus,nodeCreateAt,runAt,endLastAt,cpu,memory,ip)" +
-            " VALUES(#{nodeName},#{location},#{nodeStatus},#{nodeCreateAt},#{runAt},#{endLastAt},#{cpu},#{cpuRate},#{memory},#{memRate},#{ip})")
+    @Insert("INSERT INTO node(nodeName,location,lon,lat,nodeStatus,nodeCreateAt,runAt,endLastAt,cpu,cpuRate,memory,memRate,ip)" +
+            " VALUES(#{nodeName},#{location},#{lon},#{lat},#{nodeStatus},#{nodeCreateAt},#{runAt},#{endLastAt},#{cpu},#{cpuRate},#{memory},#{memRate},#{ip})")
       public void create_node(@Param("nodeName")String nodeName, @Param("location")String location,
-                            @Param("node_status")boolean node_status,
+                              @Param("lon")String lon,@Param("lat")String lat,
+                            @Param("nodeStatus")boolean nodeStatus,
                             @Param("nodeCreateAt")String nodeCreateAt, @Param("runAt")String runAt,
                             @Param("endLastAt")String endLastAt, @Param("cpu")String cpu,
                               @Param("cpuRate")double cpuRate, @Param("memory")String memory,
-                              @Param("memory")double memRate, @Param("ip")String ip);
+                              @Param("memRate")double memRate, @Param("ip")String ip);
 
 
     /*-------select--------------*/
     @Select("SELECT * FROM node WHERE nodeName=#{nodeName}")
     public Node getNodeByNodeName(@Param("nodeName") String nodeName);
 
-    @Select("SELECT * FROM node")
+    @Select("SELECT * FROM node ORDER BY nodeCreateAt")
     public List<Node> get_all();
 
     @Select("SELECT nodeStatus FROM node WHERE nodeName=#{nodeName}")
@@ -31,11 +32,11 @@ public interface NodeMapper {
     @Select("SELECT location FROM node")
     public List<String> get_all_location();
 
-    @Select("SELECT location FROM node WHERE nodeStatus=true")
-    public List<String> get_on_location();
+    @Select("SELECT * FROM node WHERE nodeStatus=true")
+    public List<Node> get_on();
 
-    @Select("SELECT location FROM node WHERE nodeStatus=false")
-    public List<String> get_off_location();
+    @Select("SELECT * FROM node WHERE nodeStatus=false")
+    public List<Node> get_off();
 
     @Select("SELECT * FROM node WHERE nodeStatus=true")
     public List<Node> get_on_num();

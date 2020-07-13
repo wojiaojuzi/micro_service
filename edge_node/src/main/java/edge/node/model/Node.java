@@ -7,6 +7,10 @@ public class Node {
 
     private String location;
 
+    private String lon;
+
+    private String lat;
+
     private boolean nodeStatus;
 
     private String nodeCreateAt;
@@ -25,12 +29,11 @@ public class Node {
 
     private double memRate;
 
-    public Node(String nodeName, String location, String cpu, String memory/*, String ip*/){
+    public Node(String nodeName, String cpu, String memory, String ip){
         this.nodeName = nodeName;
-        this.location = location;
         this.cpu = cpu;
         this.memory = memory;
-        //this.ip = ip;
+        this.ip = ip;
     }
 
 
@@ -38,11 +41,25 @@ public class Node {
     public String getLocation(){ return this.location; }
     public void setLocation(String location){ this.location = location; }
 
+    public String getLon() {
+        return this.lon;
+    }
+    public void setLon(String lon) {
+        this.lon = lon;
+    }
+
+    public String getLat() {
+        return this.lat;
+    }
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
     public String getNodeName() { return this.nodeName; }
     public void setNodeName(String nodeName) { this.nodeName = nodeName; }
 
     public boolean getNodeStatus() { return this.nodeStatus; }
-    public void setNodeStatus(boolean node_status) { this.nodeStatus = node_status; }
+    public void setNodeStatus(boolean nodeStatus) { this.nodeStatus = nodeStatus; }
 
     public String getNodeCreateAt() { return this.nodeCreateAt; }
     public void setNodeCreateAt(String nodeCreateAt) { this.nodeCreateAt = nodeCreateAt; }

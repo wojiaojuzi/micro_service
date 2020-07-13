@@ -7,27 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/deployBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/AmapBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/LocBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/ipApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/edge_node.iml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/edge_node.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/NodeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/NodeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/deployBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/return_location.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/return_location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/mapper/NodeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/mapper/NodeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/deployBody.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/schedule/NodeSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/schedule/NodeSchedule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/node-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/node-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/node-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/node-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/surefire-reports/TEST-edge.node.NodeApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/surefire-reports/TEST-edge.node.NodeApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/surefire-reports/edge.node.NodeApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/surefire-reports/edge.node.NodeApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka_server/server-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka_server/target/server-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/target/server-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka_server/target/surefire-reports/TEST-eureka.server.ServerApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/target/surefire-reports/TEST-eureka.server.ServerApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka_server/target/surefire-reports/eureka.server.ServerApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/target/surefire-reports/eureka.server.ServerApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/src/main/java/com/loger/controller/LogerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/controller/LogerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/target/classes/com/loger/controller/LogerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/loger/target/classes/com/loger/controller/LogerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/target/classes/com/manager/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/target/classes/com/manager/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +109,7 @@
       <recent name="D:\micro_service\manager\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NodeApplication">
+  <component name="RunManager" selected="Spring Boot.application">
     <configuration name="loger-0.0.1-SNAPSHOT.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/loger/loger-0.0.1-SNAPSHOT.jar" />
       <method v="2" />
@@ -184,8 +180,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NodeApplication" />
         <item itemvalue="Spring Boot.application" />
+        <item itemvalue="Spring Boot.NodeApplication" />
         <item itemvalue="JAR Application.server-0.0.1-SNAPSHOT.jar" />
         <item itemvalue="Spring Boot.ServerApplication" />
         <item itemvalue="JAR Application.loger-0.0.1-SNAPSHOT.jar" />
@@ -302,7 +298,9 @@
       <workItem from="1594378645450" duration="4231000" />
       <workItem from="1594430780066" duration="4837000" />
       <workItem from="1594470198980" duration="2900000" />
-      <workItem from="1594523858350" duration="13545000" />
+      <workItem from="1594523858350" duration="14033000" />
+      <workItem from="1594551309455" duration="6444000" />
+      <workItem from="1594603637805" duration="6872000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -353,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594431061010</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="边缘节点管理系统">
+      <created>1594546906455</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594546906455</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,10 +386,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="219" y="71" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1594050993351" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1594534570028">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1594608364962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594534570028" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594608364962" />
     <state x="421" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593756732458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -397,10 +402,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="272" y="6" key="CommitChangelistDialog2" timestamp="1594431057333">
+    <state x="272" y="6" key="CommitChangelistDialog2" timestamp="1594546881726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594431057333" />
+    <state x="272" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594546881726" />
     <state x="410" y="150" key="FileChooserDialogImpl" timestamp="1594301849553">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -413,38 +418,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="641" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594046818024" />
-    <state width="1493" height="180" key="GridCell.Tab.0.bottom" timestamp="1594540175261">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom" timestamp="1594623161288">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594540175261" />
-    <state width="1493" height="180" key="GridCell.Tab.0.center" timestamp="1594540175260">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594623161288" />
+    <state width="1493" height="172" key="GridCell.Tab.0.center" timestamp="1594623161288">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594540175260" />
-    <state width="1493" height="180" key="GridCell.Tab.0.left" timestamp="1594540175260">
+    <state width="1493" height="172" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594623161288" />
+    <state width="1493" height="172" key="GridCell.Tab.0.left" timestamp="1594623161287">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594540175260" />
-    <state width="1493" height="180" key="GridCell.Tab.0.right" timestamp="1594540175261">
+    <state width="1493" height="172" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594623161287" />
+    <state width="1493" height="172" key="GridCell.Tab.0.right" timestamp="1594623161288">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594540175261" />
-    <state width="1493" height="180" key="GridCell.Tab.1.bottom" timestamp="1594540175262">
+    <state width="1493" height="172" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594623161288" />
+    <state width="1493" height="172" key="GridCell.Tab.1.bottom" timestamp="1594623161290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594540175262" />
-    <state width="1493" height="180" key="GridCell.Tab.1.center" timestamp="1594540175262">
+    <state width="1493" height="172" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594623161290" />
+    <state width="1493" height="172" key="GridCell.Tab.1.center" timestamp="1594623161289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594540175262" />
-    <state width="1493" height="180" key="GridCell.Tab.1.left" timestamp="1594540175261">
+    <state width="1493" height="172" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594623161289" />
+    <state width="1493" height="172" key="GridCell.Tab.1.left" timestamp="1594623161289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594540175261" />
-    <state width="1493" height="180" key="GridCell.Tab.1.right" timestamp="1594540175262">
+    <state width="1493" height="172" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594623161289" />
+    <state width="1493" height="172" key="GridCell.Tab.1.right" timestamp="1594623161290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594540175262" />
+    <state width="1493" height="172" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594623161290" />
     <state x="270" y="55" key="SettingsEditor" timestamp="1594046518741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -453,10 +458,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1594431071454" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1594523862677">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1594623367238">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594523862677" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594623367238" />
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594046962694">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
