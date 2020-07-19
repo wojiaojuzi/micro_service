@@ -61,4 +61,9 @@ public class Admin {
 
     public void setCreateAt(String createAt){ this.createAt = createAt; }
     public String getCreateAt(){ return this.createAt; }
+
+    @Override
+    public String toString(){
+        return this.account+"  "+this.password;
+    }
 }

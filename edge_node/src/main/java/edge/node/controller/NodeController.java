@@ -31,9 +31,10 @@ public class NodeController {
                                             @RequestParam("account") String account,
                                             @RequestParam("cpu") String cpu,
                                             @RequestParam("memory") String memory,
-                                            @RequestParam("ip") String ip){
+                                            @RequestParam("ip") String ip,
+                                            @RequestParam("remark") String remark){
         HttpResponseContent response = new HttpResponseContent();
-        Node node = new Node(node_name, cpu, memory,ip);
+        Node node = new Node(node_name, cpu, memory,ip,remark);
         Node res = nodeService.nodeRegister(node,account);
         if (res == null) {
             response.setCode(ResponseEnum.ERROR.getCode());
@@ -139,7 +140,7 @@ public class NodeController {
                                              @RequestParam(value = "account") String account) throws Exception {
         HttpResponseContent response = new HttpResponseContent();
         boolean ans = true;
-        System.out.println(nodeName+"  "+serviceName.length+"  "+"account");
+        System.out.println(nodeName+"  "+serviceName.length+"  "+account);
         for(String str : serviceName){
             System.out.println(str);
         }

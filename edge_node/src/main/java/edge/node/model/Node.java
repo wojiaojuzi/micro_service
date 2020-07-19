@@ -29,11 +29,14 @@ public class Node {
 
     private double memRate;
 
-    public Node(String nodeName, String cpu, String memory, String ip){
+    private String remark;
+
+    public Node(String nodeName, String cpu, String memory, String ip, String remark){
         this.nodeName = nodeName;
         this.cpu = cpu;
         this.memory = memory;
         this.ip = ip;
+        this.remark = remark;
     }
 
 
@@ -82,7 +85,6 @@ public class Node {
     public double getCpuRate() {
         return this.cpuRate;
     }
-
     public void setCpuRate(double cpuRate) {
         this.cpuRate = cpuRate;
     }
@@ -90,9 +92,14 @@ public class Node {
     public double getMemRate() {
         return this.memRate;
     }
-
     public void setMemRate(double memRate) {
         this.memRate = memRate;
     }
 
+    public String getRemark() {
+        return this.remark;
+    }
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
 }

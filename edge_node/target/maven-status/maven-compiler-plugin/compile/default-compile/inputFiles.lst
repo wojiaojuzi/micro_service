@@ -1,10 +1,11 @@
-D:\micro_service\edge_node\src\main\java\edge\node\model\deployBody.java
+D:\micro_service\edge_node\src\main\java\edge\node\model\AmapBody.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\Task.java
 D:\micro_service\edge_node\src\main\java\edge\node\controller\NodeController.java
 D:\micro_service\edge_node\src\main\java\edge\node\schedule\NodeSchedule.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\Response\HttpResponseContent.java
 D:\micro_service\edge_node\src\main\java\edge\node\NodeApplication.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\MicroService.java
+D:\micro_service\edge_node\src\main\java\edge\node\model\LocBody.java
 D:\micro_service\edge_node\src\main\java\edge\node\service\NodeService.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\api\LogFeign.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\Exception\EdgeComputingServiceException.java
@@ -12,7 +13,9 @@ D:\micro_service\edge_node\src\main\java\edge\node\model\DeviceAndTask.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\return_location.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\CheckBracelet.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\Request\UserRegisterRequest.java
+D:\micro_service\edge_node\src\main\java\edge\node\service\NodeLocService.java
 D:\micro_service\edge_node\src\main\java\edge\node\service\CheckService.java
+D:\micro_service\edge_node\src\main\java\edge\node\model\ipApi.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\CheckVervel.java
 D:\micro_service\edge_node\src\main\java\edge\node\model\Device.java
 D:\micro_service\edge_node\src\main\java\edge\node\mapper\NodeMapper.java

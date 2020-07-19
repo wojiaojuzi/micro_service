@@ -8,15 +8,16 @@ import java.util.List;
 
 @Mapper
 public interface NodeMapper {
-    @Insert("INSERT INTO node(nodeName,location,lon,lat,nodeStatus,nodeCreateAt,runAt,endLastAt,cpu,cpuRate,memory,memRate,ip)" +
-            " VALUES(#{nodeName},#{location},#{lon},#{lat},#{nodeStatus},#{nodeCreateAt},#{runAt},#{endLastAt},#{cpu},#{cpuRate},#{memory},#{memRate},#{ip})")
+    @Insert("INSERT INTO node(nodeName,location,lon,lat,nodeStatus,nodeCreateAt,runAt,endLastAt,cpu,cpuRate,memory,memRate,ip,remark)" +
+            " VALUES(#{nodeName},#{location},#{lon},#{lat},#{nodeStatus},#{nodeCreateAt},#{runAt},#{endLastAt},#{cpu},#{cpuRate},#{memory},#{memRate},#{ip},#{remark})")
       public void create_node(@Param("nodeName")String nodeName, @Param("location")String location,
                               @Param("lon")String lon,@Param("lat")String lat,
                             @Param("nodeStatus")boolean nodeStatus,
                             @Param("nodeCreateAt")String nodeCreateAt, @Param("runAt")String runAt,
                             @Param("endLastAt")String endLastAt, @Param("cpu")String cpu,
                               @Param("cpuRate")double cpuRate, @Param("memory")String memory,
-                              @Param("memRate")double memRate, @Param("ip")String ip);
+                              @Param("memRate")double memRate, @Param("ip")String ip,
+                              @Param("remark") String remark);
 
 
     /*-------select--------------*/

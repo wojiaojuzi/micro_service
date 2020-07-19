@@ -61,10 +61,12 @@ public class AdminService {
             throw new EdgeComputingServiceException(ResponseEnum.LOGIN_FAILED.getCode(), ResponseEnum.LOGIN_FAILED.getMessage());
         }
         else {
+            System.out.println("清空前");
             adminMapper.updateTokenCreateTimeByAccount(null, account);
             adminMapper.updateTokenByAccount(null,account);
-
+            System.out.println("日之前");
             logFeign.addLog(admin.getAccount(), "管理员'"+admin.getAccount()+"'退出");
+            System.out.println("日之后");
         }
     }
 
@@ -73,8 +75,8 @@ public class AdminService {
         if(account == null || password == null) {
             throw new EdgeComputingServiceException(ResponseEnum.LOGIN_FAILED.getCode(), ResponseEnum.LOGIN_FAILED.getMessage());
         } else {
-            String name = adminMapper.getAdminNameFromAccount(account);
-            if (name != null) {//账号已被注册
+            Admin adm = adminMapper.getByAccount(account);
+            if (adm != null) {//账号已被注册
                 return "error";
             } else {
                 Date createTime = new Date();
@@ -97,7 +99,7 @@ public class AdminService {
             if(admin == null) {
             throw new EdgeComputingServiceException(ResponseEnum.LOGIN_FAILED.getCode(), ResponseEnum.LOGIN_FAILED.getMessage());
             } else {
-                if (password.equals(oldpassword)){//还要重新生成token
+                if (password.equals(oldpassword)){
                     adminMapper.updatePassWordByAccount(account,newpassword);
 
                     logFeign.addLog(admin.getAccount(),"管理员'"+admin.getAccount()+"'修改密码");
@@ -117,5 +119,4 @@ public class AdminService {
         return adminMapper.getByToken(token);
     }
     public String getAccountByToken(String token){return adminMapper.getAccountFromToken(token);}
-    public String getAdminNameByAccount(String account){ return adminMapper.getAdminNameFromAccount(account);}
 }

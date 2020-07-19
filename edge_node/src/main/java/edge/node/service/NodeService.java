@@ -3,11 +3,8 @@ package edge.node.service;
 
 import com.alibaba.fastjson.JSON;
 import edge.node.mapper.NodeMapper;
-import edge.node.model.LocBody;
-import edge.node.model.Node;
+import edge.node.model.*;
 import edge.node.model.api.LogFeign;
-import edge.node.model.ipApi;
-import edge.node.model.return_location;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -40,14 +37,17 @@ public class NodeService {
         //String url = "http://freeapi.ipip.net/"+node.getIp();
         //String str = restTmpl.getForObject(url, String.class);
         //List<String> list = JSON.parseArray(str, String.class);
+
         LocBody loc = getLocByIpApi(node.getIp());
+        //LocBody loc = getLocByGD(node.getIp());
         node.setLocation(loc.getCity());
         node.setLon(loc.getLon());
         node.setLat(loc.getLat());
         nodeMapper.create_node(node.getNodeName(), node.getLocation(),node.getLon(),
                                 node.getLat(), node.getNodeStatus(),node.getNodeCreateAt(),
                                 node.getRunAt(),node.getEndLastAt(),
-                                node.getCpu(), 0,node.getMemory(),0, node.getIp());
+                                node.getCpu(), 0,node.getMemory(),0, node.getIp(),
+                                node.getRemark());
         Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
         if(test == null)
             return null;
@@ -177,5 +177,22 @@ public class NodeService {
         LocBody loc = new LocBody(str.regionName, str.city, str.lon, str.lat);
         System.out.println(loc);
         return loc;
+    }
+
+    private LocBody getLocByGD(String ip){
+        String key = "76388c9dc654c2c4df579c51bcf1984e";
+        RestTemplate restTmpl = new RestTemplate();
+        //https://restapi.amap.com/v3/ip?ip=123.161.150.106&key=76388c9dc654c2c4df579c51bcf1984e
+        //String url = "http://freeapi.ipip.net/123.161.151.72";
+        String url = "http://restapi.amap.com/v3/ip?ip="+ ip +"&key=" + key;
+        AmapBody str = restTmpl.getForObject(url, AmapBody.class);
+        System.out.println(str.rectangle);
+        String rect1 = str.rectangle;
+        String[] rect2 = rect1.split(";");
+        //String[]
+        //LocBody loc = new LocBody(str.province, str.city, str.rectangle[0][0], str.rectangle[0][1]);
+        //System.out.println(loc);
+        //return loc;
+        return null;
     }
 }

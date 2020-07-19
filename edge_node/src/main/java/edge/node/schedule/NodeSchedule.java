@@ -86,7 +86,7 @@ public class NodeSchedule {
         //String url = "http://freeapi.ipip.net/123.161.151.72";
         String url = "http://restapi.amap.com/v3/ip?ip="+ ip +"&key=" + key;
         AmapBody str = restTmpl.getForObject(url, AmapBody.class);
-        System.out.println(str);
+        System.out.println(str.rectangle);
         //LocBody loc = new LocBody(str.province, str.city, str.rectangle[0][0], str.rectangle[0][1]);
         //System.out.println(loc);
         //return loc;

@@ -30,8 +30,6 @@ public interface AdminMapper {
     @Select("SELECT account FROM admin WHERE LoginToken =#{LoginToken};")
     String getAccountFromToken(@Param("LoginToken") String LoginToken);
 
-    @Select("SELECT adminName FROM admin WHERE account =#{account};")
-    String getAdminNameFromAccount(@Param("account") String account);
 
     @Select("SELECT password FROM admin WHERE LoginToken =#{token};")
     String getPassWordByToken(@Param("token") String token);
