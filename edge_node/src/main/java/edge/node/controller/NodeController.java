@@ -171,4 +171,11 @@ public class NodeController {
         return response;
     }
 
+    @ApiOperation(value = "节点微服务撤销部署")
+    @RequestMapping(path = "/tt")
+    @CrossOrigin
+    public void pyTest(){
+        nodeService.pytest("127.0.0.1");
+    }
+
 }

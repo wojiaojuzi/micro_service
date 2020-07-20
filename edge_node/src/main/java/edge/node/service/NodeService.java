@@ -3,27 +3,36 @@ package edge.node.service;
 
 import com.alibaba.fastjson.JSON;
 import edge.node.mapper.NodeMapper;
+import edge.node.mapper.ServiceMapper;
 import edge.node.model.*;
 import edge.node.model.api.LogFeign;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.net.InetAddress;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Service
 public class NodeService {
     private static final String mysqlSdfPatternString = "yyyy-MM-dd HH:mm:ss";
     private final NodeMapper nodeMapper;
+    private final ServiceMapper serviceMapper;
     private final LogFeign logFeign;
+    private static final Logger logger = LogManager.getLogger(NodeService.class);
 
-    public NodeService(NodeMapper nodeMapper, LogFeign logFeign){
+    public NodeService(NodeMapper nodeMapper, LogFeign logFeign, ServiceMapper serviceMapper){
         this.nodeMapper = nodeMapper;
         this.logFeign = logFeign;
+        this.serviceMapper = serviceMapper;
     }
 
     //节点注册逻辑要求改
@@ -37,24 +46,69 @@ public class NodeService {
         //String url = "http://freeapi.ipip.net/"+node.getIp();
         //String str = restTmpl.getForObject(url, String.class);
         //List<String> list = JSON.parseArray(str, String.class);
-
-        LocBody loc = getLocByIpApi(node.getIp());
-        //LocBody loc = getLocByGD(node.getIp());
-        node.setLocation(loc.getCity());
-        node.setLon(loc.getLon());
-        node.setLat(loc.getLat());
-        nodeMapper.create_node(node.getNodeName(), node.getLocation(),node.getLon(),
-                                node.getLat(), node.getNodeStatus(),node.getNodeCreateAt(),
-                                node.getRunAt(),node.getEndLastAt(),
-                                node.getCpu(), 0,node.getMemory(),0, node.getIp(),
-                                node.getRemark());
-        Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
-        if(test == null)
-            return null;
-        else {
-            logFeign.addLog(account,"注册节点:  节点名="+node.getNodeName()+" , 位置="+node.getLocation());
-            return test;
+        if(isPing(node.getIp())) {
+            LocBody loc = getLocByIpApi(node.getIp());
+            //LocBody loc = getLocByGD(node.getIp());
+            node.setLocation(loc.getCity());
+            node.setLon(loc.getLon());
+            node.setLat(loc.getLat());
+            nodeMapper.create_node(node.getNodeName(), node.getLocation(), node.getLon(),
+                    node.getLat(), node.getNodeStatus(), node.getNodeCreateAt(),
+                    node.getRunAt(), node.getEndLastAt(),
+                    node.getCpu(), 0, node.getMemory(), 0, node.getIp(),
+                    node.getRemark());
+            serviceMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/image_system:eureka",false);
+            serviceMapper.createImage(node.getNodeName(),null,null,"mysql:latest",false);
+            Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
+            if (test == null)
+                return null;
+            else {
+                logFeign.addLog(account, "注册节点:  节点名=" + node.getNodeName() + " , 位置=" + node.getLocation());
+                return test;
+            }
         }
+        System.out.println("ip不可用");
+        return null;
+    }
+
+    public static boolean isPing(String ip) {
+        logger.debug("ip地址为："+ip);
+        if (ip == null){
+            return false;
+        }
+        BufferedReader in = null;
+        try {
+            Process pro = Runtime.getRuntime().exec("ping " + ip +" -n 5 -w 5000");
+            //GB2312  解决InputStreamReader乱码问题
+            in = new BufferedReader(new InputStreamReader(pro.getInputStream(),"GB2312"));
+            //逐行检查输出，计算类似出现=23ms TTL=62字样的次数
+            int connectedCount = 0;
+            String line = null;
+            while ((line = in.readLine()) != null){
+                logger.info(line);
+                connectedCount += getCheckResult(line);// 如果出现类似=23ms TTL=62这样的字样,出现的次数=测试次数则返回真
+            }
+            return connectedCount == 5;
+        } catch (Exception ex) {
+            ex.printStackTrace();   // 出现异常则返回假
+            return false;
+        }finally {
+            try {
+                in.close();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //若line含有=18ms TTL=16字样,说明已经ping通,返回1,否則返回0.
+    private static int getCheckResult(String line) {  // System.out.println("控制台输出的结果为:"+line);
+        Pattern pattern = Pattern.compile("(\\d+ms)(\\s+)(TTL=\\d+)",  Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(line);
+        while (matcher.find()) {
+            return 1;
+        }
+        return 0;
     }
 
     //删除节点逻辑要修改
@@ -194,5 +248,50 @@ public class NodeService {
         //System.out.println(loc);
         //return loc;
         return null;
+    }
+    public void getImage(String nodeName){
+        String ip = nodeMapper.getNodeByNodeName(nodeName).getIp();
+        System.out.println(ip);
+        try {
+            String exe = "python";
+            String command = "C:\\Users\\guoxidong\\Desktop\\docketTest\\getimage.py";
+            String[] cmdArr = new String[] { exe, command };
+            Process process = Runtime.getRuntime().exec(cmdArr);
+            BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while( ( line = in.readLine() ) != null ) {
+                System.out.println(line);
+            }
+            in.close();
+            int result = process.waitFor();
+            System.out.println("执行结果:" + result);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void createImage(String nodeName){
+        serviceMapper.createImage(nodeName,null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/image_system:eureka",false);
+    }
+
+
+
+    public void pytest(String ip){
+        try {
+            String exe = "python";
+            String command = "C:\\Users\\guoxidong\\Desktop\\docketTest\\getimage.py";
+            String[] cmdArr = new String[] { exe, command };
+            Process process = Runtime.getRuntime().exec(cmdArr);
+            BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while( ( line = in.readLine() ) != null ) {
+                System.out.println(line);
+            }
+            in.close();
+            int result = process.waitFor();
+            System.out.println("执行结果:" + result);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

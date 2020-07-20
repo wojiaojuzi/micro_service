@@ -84,7 +84,7 @@ public class AdminController {
     @RequestMapping(path = "/getAboutInformation", method = RequestMethod.GET)
     @ResponseBody
     @CrossOrigin
-    public Admin aboutInformation(@RequestParam(value="token",required = false) String token){
+    public Admin aboutInformation(@RequestParam("token") String token){
         System.out.println("get进来了");
         System.out.println("token:"+token);
         return adminService.aboutInformationByToken(token);
@@ -95,11 +95,12 @@ public class AdminController {
     @RequestMapping(path = "/alterpassword", method = RequestMethod.POST)
     @ResponseBody
     @CrossOrigin
-    public HttpResponseContent alterPassword(@RequestParam(value="account",required = false) String account,
-                                             @RequestParam(value="oldPassword",required = false) String oldPassword,
-                                             @RequestParam(value="newPassword",required = false) String newPassword)
+    public HttpResponseContent alterPassword(@RequestParam("account") String account,
+                                             @RequestParam("oldPassword") String oldPassword,
+                                             @RequestParam("newPassword") String newPassword)
         throws Exception{
         HttpResponseContent response = new HttpResponseContent();
+        System.out.println(account);
         if(adminService.alterPassword(account,oldPassword,newPassword)=="error"){
             response.setCode(ResponseEnum.ERROR.getCode());
             response.setMessage(ResponseEnum.ERROR.getMessage());
