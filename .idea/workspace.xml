@@ -7,29 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/serviceport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/edge_node.iml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/edge_node.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/MicroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/MicroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ServiceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ServiceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Micro.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Micro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/MicroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/MicroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/MicroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/MicroController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/mapper/ServiceMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/mapper/ServiceMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Image.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Micro.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Micro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/schedule/NodeSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/schedule/NodeSchedule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/MicroService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/MicroService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/surefire-reports/TEST-edge.node.NodeApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/surefire-reports/TEST-edge.node.NodeApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/surefire-reports/edge.node.NodeApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/surefire-reports/edge.node.NodeApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +306,7 @@
       <workItem from="1595247869002" duration="1863000" />
       <workItem from="1595297713710" duration="13066000" />
       <workItem from="1595328936170" duration="1966000" />
-      <workItem from="1595382586294" duration="900000" />
+      <workItem from="1595382586294" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -406,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595241840518</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="边缘节点管理系统">
+      <created>1595383606129</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1595383606129</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,10 +436,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2" timestamp="1595241825987">
+    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2" timestamp="1595383602556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595241825987" />
+    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595383602556" />
     <state x="410" y="150" key="FileChooserDialogImpl" timestamp="1595383051110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -506,10 +492,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594046518741" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1595241835377">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1595383610623">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595241835377" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595383610623" />
     <state x="394" y="163" key="com.intellij.ide.util.TipDialog" timestamp="1595382589168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
