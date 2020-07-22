@@ -12,7 +12,9 @@ public class Micro {
     private String containerStatus;
 
 
-    public Micro(String nodeName, String serviceName, String serviceStatus, String containerName, String containerStatus) {
+
+    public Micro(String nodeName, String serviceName, String serviceStatus,
+                 String containerName, String containerStatus) {
         this.serviceName = serviceName;
         this.serviceStatus = serviceStatus;
         this.nodeName = nodeName;

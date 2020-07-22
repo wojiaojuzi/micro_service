@@ -41,11 +41,6 @@ public class NodeService {
         SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
         node.setNodeCreateAt(mysqlSdf.format(createTime));
 
-        //由Ip获取地理位置
-        //RestTemplate restTmpl = new RestTemplate();
-        //String url = "http://freeapi.ipip.net/"+node.getIp();
-        //String str = restTmpl.getForObject(url, String.class);
-        //List<String> list = JSON.parseArray(str, String.class);
         if(isPing(node.getIp())) {
             LocBody loc = getLocByIpApi(node.getIp());
             //LocBody loc = getLocByGD(node.getIp());
@@ -57,8 +52,8 @@ public class NodeService {
                     node.getRunAt(), node.getEndLastAt(),
                     node.getCpu(), 0, node.getMemory(), 0, node.getIp(),
                     node.getRemark());
-            serviceMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/image_system:eureka",false);
-            serviceMapper.createImage(node.getNodeName(),null,null,"mysql:latest",false);
+            serviceMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/eureka","latest",false,"eureka");
+            serviceMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/zuul","latest",false,"zuul");
             Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
             if (test == null)
                 return null;
@@ -270,9 +265,7 @@ public class NodeService {
         }
     }
 
-    public void createImage(String nodeName){
-        serviceMapper.createImage(nodeName,null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/image_system:eureka",false);
-    }
+
 
 
 

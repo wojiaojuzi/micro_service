@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "serviceport",
+      "type": "edge.node.model.serviceport",
+      "sourceType": "edge.node.model.serviceport"
+    }
+  ],
+  "properties": [
+    {
+      "name": "serviceport.portmap",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "edge.node.model.serviceport"
+    }
+  ],
+  "hints": []
+}

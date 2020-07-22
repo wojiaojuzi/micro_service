@@ -25,7 +25,7 @@ public class NodeSchedule {
     @Autowired
     private NodeMapper nodeMapper;
 
-    @Scheduled(fixedRate = 3000)
+   // @Scheduled(fixedRate = 3000)
     private void test() throws IOException {
         //SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         //System.out.println("当前时间:"+df.format(new Date()));

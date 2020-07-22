@@ -100,6 +100,7 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:2.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ibatis:ibatis-core:3.0" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.19" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.6.1" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-spring-web:2.6.1" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:2.6.1" level="project" />

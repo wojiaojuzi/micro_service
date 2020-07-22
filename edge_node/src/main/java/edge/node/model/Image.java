@@ -7,15 +7,22 @@ public class Image {
 
     private String imageShortId;
 
+    private String imageRepository;
+
     private String imageTag;
 
+    private String serviceName;
+
     private boolean imageStatus;
-    public Image(String nodeName, String imageId, String imageShortId, String imageTag, boolean imageStatus){
+    public Image(String nodeName, String imageId, String imageShortId, String imageRepository,
+                 String imageTag, boolean imageStatus, String serviceName){
         this.nodeName = nodeName;
         this.imageId = imageId;
+        this.imageRepository = imageRepository;
         this.imageTag = imageTag;
         this.imageShortId = imageShortId;
         this.imageStatus = imageStatus;
+        this.serviceName = serviceName;
     }
     public String getNodeName() {
         return this.nodeName;
@@ -41,6 +48,14 @@ public class Image {
         this.imageShortId = imageShortId;
     }
 
+    public String getImageRepository() {
+        return this.imageRepository;
+    }
+
+    public void setImageRepository(String imageRepository) {
+        this.imageRepository = imageRepository;
+    }
+
     public String getImageTag() {
         return this.imageTag;
     }
@@ -55,5 +70,13 @@ public class Image {
 
     public void setImageStatus(boolean imageStatus) {
         this.imageStatus = imageStatus;
+    }
+
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
     }
 }

@@ -14,5 +14,8 @@ eureka:
 
 
 
-serviceTag:
-  eureka:
+
+serviceport:
+  portmap:
+    eureka: 10000
+    zuul: 10001
