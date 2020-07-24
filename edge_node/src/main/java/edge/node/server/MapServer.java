@@ -13,14 +13,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-@ServerEndpoint("/websocket/testsocket")
+@ServerEndpoint("/websocket/mapsocket")
 @Component
-public class WebSocketServer {
-    private static Logger log = LoggerFactory.getLogger(WebSocketServer.class);
+public class MapServer {
+    private static Logger log = LoggerFactory.getLogger(MapServer.class);
     //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
     private static int onlineCount = 0;
     //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
-    private static CopyOnWriteArraySet<WebSocketServer> webSocketSet = new CopyOnWriteArraySet<WebSocketServer>();
+    private static CopyOnWriteArraySet<MapServer> webSocketSet = new CopyOnWriteArraySet<MapServer>();
 
     //与某个客户端的连接会话，需要通过它来给客户端发送数据
     private Session session;
@@ -96,7 +96,7 @@ public class WebSocketServer {
      * 群发自定义消息
      * */
     public static void sendInfo(Object obj) {
-        for (WebSocketServer item : webSocketSet) {
+        for (MapServer item : webSocketSet) {
             try {
                 item.sendMessage(obj);
             } catch (Exception e) {
@@ -110,10 +110,10 @@ public class WebSocketServer {
     }
 
     public static synchronized void addOnlineCount() {
-        WebSocketServer.onlineCount++;
+        MapServer.onlineCount++;
     }
 
     public static synchronized void subOnlineCount() {
-        WebSocketServer.onlineCount--;
+        MapServer.onlineCount--;
     }
 }

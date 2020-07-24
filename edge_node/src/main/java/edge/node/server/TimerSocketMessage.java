@@ -19,6 +19,6 @@ public class TimerSocketMessage {
         Map<String, Object> maps = new HashMap<>();
         maps.put("type", "sendMessage");
         maps.put("data","11111");
-        WebSocketServer.sendInfo(maps);
+        MapServer.sendInfo(maps);
     }
 }
