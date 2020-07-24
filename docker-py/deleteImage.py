@@ -6,18 +6,20 @@ import sys
 
 def deleteImage(repository, tag, ip):
     mydocker = client.from_env()
-    targetimage = mydocker.images.get("registry.cn-hangzhou.aliyuncs.com/edge_node/eureka"+":"+"latest")
-    mydocker.images.remove("registry.cn-hangzhou.aliyuncs.com/edge_node/eureka"+":"+"latest")
+    targetimage = mydocker.images.get(repository+":"+tag)
     image_list = mydocker.images.list()
-
-    if targetimage not in image_list:
-        print(True)
+    if targetimage in image_list:
+        mydocker.images.remove(repository+":"+tag)
+        image_list = mydocker.images.list()
+        if targetimage not in image_list:
+            print("delete success")
+        else:
+            print("delete failure")
     else:
-        print(False)
-
+        print("delete failure")
 
 def main(argv):
-    deleteImage("","","127.0.0.1")
+    deleteImage(argv[1],argv[2],argv[3])
 
 
 if __name__ == "__main__":

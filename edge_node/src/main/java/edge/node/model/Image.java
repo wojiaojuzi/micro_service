@@ -3,6 +3,8 @@ package edge.node.model;
 public class Image {
     private String nodeName;
 
+    private String serviceName;
+
     private String imageId;
 
     private String imageShortId;
@@ -10,8 +12,6 @@ public class Image {
     private String imageRepository;
 
     private String imageTag;
-
-    private String serviceName;
 
     private boolean imageStatus;
 
@@ -45,7 +45,7 @@ public class Image {
         return this.imageShortId;
     }
 
-    public void setimageShortId(String imageShortId) {
+    public void setImageShortId(String imageShortId) {
         this.imageShortId = imageShortId;
     }
 

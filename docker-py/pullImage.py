@@ -9,11 +9,17 @@ def pullImage(repository, tag, ip):
 
     image = mydocker.images.pull(repository=repository,tag=tag)
     #nowimage = mydocker.images.pull(repository="registry.cn-hangzhou.aliyuncs.com/edge_node/eureka", tag="latest")
-    print(image.id+" "+image.short_id)
+    images = mydocker.images.list()
+    image = mydocker.images.get(repository+":"+tag)
+    if image in images:
+        print("pull success")
+        print(image.id+" "+image.short_id)
+    else:
+        print("pull failure")
 
 
 def main(argv):
-    pullImage(argv[1],argv[2],argc[3])
+    pullImage(argv[1],argv[2],argv[3])
 
 
 if __name__ == "__main__":

@@ -23,21 +23,27 @@ public interface ImageMapper {
     @Select("Select imageRepository from image where nodeName=#{nodeName} and serviceName=#{serviceName}")
     public String getRepositoryByNodeNameAndServiceName(@Param("nodeName")String nodeName, @Param("serviceName")String serviceName);
 
+    @Select("Select imageStatus from image where nodeName=#{nodeName} and serviceName=#{serviceName}")
+    public boolean getImageStatusByNodeNameAndServiceName(@Param("nodeName")String nodeName, @Param("serviceName")String serviceName);
+
     @Select("Select * from image where nodeName=#{nodeName} and serviceName=#{serviceName}")
     public Image getByNodeNameAndServiceName(@Param("nodeName")String nodeName, @Param("serviceName")String serviceName);
 
-    @Update("Update image set imageId=#{imageId} where nodeName=#{nodeName} and imageRepository=#{imageRepository} and imageTag=#{imageTag}")
-    public void updataImageIdByNodeNameAndImageRepositoryAndImageTag
-            (@Param("nodeName") String nodeName, @Param("imageRepository") String imageRepository,
-             @Param("imageTag") String imageTag, @Param("imageId")String imageId);
+    @Delete("Delete from image where nodeName=#{nodeName} and serviceName=#{serviceName}")
+    public void deleteByNodeNameAndServiceName(@Param("nodeName")String nodeName, @Param("serviceName")String serviceName);
 
-    @Update("Update image set imageShortId=#{imageShortId} where nodeName=#{nodeName} and imageRepository=#{imageRepository} and imageTag=#{imageTag}")
-    public void updataImageShortIdByNodeNameAndImageRepositoryAndImageTag
-            (@Param("nodeName") String nodeName, @Param("imageRepository") String imageRepository,
-             @Param("imageTag") String imageTag, @Param("imageShortId")String imageShortId);
 
-    @Update("Update image set imageStatus=#{imageStatus} where nodeName=#{nodeName} and imageRepository=#{imageRepository} and imageTag=#{imageTag}")
-    public void updataImageStatusByNodeNameAndImageRepositoryAndImageTag
-            (@Param("nodeName") String nodeName, @Param("imageRepository") String imageRepository, @Param("imageTag") String imageTag, @Param("imageStatus")boolean imageStatus);
+
+    @Update("Update image set imageId=#{imageId} where nodeName=#{nodeName} and serviceName=#{serviceName}")
+    public void updataImageIdByNodeNameAndServiceName
+            (@Param("nodeName") String nodeName, @Param("serviceName") String serviceName, @Param("imageId")String imageId);
+
+    @Update("Update image set imageShortId=#{imageShortId} where nodeName=#{nodeName} and serviceName=#{serviceName}")
+    public void updataImageShortIdByNodeNameAndServiceName
+            (@Param("nodeName") String nodeName, @Param("serviceName") String serviceName, @Param("imageShortId")String imageShortId);
+
+    @Update("Update image set imageStatus=#{imageStatus} where nodeName=#{nodeName} and serviceName=#{serviceName}")
+    public void updataImageStatusByNodeNameAndServiceName
+            (@Param("nodeName") String nodeName, @Param("serviceName") String serviceName, @Param("imageStatus")boolean imageStatus);
 
 }
