@@ -7,13 +7,13 @@ import sys
 def pullImage(repository, tag, ip):
     mydocker = client.from_env()
 
-    #nowimage = mydocker.images.pull(repository=repository,tag=tag)
-    nowimage = mydocker.images.pull(repository="registry.cn-hangzhou.aliyuncs.com/edge_node/eureka", tag="latest")
-    print(nowimage.tags[0])
+    image = mydocker.images.pull(repository=repository,tag=tag)
+    #nowimage = mydocker.images.pull(repository="registry.cn-hangzhou.aliyuncs.com/edge_node/eureka", tag="latest")
+    print(image.id+" "+image.short_id)
 
 
 def main(argv):
-    pullImage("","","127.0.0.1")
+    pullImage(argv[1],argv[2],argc[3])
 
 
 if __name__ == "__main__":
