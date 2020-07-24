@@ -54,23 +54,31 @@ public class ContainerService {
         }
     }
 
-    public void pullImage(String nodeName){
-        String ip = nodeMapper.getNodeByNodeName(nodeName).getIp();
-        System.out.println(ip);
-        try {
-            String exe = "python";
-            String command = "./docker-py/getImage.py";
-            String[] cmdArr = new String[] { exe, command };
-            Process process = Runtime.getRuntime().exec(cmdArr);
-            BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            while( ( line = in.readLine() ) != null ) {
-                System.out.println(line);
+    public boolean pullImage(String nodeName, String serviceName){
+        boolean imageStatus = imageMapper.getByNodeNameAndServiceName(nodeName,serviceName).getImageStatus();
+        if(imageStatus == true) {
+            try {
+                String ip = nodeMapper.getNodeByNodeName(nodeName).getIp();
+                String repository = imageMapper.getRepositoryByNodeNameAndServiceName(nodeName,serviceName);
+                String tag = imageMapper.getTagByNodeNameAndServiceName(nodeName,serviceName);
+                String exe = "python";
+                String command = "./docker-py/getImage.py";
+                String[] cmdArr = new String[]{exe, command, repository, tag, ip};
+                Process process = Runtime.getRuntime().exec(cmdArr);
+                BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                String line;
+                while ((line = in.readLine()) != null) {
+                    System.out.println(line);
+                }
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+        else{
+            return false;
+        }
+        return false;
     }
 
     public void deleteImage(/*String nodeName,*/ String imageRepository, String imageTag){

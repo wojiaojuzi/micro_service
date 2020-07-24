@@ -7,24 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ContainerMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/getContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/getContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/offContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/offContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/openTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/openTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/runContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/runContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/MicroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/ContainerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ServiceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ImageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Micro.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/MicroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/MicroController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Micro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/MicroService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ImageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,6 +311,7 @@
       <workItem from="1595328936170" duration="1966000" />
       <workItem from="1595382586294" duration="1640000" />
       <workItem from="1595507459860" duration="7096000" />
+      <workItem from="1595567224910" duration="1562000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -430,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595384126437</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="边缘节点管理系统">
+      <created>1595567372319</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1595567372319</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,6 +453,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="219" y="71" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1594050993351" />
+    <state x="361" y="71" key="#Inspections" timestamp="1595568004683">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1595568004683" />
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1595315180772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -478,10 +477,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2" timestamp="1595384124788">
+    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2" timestamp="1595567468459">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595384124788" />
+    <state x="272" y="4" width="791" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595567468459" />
     <state x="410" y="150" key="FileChooserDialogImpl" timestamp="1595383051110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -534,10 +533,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595514239688" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1595384130751">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1595567869656">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595384130751" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595567869656" />
     <state x="394" y="163" key="com.intellij.ide.util.TipDialog" timestamp="1595567259054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -546,9 +545,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1594046962694" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595316610368">
+    <state x="578" y="307" key="git4idea.ui.GitResetDialog" timestamp="1595567859597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595316610368" />
+    <state x="578" y="307" key="git4idea.ui.GitResetDialog/0.0.1536.824@0.0.1536.824" timestamp="1595567859597" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595568556771">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595568556771" />
   </component>
 </project>

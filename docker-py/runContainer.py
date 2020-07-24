@@ -10,7 +10,7 @@ def runContainer(repository, tag ,ip , port, name):
                                 detach=True, ports={port+'/tcp': [port]}, name=name, network="zhuanyong")
     if container.status == "created":
         container_list = mydocker.containers.list();
-        container = mydocker.containers.get("eureka")
+        container = mydocker.containers.get(name)
         if container in container_list:
             if container.status == "running":
                 print("create success")

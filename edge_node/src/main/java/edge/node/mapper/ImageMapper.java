@@ -23,6 +23,9 @@ public interface ImageMapper {
     @Select("Select imageRepository from image where nodeName=#{nodeName} and serviceName=#{serviceName}")
     public String getRepositoryByNodeNameAndServiceName(@Param("nodeName")String nodeName, @Param("serviceName")String serviceName);
 
+    @Select("Select * from image where nodeName=#{nodeName} and serviceName=#{serviceName}")
+    public Image getByNodeNameAndServiceName(@Param("nodeName")String nodeName, @Param("serviceName")String serviceName);
+
     @Update("Update image set imageId=#{imageId} where nodeName=#{nodeName} and imageRepository=#{imageRepository} and imageTag=#{imageTag}")
     public void updataImageIdByNodeNameAndImageRepositoryAndImageTag
             (@Param("nodeName") String nodeName, @Param("imageRepository") String imageRepository,

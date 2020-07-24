@@ -14,6 +14,7 @@ public class Image {
     private String serviceName;
 
     private boolean imageStatus;
+
     public Image(String nodeName, String imageId, String imageShortId, String imageRepository,
                  String imageTag, boolean imageStatus, String serviceName){
         this.nodeName = nodeName;
@@ -64,7 +65,7 @@ public class Image {
         this.imageTag = imageTag;
     }
 
-    public boolean isImageStatus() {
+    public boolean getImageStatus() {
         return this.imageStatus;
     }
 
