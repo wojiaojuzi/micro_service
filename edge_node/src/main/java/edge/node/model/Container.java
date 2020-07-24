@@ -1,6 +1,6 @@
 package edge.node.model;
 
-public class Micro {
+public class Container {
     private String nodeName;
 
     private String serviceName;
@@ -13,8 +13,8 @@ public class Micro {
 
 
 
-    public Micro(String nodeName, String serviceName, String serviceStatus,
-                 String containerName, String containerStatus) {
+    public Container(String nodeName, String serviceName, String serviceStatus,
+                     String containerName, String containerStatus) {
         this.serviceName = serviceName;
         this.serviceStatus = serviceStatus;
         this.nodeName = nodeName;

@@ -8,10 +8,15 @@ def runContainer(repository, tag ,ip , port, name):
 
     container = mydocker.containers.run(repository+":"+tag,
                                 detach=True, ports={port+'/tcp': [port]}, name=name, network="zhuanyong")
-    container_list = mydocker.containers.list();
-
-    if container in container_list:
-        print("create success")
+    if container.status == "created":
+        container_list = mydocker.containers.list();
+        container = mydocker.containers.get("eureka")
+        if container in container_list:
+            if container.status == "running":
+                print("create success")
+                print(container.name + " " + container.id + " " + container.short_id + " " + container.status)
+            else:
+                print("create failure")
     else:
         print("create failure")
 

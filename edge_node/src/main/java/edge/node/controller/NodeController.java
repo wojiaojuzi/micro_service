@@ -131,28 +131,6 @@ public class NodeController {
         }
         return response;
 
-    }*/
-    @ApiOperation(value = "节点微服务部署")
-    @RequestMapping(path = "/deployTest", method = RequestMethod.POST)
-    @CrossOrigin
-    public HttpResponseContent serviceDeploy(@RequestParam(value = "nodeName") String nodeName,
-                                             @RequestParam(value = "serviceName") String[] serviceName,
-                                             @RequestParam(value = "account") String account) throws Exception {
-        HttpResponseContent response = new HttpResponseContent();
-        boolean ans = true;
-        System.out.println(nodeName+"  "+serviceName.length+"  "+account);
-        for(String str : serviceName){
-            System.out.println(str);
-        }
-        if (ans == false) {
-            response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
-            response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
-        } else {
-            response.setCode(ResponseEnum.SUCCESS.getCode());
-            response.setMessage(ResponseEnum.SUCCESS.getMessage());
-        }
-        return response;
-
     }
 
     @ApiOperation(value = "节点微服务撤销部署")
@@ -169,13 +147,7 @@ public class NodeController {
             response.setMessage(ResponseEnum.SUCCESS.getMessage());
         }
         return response;
-    }
+    }*/
 
-    @ApiOperation(value = "节点微服务撤销部署")
-    @RequestMapping(path = "/tt")
-    @CrossOrigin
-    public void pyTest(){
-        nodeService.pytest("127.0.0.1");
-    }
 
 }

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 @Mapper
-public interface ServiceMapper {
+public interface ImageMapper {
     @Insert("Insert into image(nodeName,imageId,imageShortId,imageRepository,imageTag,imageStatus,serviceName)"+
             " values(#{nodeName},#{imageId},#{imageShortId},#{imageRepository},#{imageTag},#{imageStatus},#{serviceName})")
     public void createImage(@Param("nodeName")String nodeName, @Param("imageId")String imageId,

@@ -1,8 +1,7 @@
 package edge.node.controller;
 
-import edge.node.service.MicroService;
+import edge.node.service.ContainerService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,17 +17,17 @@ import java.io.InputStreamReader;
 @RequestMapping(path = "/service")
 @EnableAutoConfiguration
 @Api(tags = "Service")
-public class MicroController {
-    private final MicroService microService;
+public class ContainerController {
+    private final ContainerService containerService;
 
-    public MicroController(MicroService microService){
-        this.microService = microService;
+    public ContainerController(ContainerService containerService){
+        this.containerService = containerService;
     }
 
     @RequestMapping(path = "/getImage", method = RequestMethod.POST)
     @CrossOrigin
     public void getImage(/*String nodeName*/){
-        microService.getImage("2414151");
+        containerService.getImage("2414151");
     }
 
     @RequestMapping(path = "/pullImage", method = RequestMethod.POST)
@@ -53,17 +52,17 @@ public class MicroController {
     @RequestMapping(path = "/deleteImage", method = RequestMethod.POST)
     @CrossOrigin
     public void deleteImage(/*String nodeName,*/ String imageRepository, String imageTag){
-        microService.deleteImage(imageRepository, imageTag);
+        containerService.deleteImage(imageRepository, imageTag);
     }
     @RequestMapping(path = "/deployService", method = RequestMethod.POST)
     @CrossOrigin
     public void deployService(@Param("nodeName") String nodeName, @Param("serviceName")String serviceName){
-        microService.deployService(nodeName,serviceName);
+        containerService.deployService(nodeName,serviceName);
     }
 
     @RequestMapping(path = "/offService", method = RequestMethod.POST)
     @CrossOrigin
     public void offService(String nodeName, String serviceName){
-        microService.offService(nodeName,serviceName);
+        containerService.offService(nodeName,serviceName);
     }
 }

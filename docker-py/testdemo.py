@@ -1,26 +1,29 @@
 from docker import client
 import sys
 
-def offContainer(containerName,ip):
+def offContainer():
     mydocker = client.from_env()
 
-    container = mydocker.containers.get(containerName)
+    container = mydocker.containers.get("eureka")
     container.stop();
-    container = mydocker.containers.get(containerName)
+    container = mydocker.containers.get("eureka")
+    print(container.status)
     if container.status == "exited":
         container.remove();
+
         container_list = mydocker.containers.list();
-        if container not in container_list:
-            print("close success")
-        else:
+
+        if container in container_list:
             print("close failure")
+        else:
+            print("close success")
     else:
         print("close failure")
 
 
 
 def main(argv):
-    offContainer(argv[1],"127.0.0.1")
+    offContainer()
 
 if __name__ == "__main__":
     main(sys.argv)

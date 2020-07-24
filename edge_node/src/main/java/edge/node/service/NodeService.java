@@ -3,14 +3,13 @@ package edge.node.service;
 
 import com.alibaba.fastjson.JSON;
 import edge.node.mapper.NodeMapper;
-import edge.node.mapper.ServiceMapper;
+import edge.node.mapper.ImageMapper;
 import edge.node.model.*;
 import edge.node.model.api.LogFeign;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
-import java.net.InetAddress;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,14 +24,14 @@ import org.apache.logging.log4j.Logger;
 public class NodeService {
     private static final String mysqlSdfPatternString = "yyyy-MM-dd HH:mm:ss";
     private final NodeMapper nodeMapper;
-    private final ServiceMapper serviceMapper;
+    private final ImageMapper imageMapper;
     private final LogFeign logFeign;
     private static final Logger logger = LogManager.getLogger(NodeService.class);
 
-    public NodeService(NodeMapper nodeMapper, LogFeign logFeign, ServiceMapper serviceMapper){
+    public NodeService(NodeMapper nodeMapper, LogFeign logFeign, ImageMapper imageMapper){
         this.nodeMapper = nodeMapper;
         this.logFeign = logFeign;
-        this.serviceMapper = serviceMapper;
+        this.imageMapper = imageMapper;
     }
 
     //节点注册逻辑要求改
@@ -52,8 +51,8 @@ public class NodeService {
                     node.getRunAt(), node.getEndLastAt(),
                     node.getCpu(), 0, node.getMemory(), 0, node.getIp(),
                     node.getRemark());
-            serviceMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/eureka","latest",false,"eureka");
-            serviceMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/zuul","latest",false,"zuul");
+            imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/eureka","latest",false,"eureka");
+            imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/zuul","latest",false,"zuul");
             Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
             if (test == null)
                 return null;
@@ -265,26 +264,4 @@ public class NodeService {
         }
     }
 
-
-
-
-
-    public void pytest(String ip){
-        try {
-            String exe = "python";
-            String command = "C:\\Users\\guoxidong\\Desktop\\docketTest\\getimage.py";
-            String[] cmdArr = new String[] { exe, command };
-            Process process = Runtime.getRuntime().exec(cmdArr);
-            BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            while( ( line = in.readLine() ) != null ) {
-                System.out.println(line);
-            }
-            in.close();
-            int result = process.waitFor();
-            System.out.println("执行结果:" + result);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }
