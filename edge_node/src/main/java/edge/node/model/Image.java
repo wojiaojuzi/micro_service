@@ -13,10 +13,10 @@ public class Image {
 
     private String imageTag;
 
-    private boolean imageStatus;
+    private String imageStatus;
 
-    public Image(String nodeName, String imageId, String imageShortId, String imageRepository,
-                 String imageTag, boolean imageStatus, String serviceName){
+    public Image(String nodeName, String serviceName, String imageId, String imageShortId, String imageRepository,
+                 String imageTag, String imageStatus){
         this.nodeName = nodeName;
         this.imageId = imageId;
         this.imageRepository = imageRepository;
@@ -65,11 +65,11 @@ public class Image {
         this.imageTag = imageTag;
     }
 
-    public boolean getImageStatus() {
+    public String getImageStatus() {
         return this.imageStatus;
     }
 
-    public void setImageStatus(boolean imageStatus) {
+    public void setImageStatus(String imageStatus) {
         this.imageStatus = imageStatus;
     }
 

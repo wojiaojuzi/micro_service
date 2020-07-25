@@ -34,8 +34,8 @@ public class ContainerService {
     }
 
     public boolean pullImage(String nodeName, String serviceName){
-        boolean imageStatus = imageMapper.getImageStatusByNodeNameAndServiceName(nodeName,serviceName);
-        if(imageStatus == false) {
+        String imageStatus = imageMapper.getImageStatusByNodeNameAndServiceName(nodeName,serviceName);
+        if(imageStatus.equals("未下载")) {
             try {
                 String ip = nodeMapper.getNodeByNodeName(nodeName).getIp();
                 String repository = imageMapper.getRepositoryByNodeNameAndServiceName(nodeName,serviceName);
@@ -54,7 +54,7 @@ public class ContainerService {
                         System.out.println(recv[0]+" "+recv[1]);
                         imageMapper.updataImageIdByNodeNameAndServiceName(nodeName,serviceName,recv[0]);
                         imageMapper.updataImageShortIdByNodeNameAndServiceName(nodeName,serviceName,recv[1]);
-                        imageMapper.updataImageStatusByNodeNameAndServiceName(nodeName,serviceName,true);
+                        imageMapper.updataImageStatusByNodeNameAndServiceName(nodeName,serviceName,"已下载");
                     }
                 }
                 in.close();
@@ -72,8 +72,8 @@ public class ContainerService {
         String ip = nodeMapper.getNodeByNodeName(nodeName).getIp();
         String repository = imageMapper.getRepositoryByNodeNameAndServiceName(nodeName,serviceName);
         String tag = imageMapper.getTagByNodeNameAndServiceName(nodeName,serviceName);
-        boolean imageStatus = imageMapper.getImageStatusByNodeNameAndServiceName(nodeName,serviceName);
-        if(imageStatus == true) {
+        String imageStatus = imageMapper.getImageStatusByNodeNameAndServiceName(nodeName,serviceName);
+        if(imageStatus.equals("已下载")) {
             try {
                 String exe = "python";
                 String command = "./docker-py/deleteImage.py";
@@ -88,7 +88,7 @@ public class ContainerService {
                     /*line = in.readLine();
                     System.out.println(line);
                     String recv[] = line.split(" ");*/
-                    imageMapper.updataImageStatusByNodeNameAndServiceName(nodeName,serviceName,false);
+                    imageMapper.updataImageStatusByNodeNameAndServiceName(nodeName,serviceName,"未下载");
 
                     in.close();
                     return true;
@@ -136,8 +136,8 @@ public class ContainerService {
         String port = servicePort.portmap.get(serviceName);
         String repository = imageMapper.getRepositoryByNodeNameAndServiceName(nodeName,serviceName);
         String tag = imageMapper.getTagByNodeNameAndServiceName(nodeName,serviceName);
-        boolean imageStatus = imageMapper.getImageStatusByNodeNameAndServiceName(nodeName, serviceName);
-        if(createNetwork(nodeName)==true && imageStatus==true){
+        String imageStatus = imageMapper.getImageStatusByNodeNameAndServiceName(nodeName, serviceName);
+        if(createNetwork(nodeName)==true && imageStatus.equals("已下载")){
             try {
                 //File dir = new File("D:\\micro_service\\docker-py");
                 String exe = "python";
@@ -152,7 +152,12 @@ public class ContainerService {
                             line = in.readLine();
                             String[] args = line.split(" ");
                             //System.out.println(args);
-                            containerMapper.createContainer(nodeName, serviceName,"null",args[0],args[1],args[2],args[3]);
+                            //containerMapper.createContainer(nodeName, serviceName,"null",args[0],args[1],args[2],args[3]);
+                            containerMapper.updateserviceStatusByNodeNameAndServiceName(nodeName, serviceName,"null");
+                            containerMapper.updatecontainerIdByNodeNameAndServiceName(nodeName, serviceName,args[0]);
+                            containerMapper.updatecontainerIdByNodeNameAndServiceName(nodeName, serviceName,args[1]);
+                            containerMapper.updatecontainerShortIdByNodeNameAndServiceName(nodeName, serviceName,args[2]);
+                            containerMapper.updateContainerStatusByNodeNameAndServiceName(nodeName, serviceName,args[3]);
                             System.out.println(serviceName+"容器启动成功");
                             return true;
                         }
@@ -184,7 +189,8 @@ public class ContainerService {
                     System.out.println(line);
                     if(line.equals("close success")){
                         System.out.println(serviceName+"容器关闭成功");
-                        containerMapper.offContainer(nodeName,serviceName);
+                        containerMapper.updateContainerStatusByNodeNameAndServiceName(nodeName, serviceName,"uncreated");
+                        containerMapper.updateserviceStatusByNodeNameAndServiceName(nodeName, serviceName,"null");
                         in.close();
                         return true;
                     }

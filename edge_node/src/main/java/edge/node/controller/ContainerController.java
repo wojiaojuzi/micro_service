@@ -1,5 +1,7 @@
 package edge.node.controller;
 
+import edge.node.model.Response.HttpResponseContent;
+import edge.node.model.Response.ResponseEnum;
 import edge.node.service.ContainerService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -35,14 +37,24 @@ public class ContainerController {
     @ApiOperation(value = "下载镜像")
     @RequestMapping(path = "/pullImage", method = RequestMethod.POST)
     @CrossOrigin
-    public void pullImage(@Param("nodeName") String nodeName, @Param("serviceName")String serviceName){
-        containerService.pullImage(nodeName,serviceName);
+    public HttpResponseContent pullImage(@Param("nodeName") String nodeName, @Param("serviceName")String serviceName){
+        HttpResponseContent response = new HttpResponseContent();
+        if(containerService.pullImage(nodeName,serviceName)){
+            response.setCode(ResponseEnum.SUCCESS.getCode());
+            response.setMessage(ResponseEnum.SUCCESS.getMessage());
+        }
+        else{
+            response.setCode(ResponseEnum.ERROR.getCode());
+            response.setMessage(ResponseEnum.ERROR.getMessage());
+        }
+        return response;
     }
 
     @ApiOperation(value = "删除镜像")
     @RequestMapping(path = "/deleteImage", method = RequestMethod.POST)
     @CrossOrigin
     public void deleteImage(@Param("nodeName") String nodeName, @Param("serviceName")String serviceName){
+        System.out.println("删除镜像进来");
         containerService.deleteImage(nodeName, serviceName);
     }
 

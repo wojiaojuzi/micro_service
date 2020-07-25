@@ -2,6 +2,7 @@ package edge.node.service;
 
 
 import com.alibaba.fastjson.JSON;
+import edge.node.mapper.ContainerMapper;
 import edge.node.mapper.NodeMapper;
 import edge.node.mapper.ImageMapper;
 import edge.node.model.*;
@@ -26,12 +27,14 @@ public class NodeService {
     private final NodeMapper nodeMapper;
     private final ImageMapper imageMapper;
     private final LogFeign logFeign;
+    private final ContainerMapper containerMapper;
     private static final Logger logger = LogManager.getLogger(NodeService.class);
 
-    public NodeService(NodeMapper nodeMapper, LogFeign logFeign, ImageMapper imageMapper){
+    public NodeService(NodeMapper nodeMapper, LogFeign logFeign, ImageMapper imageMapper,ContainerMapper containerMapper){
         this.nodeMapper = nodeMapper;
         this.logFeign = logFeign;
         this.imageMapper = imageMapper;
+        this.containerMapper = containerMapper;
     }
 
     //节点注册逻辑要求改
@@ -51,8 +54,10 @@ public class NodeService {
                     node.getRunAt(), node.getEndLastAt(),
                     node.getCpu(), 0, node.getMemory(), 0, node.getIp(),
                     node.getRemark());
-            imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/eureka","latest",false,"eureka");
-            imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/zuul","latest",false,"zuul");
+            imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/eureka","latest","未下载","eureka");
+            imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/zuul","latest","未下载","zuul");
+            containerMapper.createContainer(node.getNodeName(),"eureka","off","eureka",null,null,"uncreated");
+            containerMapper.createContainer(node.getNodeName(),"zuul","off","zuul",null,null,"uncreated");
             Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
             if (test == null)
                 return null;
@@ -106,9 +111,11 @@ public class NodeService {
     }
 
     //删除节点逻辑要修改
-    public void nodeDelete(String node_name,String account){
-        nodeMapper.deleteNodeByNodeName(node_name);
-        logFeign.addLog(account,"删除节点:  节点名="+node_name);
+    public void nodeDelete(String nodeName,String account){
+        nodeMapper.deleteNodeByNodeName(nodeName);
+        imageMapper.deleteByNodeName(nodeName);
+        containerMapper.deleteContainerByNodeName(nodeName);
+        logFeign.addLog(account,"删除节点:  节点名="+nodeName);
     }
 
     public Node nodeGet(String node_name){ return nodeMapper.getNodeByNodeName(node_name);}

@@ -34,7 +34,7 @@ public class NodeController {
                                             @RequestParam("ip") String ip,
                                             @RequestParam("remark") String remark){
         HttpResponseContent response = new HttpResponseContent();
-        Node node = new Node(node_name, cpu, memory,ip,remark);
+        Node node = new Node(node_name, "","","",false,"","","",cpu, 0,memory,0,ip, remark);
         Node res = nodeService.nodeRegister(node,account);
         if (res == null) {
             response.setCode(ResponseEnum.ERROR.getCode());

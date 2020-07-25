@@ -31,11 +31,20 @@ public class Node {
 
     private String remark;
 
-    public Node(String nodeName, String cpu, String memory, String ip, String remark){
+    public Node(String nodeName, String location, String lon, String lat, boolean nodeStatus, String nodeCreateAt, String runAt, String endLastAt, String cpu, double cpuRate, String memory, double memRate, String ip, String remark) {
         this.nodeName = nodeName;
-        this.cpu = cpu;
-        this.memory = memory;
+        this.location = location;
+        this.lon = lon;
+        this.lat = lat;
+        this.nodeStatus = nodeStatus;
+        this.nodeCreateAt = nodeCreateAt;
+        this.runAt = runAt;
+        this.endLastAt = endLastAt;
         this.ip = ip;
+        this.cpu = cpu;
+        this.cpuRate = cpuRate;
+        this.memory = memory;
+        this.memRate = memRate;
         this.remark = remark;
     }
 
