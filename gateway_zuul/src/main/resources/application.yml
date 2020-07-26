@@ -26,12 +26,12 @@ management:
       show-details: ALWAYS
 
 ribbon:
-  ReadTimeout: 2000
-  ConnectTimeout: 2000
+  ReadTimeout: 120000
+  ConnectTimeout: 120000
 hystrix:
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 120000

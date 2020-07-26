@@ -44,7 +44,7 @@ public class PreRequestFilter extends ZuulFilter {
         //RequestContext ctx = RequestContext.getCurrentContext();
         //HttpServletRequest request = ctx.getRequest();
         //if(uri.contains(request.getRequestURI()))
-            return false;
+            return true;
         //return true;
     }
 
@@ -53,15 +53,17 @@ public class PreRequestFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
 
-        System.out.println(request.getParameter("account"));
-        String token = request.getParameter("token");
+        //System.out.println(request.getParameter("account"));
+        //String token = request.getParameter("Authentication-Token");
+        String token = request.getHeader("Authentication");//token
         System.out.println(token);
-        try {
+        //ctx.setResponseBody();
+        /*try {
             DecodedJWT jwt = CommonUtil.phraseJWT(token, "EdgeComputingService", ResponseEnum.INVALID_USER_TOKEN.getMessage());
             String account = JSONObject.parseObject(jwt.getSubject()).getString("account");
-            System.out.println("解析后的用户名："+account);
+            System.out.println("解析后的用户名："+account+"时间:"+jwt.getExpiresAt().getTime());
 
-            String token1 = zuulMapper.getTokenByAccount(account);
+            /*String token1 = zuulMapper.getTokenByAccount(account);
             System.out.println(token1);
             if(token.equals(token1))
                 System.out.println("验证通过");
@@ -69,7 +71,7 @@ public class PreRequestFilter extends ZuulFilter {
         } catch (Exception e) {
             e.printStackTrace();
             RequestContext.getCurrentContext().setSendZuulResponse(false);
-        }
+        }*/
         return null;
     }
 }
