@@ -1,9 +1,11 @@
 package edge.node.server;
 
 import edge.node.mapper.ContainerMapper;
+import edge.node.mapper.DeviceTestMapper;
 import edge.node.mapper.ImageMapper;
 import edge.node.mapper.NodeMapper;
 import edge.node.model.Container;
+import edge.node.model.DeviceTest;
 import edge.node.model.Image;
 import edge.node.model.Node;
 import io.swagger.annotations.ApiOperation;
@@ -24,12 +26,14 @@ public class PushSchedule {
     private final NodeMapper nodeMapper;
     private final ImageMapper imageMapper;
     private final ContainerMapper containerMapper;
+    private final DeviceTestMapper deviceTestMapper;
 
     @Autowired
-    public PushSchedule(NodeMapper nodeMapper,ImageMapper imageMapper,ContainerMapper containerMapper){
+    public PushSchedule(NodeMapper nodeMapper,ImageMapper imageMapper,ContainerMapper containerMapper,DeviceTestMapper deviceTestMapper){
         this.nodeMapper = nodeMapper;
         this.imageMapper = imageMapper;
         this.containerMapper = containerMapper;
+        this.deviceTestMapper = deviceTestMapper;
     }
 
     /**
@@ -73,6 +77,27 @@ public class PushSchedule {
         }
         maps.put("data", pushContainerData);
         NodeServer.sendInfo(maps);
+    }
+
+    @Scheduled(cron = "*/1 * * * * * ")
+    public void NodeSocketMessage() {
+        Map<String, Object> maps = new HashMap<>();
+        if (MapServer.getOnlineCount() > 0){
+            maps.put("type", "nodeData");
+            List<Node> nodeList = nodeMapper.get_all();
+            maps.put("data", nodeList);
+            MapServer.sendInfo(maps);
+        }
+    }
+    @Scheduled(cron = "*/1 * * * * * ")
+    public void DeviceSocketMessage() {
+        Map<String, Object> maps = new HashMap<>();
+        if (MapServer.getOnlineCount() > 0){
+            maps.put("type", "deviceData");
+            List<DeviceTest> deviceTestList= deviceTestMapper.getAllDevice();
+            maps.put("data", deviceTestList);
+            MapServer.sendInfo(maps);
+        }
     }
 
 }

@@ -4,7 +4,6 @@ package edge.node.controller;
 import edge.node.model.Node;
 import edge.node.model.Response.HttpResponseContent;
 import edge.node.model.Response.ResponseEnum;
-import edge.node.model.return_location;
 import edge.node.service.NodeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -95,26 +94,7 @@ public class NodeController {
         return nodeService.get_on_num();
     }
 
-    @ApiOperation(value = "查看所有节点位置")
-    @RequestMapping(path = "/getAllLocation")
-    @CrossOrigin
-    public List<return_location> get_all_location() {
-        return nodeService.get_all_location();
-    }
 
-    @ApiOperation(value = "查看启动节点位置")
-    @RequestMapping(path = "/getOnLocation")
-    @CrossOrigin
-    public List<return_location> get_on_location() {
-        return nodeService.get_on_location();
-    }
-
-    @ApiOperation(value = "查看关闭节点位置")
-    @RequestMapping(path = "/getOffLocation")
-    @CrossOrigin
-    public List<return_location> get_off_location(){
-        return nodeService.get_off_location();
-    }
 
     /*@ApiOperation(value = "节点微服务部署")
     @RequestMapping(path = "/deploy", method = RequestMethod.POST)

@@ -126,47 +126,6 @@ public class NodeService {
 
     public List<Node> get_all(){ return nodeMapper.get_all(); }
 
-    public List<return_location> get_all_location(){
-        List<Node> list = nodeMapper.get_all();
-        List<return_location> ans = new ArrayList<>();
-        for(int i=0;i<list.size();i++){
-            return_location p = new return_location();
-            p.setLocation(list.get(i).getLocation());
-            p.setLon(list.get(i).getLon());
-            p.setLat(list.get(i).getLat());
-            p.setValue(20);
-            ans.add(p);
-        }
-        return ans;
-    }
-
-    public List<return_location> get_on_location(){
-        List<Node> list = nodeMapper.get_on();
-        List<return_location> ans = new ArrayList<>();
-        for(int i=0;i<list.size();i++) {
-            return_location p = new return_location();
-            p.setLocation(list.get(i).getLocation());
-            p.setLon(list.get(i).getLon());
-            p.setLat(list.get(i).getLat());
-            p.setValue(20);
-            ans.add(p);
-        }
-        return ans;
-    }
-
-    public List<return_location> get_off_location(){
-        List<Node> list = nodeMapper.get_off();
-        List<return_location> ans = new ArrayList<>();
-        for(int i=0;i<list.size();i++) {
-            return_location p = new return_location();
-            p.setLocation(list.get(i).getLocation());
-            p.setLon(list.get(i).getLon());
-            p.setLat(list.get(i).getLat());
-            p.setValue(20);
-            ans.add(p);
-        }
-        return ans;
-    }
 
     public boolean deploy(String node_name,String account) throws IOException {
       /*  boolean ans = nodeMapper.geNodeStatusByNodeName(node_name);

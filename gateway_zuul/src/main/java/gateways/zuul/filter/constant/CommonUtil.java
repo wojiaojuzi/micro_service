@@ -5,6 +5,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
 import java.util.Date;
@@ -29,7 +30,7 @@ public class CommonUtil {
         return token;
     }
 
-    public static DecodedJWT phraseJWT(String token, String secret, String message) throws Exception {
+    public static DecodedJWT phraseJWT(String token, String secret, String message) {
         Algorithm algorithm = Algorithm.HMAC256(secret);
         DecodedJWT jwt;
         try {
@@ -39,7 +40,7 @@ public class CommonUtil {
             jwt = verifier.verify(token);
         } catch (JWTVerificationException exception) {
             //无效签名或者无效token
-            throw new EdgeComputingServiceException(ResponseEnum.ERROR.getCode(), ResponseEnum.ERROR.getMessage());
+            throw new TokenExpiredException("token time out");
         }
         return jwt;
     }
