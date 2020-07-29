@@ -138,7 +138,7 @@
             <artifactId>spring-cloud-netflix-eureka-client</artifactId>
             <version>2.2.1.RELEASE</version>
             <scope>compile</scope>
-        </dependency>- ->
+        </dependency>-->
 
 
 
