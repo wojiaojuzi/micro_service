@@ -1,5 +1,4 @@
 from docker import client
-import yaml
 import os
 import sys
 def get_image(ip):

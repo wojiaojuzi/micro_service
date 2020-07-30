@@ -33,6 +33,7 @@ public class NodeController {
                                             @RequestParam("ip") String ip,
                                             @RequestParam("remark") String remark){
         HttpResponseContent response = new HttpResponseContent();
+        System.out.println("node进来");
         Node node = new Node(node_name, "","","",false,"","","",cpu, 0,memory,0,ip, remark);
         Node res = nodeService.nodeRegister(node,account);
         if (res == null) {
