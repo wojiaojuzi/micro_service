@@ -45,6 +45,7 @@ public class PreRequestFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
+        System.out.println("000");
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         if(uri.contains(request.getRequestURI()))
@@ -56,6 +57,7 @@ public class PreRequestFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
+        System.out.println("111");
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
 
@@ -67,7 +69,7 @@ public class PreRequestFilter extends ZuulFilter {
             DecodedJWT jwt = CommonUtil.phraseJWT(token, "EdgeComputingService", ResponseEnum.INVALID_USER_TOKEN.getMessage());
             String account = JSONObject.parseObject(jwt.getSubject()).getString("account");
             System.out.println("解析后的用户名："+account+"时间:"+jwt.getExpiresAt().getTime());
-
+            System.out.println("111");
             String token1 = zuulMapper.getTokenByAccount(account);
             System.out.println(token1);
             if(token.equals(token1))

@@ -4,7 +4,8 @@ import sys
 
 
 def pullImage(repository, tag, ip):
-    mydocker = client.from_env()
+    #mydocker = client.from_env()
+    mydocker = client.DockerClient(base_url=ip+":2375")
 
     image = mydocker.images.pull(repository=repository,tag=tag)
     #nowimage = mydocker.images.pull(repository="registry.cn-hangzhou.aliyuncs.com/edge_node/eureka", tag="latest")

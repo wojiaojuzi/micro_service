@@ -35,18 +35,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docker-py/ttt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/.idea/docketTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/.idea/docketTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-py/createNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/createNetwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/deleteImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/deleteImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/getContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/getContainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/getImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/getImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/openTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/openTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-py/offContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/offContainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/pullImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/pullImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/runContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/runContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/ContainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/ContainerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/DeviceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/DeviceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/server/PushSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/server/PushSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/ContainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/ContainerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/server/PushSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/server/PushSchedule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/ContainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/ContainerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,16 +141,14 @@
       <recent name="D:\micro_service\manager" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NodeApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.LogerApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,6 +159,10 @@
     </configuration>
     <configuration name="server-0.0.1-SNAPSHOT.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/eureka_server/server-0.0.1-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="zuul-0.0.1-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/gateway_zuul/zuul-0.0.1-SNAPSHOT.jar" />
       <method v="2" />
     </configuration>
     <configuration name="LogerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -185,19 +192,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="eureka_server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="eureka.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="eureka.server.ServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gateway_zuul" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="gateways.zuul.ZuulApplication" />
@@ -223,8 +217,8 @@
         <item itemvalue="Spring Boot.NodeApplication" />
         <item itemvalue="Spring Boot.application" />
         <item itemvalue="JAR Application.server-0.0.1-SNAPSHOT.jar" />
+        <item itemvalue="JAR Application.zuul-0.0.1-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.manager-0.0.1-SNAPSHOT.jar" />
-        <item itemvalue="Spring Boot.ServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -368,7 +362,11 @@
       <workItem from="1596035747083" duration="1291000" />
       <workItem from="1596039611341" duration="613000" />
       <workItem from="1596074433680" duration="1405000" />
-      <workItem from="1596092674323" duration="497000" />
+      <workItem from="1596092674323" duration="2596000" />
+      <workItem from="1596098436355" duration="4898000" />
+      <workItem from="1596159767677" duration="1290000" />
+      <workItem from="1596215747384" duration="2659000" />
+      <workItem from="1596259950796" duration="1655000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -566,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596040129652</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="边缘节点管理系统">
+      <created>1596093310868</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1596093310868</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,10 +618,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="410" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1596036534676" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1596011944040">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1596103907671">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596011944040" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596103907671" />
     <state x="421" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593756732458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -633,10 +638,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2" timestamp="1596040129143">
+    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2" timestamp="1596093309948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596040129143" />
+    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596093309948" />
     <state x="70" y="262" key="FileChooserDialogImpl" timestamp="1596039954659">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -649,38 +654,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="641" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594046818024" />
-    <state width="1493" height="235" key="GridCell.Tab.0.bottom" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.0.bottom" timestamp="1596266669226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
-    <state width="1493" height="235" key="GridCell.Tab.0.center" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
+    <state width="1493" height="286" key="GridCell.Tab.0.center" timestamp="1596266669225">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
-    <state width="1493" height="235" key="GridCell.Tab.0.left" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596266669225" />
+    <state width="1493" height="286" key="GridCell.Tab.0.left" timestamp="1596266669225">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
-    <state width="1493" height="235" key="GridCell.Tab.0.right" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596266669225" />
+    <state width="1493" height="286" key="GridCell.Tab.0.right" timestamp="1596266669226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
-    <state width="1493" height="235" key="GridCell.Tab.1.bottom" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
+    <state width="1493" height="286" key="GridCell.Tab.1.bottom" timestamp="1596266669226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
-    <state width="1493" height="235" key="GridCell.Tab.1.center" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
+    <state width="1493" height="286" key="GridCell.Tab.1.center" timestamp="1596266669226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
-    <state width="1493" height="235" key="GridCell.Tab.1.left" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
+    <state width="1493" height="286" key="GridCell.Tab.1.left" timestamp="1596266669226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
-    <state width="1493" height="235" key="GridCell.Tab.1.right" timestamp="1596077737665">
+    <state width="1493" height="286" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
+    <state width="1493" height="286" key="GridCell.Tab.1.right" timestamp="1596266669226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="235" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596077737665" />
+    <state width="1493" height="286" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1596033376433">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -689,10 +694,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596039895963" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596040145184">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596093317395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596040145184" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596093317395" />
     <state x="394" y="163" key="com.intellij.ide.util.TipDialog" timestamp="1596028920135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -701,25 +706,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1594046962694" />
-    <state x="193" y="148" width="1149" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596036028756">
+    <state x="193" y="148" width="1149" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596219767028">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="193" y="148" width="1149" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1596036028756" />
+    <state x="193" y="148" width="1149" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1596219767028" />
     <state x="578" y="307" key="git4idea.ui.GitResetDialog" timestamp="1595603982797">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="307" key="git4idea.ui.GitResetDialog/0.0.1536.824@0.0.1536.824" timestamp="1595603982797" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595680571830">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596220574685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595680571830" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596220574685" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="com.netflix.zuul.exception.ZuulException" package="com.netflix.zuul.exception" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

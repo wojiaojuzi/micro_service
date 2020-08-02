@@ -185,8 +185,10 @@ public class ContainerService {
                 Process process = Runtime.getRuntime().exec(cmdArr);
                 BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
                 String line;
+                System.out.println("line之前");
                     line = in.readLine();
                     System.out.println(line);
+                System.out.println("line之后");
                     if(line.equals("close success")){
                         System.out.println(serviceName+"容器关闭成功");
                         containerMapper.updateContainerStatusByNodeNameAndServiceName(nodeName, serviceName,"uncreated");

@@ -9,11 +9,21 @@ public class DeviceTest {
 
     private String deviceType;
 
-    public DeviceTest(String nodeName, String deviceId, String deviceStatus, String deviceType) {
+    private String cpuRate;
+
+    private String memoryRate;
+
+    private String batteryRate;
+
+    public DeviceTest(String nodeName, String deviceId, String deviceStatus, String deviceType,
+                      String cpuRate,String memoryRate,String batteryRate) {
         this.nodeName = nodeName;
         this.deviceId = deviceId;
         this.deviceStatus = deviceStatus;
         this.deviceType = deviceType;
+        this.cpuRate = cpuRate;
+        this.memoryRate = memoryRate;
+        this.batteryRate = batteryRate;
     }
 
     public String getNodeName() {
@@ -46,5 +56,29 @@ public class DeviceTest {
 
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
+    }
+
+    public String getCpuRate() {
+        return this.cpuRate;
+    }
+
+    public void setCpuRate(String cpuRate) {
+        this.cpuRate = cpuRate;
+    }
+
+    public String getMemoryRate() {
+        return this.memoryRate;
+    }
+
+    public void setMemoryRate(String memoryRate) {
+        this.memoryRate = memoryRate;
+    }
+
+    public String getBatteryRate() {
+        return this.batteryRate;
+    }
+
+    public void setBatteryRate(String batteryRate) {
+        this.batteryRate = batteryRate;
     }
 }

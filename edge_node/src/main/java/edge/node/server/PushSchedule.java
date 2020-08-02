@@ -39,7 +39,7 @@ public class PushSchedule {
     /**
      * 推送消息到前台
      */
-    @Scheduled(cron = "*/1 * * * * * ")
+    //@Scheduled(cron = "*500")
     public void mapSocketMessage(){
         Map<String, Object> maps = new HashMap<>();
         maps.put("type", "sendMessage");
@@ -47,7 +47,8 @@ public class PushSchedule {
         MapServer.sendInfo(maps);
     }
 
-    @Scheduled(cron = "*/1 * * * * * ")
+    //@Scheduled(cron = "*/1 * * * * * ")
+    @Scheduled(fixedRate = 200)
     public void ImageSocketMessage() {
         Map<String, Object> maps = new HashMap<>();
         if (NodeServer.getOnlineCount() > 0)
@@ -63,7 +64,8 @@ public class PushSchedule {
             NodeServer.sendInfo(maps);
     }
 
-    @Scheduled(cron = "*/1 * * * * * ")
+    //@Scheduled(cron = "*/1 * * * * * ")
+    @Scheduled(fixedRate = 200)
     public void ServiceSocketMessage() {
         Map<String, Object> maps = new HashMap<>();
         if (NodeServer.getOnlineCount() > 0)
@@ -79,17 +81,20 @@ public class PushSchedule {
         NodeServer.sendInfo(maps);
     }
 
-    @Scheduled(cron = "*/1 * * * * * ")
+    //@Scheduled(cron = "*/1 * * * * * ")
+    @Scheduled(fixedRate = 200)
     public void NodeSocketMessage() {
         Map<String, Object> maps = new HashMap<>();
         if (MapServer.getOnlineCount() > 0){
             maps.put("type", "nodeData");
             List<Node> nodeList = nodeMapper.get_all();
+            //System.out.println(nodeList);
             maps.put("data", nodeList);
             MapServer.sendInfo(maps);
         }
     }
-    @Scheduled(cron = "*/1 * * * * * ")
+    //@Scheduled(cron = "*/1 * * * * * ")
+    @Scheduled(fixedRate = 200)
     public void DeviceSocketMessage() {
         Map<String, Object> maps = new HashMap<>();
         if (MapServer.getOnlineCount() > 0){

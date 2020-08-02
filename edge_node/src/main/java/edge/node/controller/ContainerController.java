@@ -87,6 +87,7 @@ public class ContainerController {
     @RequestMapping(path = "/offService", method = RequestMethod.POST)
     @CrossOrigin
     public HttpResponseContent offService(String nodeName, String serviceName){
+        System.out.println("停止服务");
         HttpResponseContent response = new HttpResponseContent();
         if(containerService.offService(nodeName,serviceName)){
             response.setCode(ResponseEnum.SUCCESS.getCode());
