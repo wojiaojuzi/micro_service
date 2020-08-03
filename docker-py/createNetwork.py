@@ -1,9 +1,7 @@
 from docker import client
-import os
 import sys
 
 def createNetwork(ip):
-    #mydocker = client.from_env()
     #mydocker = client.DockerClient(base_url=ip + ":2375")
     mydocker = client.DockerClient(base_url=ip+":2375")
     networks = mydocker.networks.list()

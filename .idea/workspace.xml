@@ -35,23 +35,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-py/ttt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/MonitorApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeviceMonitor/src/test/java/device/monitor/MonitorApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/createNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/createNetwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/deleteImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/deleteImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-py/getContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/getContainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/getImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/getImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/offContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/offContainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/pullImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/pullImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/runContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/runContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/ContainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/ContainerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/DeviceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/DeviceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/server/PushSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/server/PushSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-py/ttt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/CheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/controller/CheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Bracelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/Bracelet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/CheckBracelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/CheckBracelet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/CheckDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/CheckDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/CheckVervel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/CheckVervel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/DeviceAndTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/DeviceAndTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Vervel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/Vervel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/server/NodeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/server/NodeServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/CheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/service/CheckService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/ContainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/ContainerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/server/PushSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/server/PushSchedule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/server/NodeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/server/NodeServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/ContainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/ContainerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +93,7 @@
   <component name="Git.Settings">
     <option name="PATH_TO_GIT" value="E:\Git\Git\cmd\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -116,23 +140,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../git_repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\micro_service" />
-      <recent name="D:\micro_service\edge_node\src\main\java\edge\node\model" />
-      <recent name="D:\micro_service\edge_node\src\test" />
-      <recent name="D:\micro_service\edge_node\src\test\java" />
-      <recent name="D:\micro_service\manager\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="gateways.zuul.filter" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\micro_service\eureka_server" />
       <recent name="D:\micro_service\edge_node" />
@@ -140,15 +154,29 @@
       <recent name="D:\micro_service\loger" />
       <recent name="D:\micro_service\manager" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="device.monitor.service" />
+      <recent name="device.monitor.controller" />
+      <recent name="gateways.zuul.filter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\micro_service\DeviceMonitor\src\main\java\device\monitor\model" />
+      <recent name="D:\micro_service" />
+      <recent name="D:\micro_service\edge_node\src\main\java\edge\node\model" />
+      <recent name="D:\micro_service\edge_node\src\test" />
+      <recent name="D:\micro_service\edge_node\src\test\java" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.LogerApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.NodeApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,6 +203,13 @@
     <configuration name="ManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="manager" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.manager.ManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="DeviceMonitor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="device.monitor.MonitorApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -367,6 +402,8 @@
       <workItem from="1596159767677" duration="1290000" />
       <workItem from="1596215747384" duration="2659000" />
       <workItem from="1596259950796" duration="1655000" />
+      <workItem from="1596349887896" duration="1997000" />
+      <workItem from="1596453499440" duration="1388000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -571,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596093310868</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="边缘节点管理系统">
+      <created>1596349917562</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1596349917563</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,14 +658,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1595568004683" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596454132664">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1596454132664" />
     <state x="410" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596036534676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="410" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1596036534676" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1596103907671">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1596350959917">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596103907671" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596350959917" />
     <state x="421" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593756732458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -634,14 +682,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="345" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1595514494741" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596454701085">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596454701085" />
     <state x="467" y="69" key="#test" timestamp="1594037436618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2" timestamp="1596093309948">
+    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2" timestamp="1596349916732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596093309948" />
+    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596349916732" />
     <state x="70" y="262" key="FileChooserDialogImpl" timestamp="1596039954659">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -654,38 +706,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="641" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594046818024" />
-    <state width="1493" height="286" key="GridCell.Tab.0.bottom" timestamp="1596266669226">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
-    <state width="1493" height="286" key="GridCell.Tab.0.center" timestamp="1596266669225">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596266669225" />
-    <state width="1493" height="286" key="GridCell.Tab.0.left" timestamp="1596266669225">
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596266669225" />
-    <state width="1493" height="286" key="GridCell.Tab.0.right" timestamp="1596266669226">
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
-    <state width="1493" height="286" key="GridCell.Tab.1.bottom" timestamp="1596266669226">
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
+    <state width="1493" height="223" key="GridCell.Tab.1.bottom" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
-    <state width="1493" height="286" key="GridCell.Tab.1.center" timestamp="1596266669226">
+    <state width="1493" height="223" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
+    <state width="1493" height="223" key="GridCell.Tab.1.center" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
-    <state width="1493" height="286" key="GridCell.Tab.1.left" timestamp="1596266669226">
+    <state width="1493" height="223" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
+    <state width="1493" height="223" key="GridCell.Tab.1.left" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
-    <state width="1493" height="286" key="GridCell.Tab.1.right" timestamp="1596266669226">
+    <state width="1493" height="223" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
+    <state width="1493" height="223" key="GridCell.Tab.1.right" timestamp="1596454208199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="286" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596266669226" />
+    <state width="1493" height="223" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596454208199" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1596033376433">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -694,10 +746,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596039895963" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596093317395">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596349935811">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596093317395" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596349935811" />
     <state x="394" y="163" key="com.intellij.ide.util.TipDialog" timestamp="1596028920135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -714,6 +766,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="307" key="git4idea.ui.GitResetDialog/0.0.1536.824@0.0.1536.824" timestamp="1595603982797" />
+    <state x="178" y="22" key="new project wizard" timestamp="1596453904202">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="22" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1596453904202" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596220574685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

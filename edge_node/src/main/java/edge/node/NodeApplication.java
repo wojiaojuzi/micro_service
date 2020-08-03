@@ -1,6 +1,5 @@
 package edge.node;
 
-import edge.node.schedule.NodeSchedule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

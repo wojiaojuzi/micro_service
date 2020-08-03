@@ -10,6 +10,6 @@ import lombok.Data;
 @Configuration
 @PropertySource("classpath:application.yml")
 @ConfigurationProperties(prefix = "serviceport")
-public class serviceport {
+public class ServicePort {
     public Map<String,String> portmap;
 }

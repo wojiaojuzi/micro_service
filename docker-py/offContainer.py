@@ -2,9 +2,8 @@ from docker import client
 import sys
 
 def offContainer(containerName,ip):
-    #mydocker = client.from_env()
-    #mydocker = client.DockerClient(base_url=ip + ":2375")
-    mydocker = client.DockerClient(base_url="192.168.194.128:2375")
+    mydocker = client.DockerClient(base_url=ip + ":2375")
+    #mydocker = client.DockerClient(base_url="192.168.194.128:2375")
     containerNames=[]
     containers = mydocker.containers.list()
     for container in containers:
@@ -28,8 +27,8 @@ def offContainer(containerName,ip):
 
 
 def main(argv):
-    #offContainer(argv[1],argv[2])
-    offContainer("222","222")
+    offContainer(argv[1],argv[2])
+    #offContainer("222","222")
 
 if __name__ == "__main__":
     main(sys.argv)

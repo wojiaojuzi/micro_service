@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5ec82be-9355-46e7-b52d-dfed2e9cdb64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ttt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/createNetwork.py" afterDir="false" />
@@ -30,15 +29,13 @@
       <change beforePath="$PROJECT_DIR$/offContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/offContainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pullImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pullImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/runContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/ContainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/ContainerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/DeviceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/DeviceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/server/PushSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/server/PushSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ttt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/server/NodeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/server/NodeServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/controller/ContainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/controller/ContainerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/server/PushSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/server/PushSchedule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/server/NodeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/server/NodeServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +210,7 @@
       <workItem from="1596215895367" duration="2421000" />
       <workItem from="1596261234646" duration="635000" />
       <workItem from="1596284013861" duration="208000" />
+      <workItem from="1596350246283" duration="1987000" />
     </task>
     <servers />
   </component>
@@ -252,10 +250,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596284221536" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1596095574896">
+    <state x="270" y="57" key="SettingsEditor" timestamp="1596355050349">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596095574896" />
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596355050349" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/docker_py$offContainer.coverage" NAME="offContainer Coverage Results" MODIFIED="1596284178596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

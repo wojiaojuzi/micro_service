@@ -1,10 +1,5 @@
-package edge.node.controller;
+package device.monitor.controller;
 
-import edge.node.model.CheckBracelet;
-import edge.node.model.CheckDevice;
-import edge.node.model.CheckVervel;
-import edge.node.service.CheckService;
-import edge.node.service.NodeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -15,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/check")
+@RequestMapping(path = "/device")
 @EnableAutoConfiguration
 @Api(tags = "Check", description = "边缘设备相关操作")
 public class CheckController {
-    private final NodeService nodeService;
+    /*private final NodeService nodeService;
     private final CheckService checkService;
 
     public CheckController(NodeService nodeService, CheckService checkService) {
@@ -46,5 +41,5 @@ public class CheckController {
     @CrossOrigin
     public List<CheckVervel> check_vervel(){
         return checkService.check_vervel();
-    }
+    }*/
 }

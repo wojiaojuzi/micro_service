@@ -1,19 +1,16 @@
-package edge.node.service;
+package device.monitor.service;
 
 import com.alibaba.fastjson.JSON;
-import edge.node.mapper.NodeMapper;
-import edge.node.model.*;
-import org.springframework.http.ResponseEntity;
+//import device.monitor.mapper.NodeMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class CheckService {
-    private final NodeMapper nodeMapper;
+    /*private final NodeMapper nodeMapper;
 
     public CheckService(NodeMapper nodeMapper){
         this.nodeMapper = nodeMapper;
@@ -137,5 +134,5 @@ public class CheckService {
         }
         System.out.println(ans);
         return ans;
-    }
+    }*/
 }

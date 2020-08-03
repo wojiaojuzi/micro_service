@@ -1,4 +1,4 @@
-package edge.node.model;
+package device.monitor.model;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,8 +19,20 @@ public class Task {
     @ApiModelProperty(value = "押解人姓名")
     private String userName;
 
+    @ApiModelProperty(value = "任务等级")
+    private String level;
+
     @ApiModelProperty(value = "任务详情")
     private String detail;
+
+    public Task(String taskNo, String prisonerName, String carNo, String userName, String level, String detail) {
+        this.taskNo = taskNo;
+        this.prisonerName = prisonerName;
+        this.carNo = carNo;
+        this.userName = userName;
+        this.level = level;
+        this.detail = detail;
+    }
 
     public String getTaskNo() {
         return this.taskNo;
@@ -46,6 +58,14 @@ public class Task {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     public String getDetail() {

@@ -2,7 +2,7 @@ package edge.node.service;
 
 import edge.node.mapper.ContainerMapper;
 import edge.node.model.Image;
-import edge.node.model.serviceport;
+import edge.node.model.ServicePort;
 import edge.node.mapper.NodeMapper;
 import edge.node.mapper.ImageMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +18,11 @@ public class ContainerService {
     private final NodeMapper nodeMapper;
     private final ContainerMapper containerMapper;
     @Autowired
-    private final serviceport servicePort;
+    private final ServicePort servicePort;
 
     @Autowired
     public ContainerService(ImageMapper imageMapper, NodeMapper nodeMapper,
-                            ContainerMapper containerMapper, serviceport servicePort){
+                            ContainerMapper containerMapper, ServicePort servicePort){
         this.imageMapper = imageMapper;
         this.nodeMapper = nodeMapper;
         this.containerMapper = containerMapper;
@@ -185,10 +185,8 @@ public class ContainerService {
                 Process process = Runtime.getRuntime().exec(cmdArr);
                 BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
                 String line;
-                System.out.println("line之前");
-                    line = in.readLine();
-                    System.out.println(line);
-                System.out.println("line之后");
+                line = in.readLine();
+                System.out.println(line);
                     if(line.equals("close success")){
                         System.out.println(serviceName+"容器关闭成功");
                         containerMapper.updateContainerStatusByNodeNameAndServiceName(nodeName, serviceName,"uncreated");

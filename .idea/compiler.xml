@@ -7,13 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka_server" />
+        <module name="DeviceMonitor" />
         <module name="edge_node" />
-        <module name="logger" />
-        <module name="manager" />
         <module name="gateway_zuul" />
+        <module name="manager" />
+        <module name="logger" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DeviceMonitor" target="1.8" />
       <module name="edge_node" target="1.8" />
       <module name="eureka_server" target="1.8" />
       <module name="gateway_zuul" target="1.8" />
@@ -23,6 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DeviceMonitor" options="-parameters" />
       <module name="edge_node" options="-parameters" />
       <module name="eureka_server" options="-parameters" />
       <module name="gateway_zuul" options="-parameters" />

@@ -1,9 +1,7 @@
 from docker import client
-import os
 import sys
 
 def runContainer(repository, tag ,ip , port, name):
-    #mydocker = client.from_env()
     mydocker = client.DockerClient(base_url=ip + ":2375")
     container = mydocker.containers.run(repository+":"+tag,
                                 detach=True, ports={port+'/tcp': [port]}, name=name, network="zhuanyong")

@@ -1,10 +1,8 @@
 from docker import client
-import os
 import sys
 
 
 def deleteImage(repository, tag, ip):
-    #mydocker = client.from_env()
     mydocker = client.DockerClient(base_url=ip + ":2375")
     targetimage = mydocker.images.get(repository+":"+tag)
     image_list = mydocker.images.list()

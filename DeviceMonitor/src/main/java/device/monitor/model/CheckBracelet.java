@@ -1,4 +1,4 @@
-package edge.node.model;
+package device.monitor.model;
 
 import io.swagger.annotations.ApiModelProperty;
 
