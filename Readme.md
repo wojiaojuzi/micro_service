@@ -7,6 +7,8 @@
   抛出异常java.lang.NumberFormatException: For input string: "latest"。
   原因：model类对象的构造函数的参数顺序没有和数据库column顺序一致，使boolean类型的属性对应到了String类型的属性，导致报错。
   解决方法：修改构造函数的参数顺序。
+### 2020-8-4
+* 日志服务使用RabbitMQ消息队列，实现异步日志生成，降低服务之间耦合以及消除日志服务故障造成的错误。
 ---
 
 

@@ -35,6 +35,9 @@ public interface ImageMapper {
     @Delete("Delete from image where nodeName=#{nodeName}")
     public void deleteByNodeName(@Param("nodeName")String nodeName);
 
+    @Delete("Delete from image where nodeName=#{nodeName} and serviceName = #{serviceName}")
+    public void deleteByNodeName(@Param("nodeName")String nodeName, @Param("serviceName")String serviceName);
+
 
     @Update("Update image set imageId=#{imageId} where nodeName=#{nodeName} and serviceName=#{serviceName}")
     public void updataImageIdByNodeNameAndServiceName

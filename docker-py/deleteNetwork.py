@@ -3,20 +3,22 @@ import os
 import sys
 
 def createNetwork(ip):
-    mydocker = client.from_env()
+    mydocker = client.DockerClient(base_url=ip + ":2375")
     networks = mydocker.networks.list()
-
-    network = mydocker.networks.get("zhuanyong")
-    print(network)
-    network.remove()
-    networks = mydocker.networks.list()
-    if network in networks:
-        print("删除失败")
+    name_list = []
+    for network in networks:
+        name_list.append(network.name)
+    network = None
+    if "zhuanyong" in name_list:
+        network = mydocker.networks.get("zhuanyong")
+        network.remove()
+    if "zhuanyong" in name_list:
+        print("delete failure")
     else:
-        print("删除成功")
+        print("delete success")
 
 def main(argv):
-    createNetwork("127.0.0.1")
+    createNetwork(argv[1])
 
 if __name__ == "__main__":
     main(sys.argv)

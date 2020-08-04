@@ -1,8 +1,10 @@
 package com.manager.service;
 
+import com.manager.config.MQSender;
 import com.manager.mapper.AdminMapper;
 import com.manager.model.Admin;
 import com.manager.model.Exception.EdgeComputingServiceException;
+import com.manager.model.MsgInfo;
 import com.manager.model.Response.ResponseEnum;
 import com.manager.model.api.LogFeign;
 import com.manager.utils.CommonUtil;
@@ -22,11 +24,13 @@ public class AdminService {
 
     private final AdminMapper adminMapper;
     private final LogFeign logFeign;
+    private final MQSender mqSender;
 
     @Autowired
-    public AdminService(AdminMapper adminMapper,LogFeign logFeign) {
+    public AdminService(AdminMapper adminMapper,LogFeign logFeign, MQSender mqSender) {
         this.adminMapper = adminMapper;
         this.logFeign = logFeign;
+        this.mqSender = mqSender;
     }
 
     public Admin adminLogin(String account, String password) throws Exception {
@@ -49,7 +53,9 @@ public class AdminService {
             admin.setToken(token);
             admin.setPassword(null);
             admin.setTokenCreateAt(null);
-            logFeign.addLog(admin.getAccount(),"管理员'"+admin.getAccount()+"'登录");
+
+            MsgInfo msgInfo = new MsgInfo("eventLog",mysqlSdf.format(createTime),account,"管理员'"+admin.getAccount()+"'登录");
+            mqSender.send(msgInfo);
         }
         return admin;
     }
@@ -57,16 +63,19 @@ public class AdminService {
     public void adminLogout(String token) throws Exception {
         String account = adminMapper.getAccountFromToken(token);
         Admin admin = adminMapper.getByAccount(account);
+        System.out.println(admin);
         if(account==null){
             throw new EdgeComputingServiceException(ResponseEnum.LOGIN_FAILED.getCode(), ResponseEnum.LOGIN_FAILED.getMessage());
         }
         else {
-            System.out.println("清空前");
             adminMapper.updateTokenCreateTimeByAccount(null, account);
             adminMapper.updateTokenByAccount(null,account);
-            System.out.println("日之前");
-            logFeign.addLog(admin.getAccount(), "管理员'"+admin.getAccount()+"'退出");
-            System.out.println("日之后");
+
+            Date createTime = new Date();
+            SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
+            MsgInfo msgInfo = new MsgInfo("eventLog",mysqlSdf.format(createTime),account,"管理员'"+admin.getAccount()+"'退出");
+            mqSender.send(msgInfo);
+
         }
     }
 
@@ -84,7 +93,9 @@ public class AdminService {
                 adminMapper.creatAdmin(null, account, password, null, null,mysqlSdf.format(createTime));
 
                 /*----日志---*/
-                logFeign.addLog("", "注册账号:"+account);
+                MsgInfo msgInfo = new MsgInfo("eventLog",mysqlSdf.format(createTime),"","注册账号:"+account);
+                mqSender.send(msgInfo);
+                //logFeign.addLog("", "注册账号:"+account);
 
                 return  "success";
             }
@@ -102,11 +113,15 @@ public class AdminService {
                 if (password.equals(oldpassword)){
                     adminMapper.updatePassWordByAccount(account,newpassword);
 
-                    logFeign.addLog(admin.getAccount(),"管理员'"+admin.getAccount()+"'修改密码");
+                    Date createTime = new Date();
+                    SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
+                    MsgInfo msgInfo = new MsgInfo("eventLog",mysqlSdf.format(createTime),admin.getAccount(),"管理员'"+admin.getAccount()+"'修改密码");
+                    mqSender.send(msgInfo);
+                    //logFeign.addLog(admin.getAccount(),"管理员'"+admin.getAccount()+"'修改密码");
                     return "success";
                 }
                 else{
-                return "error";
+                    return "error";
                 }
             }
 

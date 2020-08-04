@@ -1,7 +1,9 @@
 package com.manager.model;
 import io.swagger.annotations.ApiModelProperty;
 
-public class Admin {
+import java.io.Serializable;
+
+public class Admin implements Serializable {
 
     @ApiModelProperty(value = "管理员id")
     private String id;
@@ -62,8 +64,16 @@ public class Admin {
     public void setCreateAt(String createAt){ this.createAt = createAt; }
     public String getCreateAt(){ return this.createAt; }
 
+
     @Override
-    public String toString(){
-        return this.account+"  "+this.password;
+    public String toString() {
+        return "Admin{" +
+                "id='" + id + '\'' +
+                ", account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                ", createAt='" + createAt + '\'' +
+                ", LoginToken='" + LoginToken + '\'' +
+                ", tokenCreateAt='" + tokenCreateAt + '\'' +
+                '}';
     }
 }

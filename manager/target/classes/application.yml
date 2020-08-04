@@ -7,7 +7,30 @@ spring:
     url: jdbc:mysql://localhost:3306/my?serverTimezone=UTC
     username: root
     password: a128263
+
+  rabbitmq:
+    host: localhost
+    port: 5673
+    username: guest
+    password: guest
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:2998/eureka/
+
+
+# 可选配置
+# 配置producer中操作的Queue和Exchange相关信息的。key是自定义的。为了避免硬编码（代码中可以写死）。
+# exchange的命名。交换器名称可以随意定义。
+mq:
+  config:
+    exchange: log.direct
+  # 路由键， 是定义某一个路由键。 info级别日志使用的queue的路由键。
+    queue:
+      info:
+        routing:
+          key: log.info.routing.key
+  # 路由键，error级别日志使用的queue的路由键。
+      error:
+        routing:
+          key: log.error.routing.key

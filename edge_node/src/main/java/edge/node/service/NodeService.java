@@ -12,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -111,11 +110,39 @@ public class NodeService {
     }
 
     //删除节点逻辑要修改
-    public void nodeDelete(String nodeName,String account){
+    public boolean nodeDelete(String nodeName,String account){
+        Node node = nodeMapper.getNodeByNodeName(nodeName);
+        List<Image> imageList = imageMapper.getAllImage(nodeName);
+        for(Image image : imageList){
+            if(image.getImageStatus().equals("已下载")){
+                try {
+                    String exe = "python";
+                    String command = "C:\\Users\\guoxidong\\Desktop\\docketTest\\deleteImage.py";
+                    String[] cmdArr = new String[] { exe, command, image.getImageRepository(),image.getImageTag(),node.getIp()};
+                    Process process = Runtime.getRuntime().exec(cmdArr);
+                    BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                    String line;
+                    line = in.readLine();
+                    System.out.println(line);
+                    if(line.equals("delete success")){
+                        imageMapper.updataImageStatusByNodeNameAndServiceName(nodeName,image.getServiceName(),"未下载");
+                        in.close();
+                    }
+                    else{
+                        in.close();
+                        return false;
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
         nodeMapper.deleteNodeByNodeName(nodeName);
         imageMapper.deleteByNodeName(nodeName);
         containerMapper.deleteContainerByNodeName(nodeName);
         logFeign.addLog(account,"删除节点:  节点名="+nodeName);
+        return true;
     }
 
     public Node nodeGet(String node_name){ return nodeMapper.getNodeByNodeName(node_name);}
@@ -125,51 +152,6 @@ public class NodeService {
     }
 
     public List<Node> get_all(){ return nodeMapper.get_all(); }
-
-
-    public boolean deploy(String node_name,String account) throws IOException {
-      /*  boolean ans = nodeMapper.geNodeStatusByNodeName(node_name);
-        if(ans == true){
-            return false;
-        }
-        else {
-            String id = nodeMapper.getNodeByNodeName(node_name).getId();
-            File dir = new File("D:\\micro_service\\deploy");
-            System.out.println(dir+" open.py "+id);
-            Runtime.getRuntime().exec("python open.py "+id,null,dir);
-            Date createTime = new Date();
-            SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
-            nodeMapper.updateNodeStatusByNodeName(true, node_name);
-            nodeMapper.updateRunAtByNodeName(mysqlSdf.format(createTime),node_name);
-
-            logFeign.addLog(account,"微服务部署:  节点名="+node_name);
-            return true;
-        }*/
-      return true;
-    }
-
-    public boolean close(String node_name,String account) throws IOException {
-       /* boolean ans = nodeMapper.geNodeStatusByNodeName(node_name);
-        if(ans == false){
-            return false;
-        }
-        else {
-            String id = nodeMapper.getNodeByNodeName(node_name).getId();
-            File dir = new File("D:\\micro_service\\deploy");
-            System.out.println(dir+" close.py "+id);
-            Runtime.getRuntime().exec("python close.py "+id,null,dir);
-            Date createTime = new Date();
-            SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
-            nodeMapper.updateNodeStatusByNodeName(false, node_name);
-            nodeMapper.updateEndLastAtByNodeName(mysqlSdf.format(createTime),node_name);
-            nodeMapper.updateRunAtByNodeName("",node_name);
-
-            logFeign.addLog(account,"取消微服务部署:  节点名="+node_name);
-            return true;
-        }*/
-       return true;
-    }
-
 
 
 
@@ -186,7 +168,7 @@ public class NodeService {
         RestTemplate restTmpl = new RestTemplate();
         //String url = "http://freeapi.ipip.net/123.161.151.72";
         String url = "http://ip-api.com/json/"+ip+"?lang=zh-CN";
-        ipApi str = restTmpl.getForObject(url, ipApi.class);
+        IpApi str = restTmpl.getForObject(url, IpApi.class);
         System.out.println(str);
         LocBody loc = new LocBody(str.regionName, str.city, str.lon, str.lat);
         System.out.println(loc);

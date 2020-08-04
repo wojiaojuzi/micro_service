@@ -3,7 +3,6 @@ import sys
 
 def offContainer(containerName,ip):
     mydocker = client.DockerClient(base_url=ip + ":2375")
-    #mydocker = client.DockerClient(base_url="192.168.194.128:2375")
     containerNames=[]
     containers = mydocker.containers.list()
     for container in containers:

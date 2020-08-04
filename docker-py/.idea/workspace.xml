@@ -20,22 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5ec82be-9355-46e7-b52d-dfed2e9cdb64" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DeviceMonitor/src/main/java/device/monitor/mapper/VirtualDeviceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DeviceMonitor/src/main/java/device/monitor/model/VirtualDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/createNetwork.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deleteImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/deleteImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/getContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/getImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deleteNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/deleteNetwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/offContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/offContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pullImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pullImage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/runContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ttt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/server/NodeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/server/NodeServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/server/NodeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/server/NodeServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdemo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/NodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/ImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/ImageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/ipApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/IpApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +206,7 @@
       <workItem from="1596261234646" duration="635000" />
       <workItem from="1596284013861" duration="208000" />
       <workItem from="1596350246283" duration="1987000" />
+      <workItem from="1596457607815" duration="887000" />
     </task>
     <servers />
   </component>

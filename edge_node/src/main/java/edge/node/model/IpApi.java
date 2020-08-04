@@ -1,6 +1,6 @@
 package edge.node.model;
 
-public class ipApi {
+public class IpApi {
     public String status;
     public String country;
     public String countryCode;

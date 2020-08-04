@@ -52,10 +52,14 @@ public class NodeController {
     @CrossOrigin
     public HttpResponseContent nodeDelete(@RequestParam("nodeName") String nodeName, @RequestParam("account") String account) {
         HttpResponseContent response = new HttpResponseContent();
-        nodeService.nodeDelete(nodeName,account);
-
-        response.setCode(ResponseEnum.SUCCESS.getCode());
-        response.setMessage(ResponseEnum.SUCCESS.getMessage());
+        if(nodeService.nodeDelete(nodeName,account)) {
+            response.setCode(ResponseEnum.SUCCESS.getCode());
+            response.setMessage(ResponseEnum.SUCCESS.getMessage());
+        }
+        else {
+            response.setCode(ResponseEnum.ERROR.getCode());
+            response.setMessage(ResponseEnum.ERROR.getMessage());
+        }
 
         return response;
     }
@@ -94,41 +98,6 @@ public class NodeController {
     public int get_on_num() {
         return nodeService.get_on_num();
     }
-
-
-
-    /*@ApiOperation(value = "节点微服务部署")
-    @RequestMapping(path = "/deploy", method = RequestMethod.POST)
-    @CrossOrigin
-    public HttpResponseContent serviceDeploy(@RequestParam("nodeName") String node_name,@RequestParam("account") String account) throws Exception {
-        HttpResponseContent response = new HttpResponseContent();
-        boolean ans = nodeService.deploy(node_name,account);
-        if (ans == false) {
-            response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
-            response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
-        } else {
-            response.setCode(ResponseEnum.SUCCESS.getCode());
-            response.setMessage(ResponseEnum.SUCCESS.getMessage());
-        }
-        return response;
-
-    }
-
-    @ApiOperation(value = "节点微服务撤销部署")
-    @RequestMapping(path = "/close", method = RequestMethod.POST)
-    @CrossOrigin
-    public HttpResponseContent serviceClose(@RequestParam("nodeName") String node_name,@RequestParam("account") String account) throws Exception {
-        HttpResponseContent response = new HttpResponseContent();
-        boolean ans = nodeService.close(node_name,account);
-        if (ans == false) {
-            response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
-            response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
-        } else {
-            response.setCode(ResponseEnum.SUCCESS.getCode());
-            response.setMessage(ResponseEnum.SUCCESS.getMessage());
-        }
-        return response;
-    }*/
 
 
 }

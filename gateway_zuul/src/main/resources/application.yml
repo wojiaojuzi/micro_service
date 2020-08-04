@@ -8,7 +8,11 @@ spring:
     url: jdbc:mysql://localhost:3306/my?serverTimezone=UTC
     username: root
     password: a128263
-
+  rabbitmq:
+    host: localhost
+    port: 5673
+    username: guest
+    password: guest
 eureka:
   instance:
     hostname: zuul
