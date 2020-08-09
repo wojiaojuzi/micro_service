@@ -2,15 +2,15 @@
   "groups": [
     {
       "name": "serviceport",
-      "type": "edge.node.model.serviceport",
-      "sourceType": "edge.node.model.serviceport"
+      "type": "edge.node.model.ServicePort",
+      "sourceType": "edge.node.model.ServicePort"
     }
   ],
   "properties": [
     {
       "name": "serviceport.portmap",
       "type": "java.util.Map<java.lang.String,java.lang.String>",
-      "sourceType": "edge.node.model.serviceport"
+      "sourceType": "edge.node.model.ServicePort"
     }
   ],
   "hints": []

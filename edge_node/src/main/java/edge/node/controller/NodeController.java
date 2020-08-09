@@ -33,7 +33,6 @@ public class NodeController {
                                             @RequestParam("ip") String ip,
                                             @RequestParam("remark") String remark){
         HttpResponseContent response = new HttpResponseContent();
-        System.out.println("node进来");
         Node node = new Node(node_name, "","","",false,"","","",cpu, 0,memory,0,ip, remark);
         Node res = nodeService.nodeRegister(node,account);
         if (res == null) {
@@ -76,27 +75,6 @@ public class NodeController {
     @CrossOrigin
     public List<Node> get_all() {
         return nodeService.get_all();
-    }
-
-    @ApiOperation(value = "查看服务信息")
-    @RequestMapping(path = "/getService", method = RequestMethod.GET)
-    @CrossOrigin
-    public Node nodeService(@RequestParam("nodeName") String nodeName) {
-        return nodeService.nodeGet(nodeName);
-    }
-
-    @ApiOperation(value = "查看节点数量")
-    @RequestMapping(path = "/get_node_num")
-    @CrossOrigin
-    public int get_node_num() {
-        return nodeService.get_all().size();
-    }
-
-    @ApiOperation(value = "查看正在运行节点数量")
-    @RequestMapping(path = "/get_on_num")
-    @CrossOrigin
-    public int get_on_num() {
-        return nodeService.get_on_num();
     }
 
 

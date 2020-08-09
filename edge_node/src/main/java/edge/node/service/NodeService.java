@@ -55,8 +55,8 @@ public class NodeService {
                     node.getRemark());
             imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/eureka","latest","未下载","eureka");
             imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/zuul","latest","未下载","zuul");
-            containerMapper.createContainer(node.getNodeName(),"eureka","off","eureka",null,null,"uncreated");
-            containerMapper.createContainer(node.getNodeName(),"zuul","off","zuul",null,null,"uncreated");
+            containerMapper.createContainer(node.getNodeName(),"eureka","","eureka",null,null,"uncreated",false);
+            containerMapper.createContainer(node.getNodeName(),"zuul","","zuul",null,null,"uncreated",false);
             Node test = nodeMapper.getNodeByNodeName(node.getNodeName());
             if (test == null)
                 return null;
@@ -117,7 +117,7 @@ public class NodeService {
             if(image.getImageStatus().equals("已下载")){
                 try {
                     String exe = "python";
-                    String command = "C:\\Users\\guoxidong\\Desktop\\docketTest\\deleteImage.py";
+                    String command = "./docker-py/deleteImage.py";
                     String[] cmdArr = new String[] { exe, command, image.getImageRepository(),image.getImageTag(),node.getIp()};
                     Process process = Runtime.getRuntime().exec(cmdArr);
                     BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -147,10 +147,6 @@ public class NodeService {
 
     public Node nodeGet(String node_name){ return nodeMapper.getNodeByNodeName(node_name);}
 
-    public int get_on_num(){
-        return nodeMapper.get_on_num().size();
-    }
-
     public List<Node> get_all(){ return nodeMapper.get_all(); }
 
 
@@ -175,22 +171,6 @@ public class NodeService {
         return loc;
     }
 
-    private LocBody getLocByGD(String ip){
-        String key = "76388c9dc654c2c4df579c51bcf1984e";
-        RestTemplate restTmpl = new RestTemplate();
-        //https://restapi.amap.com/v3/ip?ip=123.161.150.106&key=76388c9dc654c2c4df579c51bcf1984e
-        //String url = "http://freeapi.ipip.net/123.161.151.72";
-        String url = "http://restapi.amap.com/v3/ip?ip="+ ip +"&key=" + key;
-        AmapBody str = restTmpl.getForObject(url, AmapBody.class);
-        System.out.println(str.rectangle);
-        String rect1 = str.rectangle;
-        String[] rect2 = rect1.split(";");
-        //String[]
-        //LocBody loc = new LocBody(str.province, str.city, str.rectangle[0][0], str.rectangle[0][1]);
-        //System.out.println(loc);
-        //return loc;
-        return null;
-    }
     public void getImage(String nodeName){
         String ip = nodeMapper.getNodeByNodeName(nodeName).getIp();
         System.out.println(ip);

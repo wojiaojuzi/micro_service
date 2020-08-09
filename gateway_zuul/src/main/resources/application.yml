@@ -1,4 +1,3 @@
-
 server:
   port: 2999
 spring:

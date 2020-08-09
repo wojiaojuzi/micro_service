@@ -9,17 +9,27 @@ public class Container {
 
     private String containerName;
 
+    private String containerId;
+
+    private String containerShortId;
+
     private String containerStatus;
+
+    private boolean isCreated;
 
 
 
     public Container(String nodeName, String serviceName, String serviceStatus,
-                     String containerName, String containerStatus) {
+                     String containerName, String containerId, String containerShortId,
+                     String containerStatus, boolean isCreated) {
+        this.nodeName = nodeName;
         this.serviceName = serviceName;
         this.serviceStatus = serviceStatus;
-        this.nodeName = nodeName;
         this.containerName = containerName;
+        this.containerId = containerId;
+        this.containerShortId = containerShortId;
         this.containerStatus = containerStatus;
+        this.isCreated = isCreated;
     }
 
     public String getServiceName() {
@@ -60,5 +70,29 @@ public class Container {
 
     public void setContainerName(String containerName) {
         this.containerName = containerName;
+    }
+
+    public boolean getIsCreated() {
+        return this.isCreated;
+    }
+
+    public void setIsCreated(boolean isCreated) {
+        this.isCreated = isCreated;
+    }
+
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    public void setContainerId(String containerId) {
+        this.containerId = containerId;
+    }
+
+    public String getContainerShortId() {
+        return this.containerShortId;
+    }
+
+    public void setContainerShortId(String containerShortId) {
+        this.containerShortId = containerShortId;
     }
 }

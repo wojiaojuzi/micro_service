@@ -17,7 +17,6 @@ public class ContainerService {
     private final ImageMapper imageMapper;
     private final NodeMapper nodeMapper;
     private final ContainerMapper containerMapper;
-    @Autowired
     private final ServicePort servicePort;
 
     @Autowired
@@ -153,12 +152,13 @@ public class ContainerService {
                             String[] args = line.split(" ");
                             //System.out.println(args);
                             //containerMapper.createContainer(nodeName, serviceName,"null",args[0],args[1],args[2],args[3]);
-                            containerMapper.updateserviceStatusByNodeNameAndServiceName(nodeName, serviceName,"null");
-                            containerMapper.updatecontainerIdByNodeNameAndServiceName(nodeName, serviceName,args[0]);
-                            containerMapper.updatecontainerIdByNodeNameAndServiceName(nodeName, serviceName,args[1]);
-                            containerMapper.updatecontainerShortIdByNodeNameAndServiceName(nodeName, serviceName,args[2]);
-                            containerMapper.updateContainerStatusByNodeNameAndServiceName(nodeName, serviceName,args[3]);
+                            containerMapper.updateServiceStatusByNodeNameAndServiceName(nodeName, serviceName,"");
+                            containerMapper.updateContainerIdByNodeNameAndServiceName(nodeName, serviceName,args[0]);
+                            containerMapper.updateContainerShortIdByNodeNameAndServiceName(nodeName, serviceName,args[1]);
+                            containerMapper.updateContainerStatusByNodeNameAndServiceName(nodeName, serviceName,args[2]);
                             System.out.println(serviceName+"容器启动成功");
+                            containerMapper.updateIsCreatedByNodeNameAndServiceName(nodeName,serviceName,true);
+
                             return true;
                         }
                     else{
@@ -190,7 +190,10 @@ public class ContainerService {
                     if(line.equals("close success")){
                         System.out.println(serviceName+"容器关闭成功");
                         containerMapper.updateContainerStatusByNodeNameAndServiceName(nodeName, serviceName,"uncreated");
-                        containerMapper.updateserviceStatusByNodeNameAndServiceName(nodeName, serviceName,"null");
+                        containerMapper.updateContainerIdByNodeNameAndServiceName(nodeName, serviceName,"");
+                        containerMapper.updateContainerShortIdByNodeNameAndServiceName(nodeName, serviceName,"");
+                        containerMapper.updateServiceStatusByNodeNameAndServiceName(nodeName, serviceName,"");
+                        containerMapper.updateIsCreatedByNodeNameAndServiceName(nodeName,serviceName,false);
                         in.close();
                         return true;
                     }

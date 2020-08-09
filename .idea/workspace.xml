@@ -35,66 +35,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80d3a7c-3d32-4bbe-bd9c-5a9ba5138a99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_7_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_http_client_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_context_3_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_core_3_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_stream_rabbit_3_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_3_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_rabbit_3_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_rabbit_core_3_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_amqp_5_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_core_5_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_jmx_5_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/mapper/VirtualDeviceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model/VirtualDevice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/config/MQSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/MsgInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/config/MQSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/model/MsgInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/config/InfoReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/model/MsgInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/config/MQSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/model/MsgInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-py/checkService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-py/checkTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/config/ScheduleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/ContainerSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/MapSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/deleteNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/deleteNetwork.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/offContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/offContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-py/testdemo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-py/getContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/getContainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-py/runContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-py/runContainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/edge_node.iml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/edge_node.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/controller/NodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ContainerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ContainerMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/mapper/ImageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/ipApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/IpApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/AmapBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/model/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/server/PushSchedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway_zuul/gateway_zuul.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/gateway_zuul.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway_zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/controller/NodeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/mapper/ContainerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/mapper/ContainerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/AmapBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Container.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/Container.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/ipApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/ipApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/serviceport.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/model/serviceport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/server/PushSchedule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/ContainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/ContainerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/edge_node/target/classes/edge/node/service/NodeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/eureka_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/eureka_server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway_zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway_zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/logger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/loger/logger.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loger/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/src/main/java/com/loger/LogerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/java/com/loger/LogerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loger/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loger/target/classes/com/loger/LogerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/loger/target/classes/com/loger/LogerApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/model/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/manager/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/manager/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/target/classes/com/manager/model/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/target/classes/com/manager/model/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/target/classes/com/manager/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/target/classes/com/manager/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loger/src/main/resources/logFile/2020-08-04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/loger/src/main/resources/logFile/2020-08-04.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,19 +139,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DeviceMonitor/src/main/java/device/monitor/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bs" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\micro_service\DeviceMonitor\src\main\java\device\monitor\model" />
-      <recent name="D:\micro_service" />
-      <recent name="D:\micro_service\edge_node\src\main\java\edge\node\model" />
-      <recent name="D:\micro_service\edge_node\src\test" />
-      <recent name="D:\micro_service\edge_node\src\test\java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\micro_service\eureka_server" />
+      <recent name="D:\micro_service\edge_node" />
+      <recent name="D:\micro_service\gateway_zuul" />
+      <recent name="D:\micro_service\loger" />
+      <recent name="D:\micro_service\manager" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="gateways.zuul.model" />
@@ -181,15 +163,15 @@
       <recent name="com.manager.model" />
       <recent name="edge.node.config" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\micro_service\eureka_server" />
-      <recent name="D:\micro_service\edge_node" />
-      <recent name="D:\micro_service\gateway_zuul" />
-      <recent name="D:\micro_service\loger" />
-      <recent name="D:\micro_service\manager" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\micro_service\DeviceMonitor\src\main\java\device\monitor\model" />
+      <recent name="D:\micro_service" />
+      <recent name="D:\micro_service\edge_node\src\main\java\edge\node\model" />
+      <recent name="D:\micro_service\edge_node\src\test" />
+      <recent name="D:\micro_service\edge_node\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZuulApplication">
+  <component name="RunManager" selected="Spring Boot.ServerApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -200,10 +182,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="manager-0.0.1-SNAPSHOT.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/manager/target/manager-0.0.1-SNAPSHOT.jar" />
-      <method v="2" />
     </configuration>
     <configuration name="server-0.0.1-SNAPSHOT.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/eureka_server/server-0.0.1-SNAPSHOT.jar" />
@@ -247,6 +225,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureka_server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eureka.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="eureka.server.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gateway_zuul" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="gateways.zuul.ZuulApplication" />
@@ -269,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.server-0.0.1-SNAPSHOT.jar" />
-        <item itemvalue="Spring Boot.application" />
         <item itemvalue="Spring Boot.NodeApplication" />
+        <item itemvalue="Spring Boot.ServerApplication" />
+        <item itemvalue="Spring Boot.application" />
+        <item itemvalue="JAR Application.server-0.0.1-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.zuul-0.0.1-SNAPSHOT.jar" />
-        <item itemvalue="JAR Application.manager-0.0.1-SNAPSHOT.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -426,7 +417,14 @@
       <workItem from="1596453499440" duration="6333000" />
       <workItem from="1596507871075" duration="19789000" />
       <workItem from="1596541424225" duration="814000" />
-      <workItem from="1596551452214" duration="137000" />
+      <workItem from="1596551452214" duration="420000" />
+      <workItem from="1596782359897" duration="2321000" />
+      <workItem from="1596798673866" duration="830000" />
+      <workItem from="1596799516703" duration="1625000" />
+      <workItem from="1596860951123" duration="2349000" />
+      <workItem from="1596879046952" duration="727000" />
+      <workItem from="1596888182152" duration="1264000" />
+      <workItem from="1596941242767" duration="18150000" />
     </task>
     <task id="LOCAL-00001" summary="边缘节点管理系统">
       <created>1594047635407</created>
@@ -645,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596455066824</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="边缘节点管理系统">
+      <created>1596551665217</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1596551665217</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,10 +701,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="410" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1596036534676" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1596524765655">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1596976834294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596524765655" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596976834294" />
     <state x="421" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593756732458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -720,14 +725,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="69" key="#test/0.0.1536.824@0.0.1536.824" timestamp="1594037436617" />
-    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2" timestamp="1596455065419">
+    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2" timestamp="1596551663356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596455065419" />
-    <state x="70" y="262" key="FileChooserDialogImpl" timestamp="1596039954659">
+    <state x="272" y="4" width="802" height="813" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596551663356" />
+    <state x="70" y="262" key="FileChooserDialogImpl" timestamp="1596958496988">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="70" y="262" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596039954659" />
+    <state x="70" y="262" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596958496988" />
     <state x="626" y="303" key="Github.ShareDialog" timestamp="1594048170147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -736,50 +741,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="641" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594046818024" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1596551503089">
+    <state width="1493" height="187" key="GridCell.Tab.0.bottom" timestamp="1596977492182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596551503089" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1596551503088">
+    <state width="1493" height="187" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596977492182" />
+    <state width="1493" height="187" key="GridCell.Tab.0.center" timestamp="1596977492182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596551503088" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1596551503088">
+    <state width="1493" height="187" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596977492182" />
+    <state width="1493" height="187" key="GridCell.Tab.0.left" timestamp="1596977492181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596551503088" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1596551503089">
+    <state width="1493" height="187" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596977492181" />
+    <state width="1493" height="187" key="GridCell.Tab.0.right" timestamp="1596977492182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596551503089" />
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom" timestamp="1596542237894">
+    <state width="1493" height="187" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596977492182" />
+    <state width="1493" height="187" key="GridCell.Tab.1.bottom" timestamp="1596977492182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596542237894" />
-    <state width="1493" height="212" key="GridCell.Tab.1.center" timestamp="1596542237894">
+    <state width="1493" height="187" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596977492182" />
+    <state width="1493" height="187" key="GridCell.Tab.1.center" timestamp="1596977492182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596542237894" />
-    <state width="1493" height="212" key="GridCell.Tab.1.left" timestamp="1596542237894">
+    <state width="1493" height="187" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596977492182" />
+    <state width="1493" height="187" key="GridCell.Tab.1.left" timestamp="1596977492182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596542237894" />
-    <state width="1493" height="212" key="GridCell.Tab.1.right" timestamp="1596542237894">
+    <state width="1493" height="187" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596977492182" />
+    <state width="1493" height="187" key="GridCell.Tab.1.right" timestamp="1596977492182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596542237894" />
+    <state width="1493" height="187" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596977492182" />
+    <state width="1493" height="125" key="GridCell.Tab.2.bottom" timestamp="1596865585722">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="125" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596865585722" />
+    <state width="1493" height="125" key="GridCell.Tab.2.center" timestamp="1596865585722">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="125" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596865585722" />
+    <state width="1493" height="125" key="GridCell.Tab.2.left" timestamp="1596865585722">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="125" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596865585722" />
+    <state width="1493" height="125" key="GridCell.Tab.2.right" timestamp="1596865585722">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="125" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596865585722" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1596033376433">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="299" y="68" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1596033376433" />
-    <state x="270" y="55" key="SettingsEditor" timestamp="1596455180813">
+    <state x="270" y="55" key="SettingsEditor" timestamp="1596957936651">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596455180813" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596455184475">
+    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596957936651" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596551846522">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596455184475" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596551846522" />
     <state x="394" y="163" key="com.intellij.ide.util.TipDialog" timestamp="1596028920135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -800,10 +821,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="178" y="22" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1596453904202" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596220574685">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596978017201">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596220574685" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596978017201" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -11,7 +11,7 @@ def runContainer(repository, tag ,ip , port, name):
         if container in container_list:
             if container.status == "running":
                 print("create success")
-                print(container.name + " " + container.id + " " + container.short_id + " " + container.status)
+                print(container.id + " " + container.short_id + " " + container.status)
             else:
                 print("create failure")
     else:
