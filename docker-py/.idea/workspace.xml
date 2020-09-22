@@ -20,47 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5ec82be-9355-46e7-b52d-dfed2e9cdb64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/checkService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/config/ScheduleConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/schedule/ContainerSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/schedule/MapSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/schedule/NodeSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-09.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_google_guava_guava_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testDocker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/model/EdgeComputingServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/utils/SqlUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/getContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/runContainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/edge_node.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/edge_node.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/NodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/ContainerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/ContainerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/ImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/ImageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/AmapBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/server/PushSchedule.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/controller/NodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/controller/NodeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/mapper/ContainerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/mapper/ContainerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/AmapBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Container.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Container.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/ipApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/ipApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/serviceport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/serviceport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/server/PushSchedule.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/NodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/NodeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka_server/eureka_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka_server/eureka_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka_server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka_server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka_server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka_server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/gateway_zuul.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/gateway_zuul.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/ZuulApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/ZuulApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gateway_zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-04.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/ZuulApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/ZuulApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/TEST-gateways.zuul.ZuulApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/TEST-gateways.zuul.ZuulApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/gateways.zuul.ZuulApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/gateways.zuul.ZuulApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/zuul-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/zuul-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/zuul-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway_zuul/zuul-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/zuul-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-09.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +72,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.checkTest">
+  <component name="RunManager" selected="Python.testDocker">
     <configuration name="checkService" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="docketTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,28 +109,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/checkTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="createNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="docketTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/createNetwork.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -200,20 +161,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testDocker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="docketTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testDocker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.getImage" />
-      <item itemvalue="Python.createNetwork" />
       <item itemvalue="Python.offContainer" />
       <item itemvalue="Python.checkService" />
       <item itemvalue="Python.checkTest" />
+      <item itemvalue="Python.testDocker" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.testDocker" />
         <item itemvalue="Python.checkTest" />
         <item itemvalue="Python.checkService" />
         <item itemvalue="Python.offContainer" />
         <item itemvalue="Python.getImage" />
-        <item itemvalue="Python.createNetwork" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +220,10 @@
       <workItem from="1596284013861" duration="208000" />
       <workItem from="1596350246283" duration="1987000" />
       <workItem from="1596457607815" duration="887000" />
-      <workItem from="1596944920695" duration="10695000" />
+      <workItem from="1596944920695" duration="10904000" />
+      <workItem from="1597131755549" duration="3432000" />
+      <workItem from="1598090012011" duration="27000" />
+      <workItem from="1600178171422" duration="606000" />
     </task>
     <servers />
   </component>
@@ -261,26 +247,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="162" y="161" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596041623992" />
-    <state width="1493" height="280" key="GridCell.Tab.0.bottom" timestamp="1596964145179">
+    <state width="1493" height="99" key="GridCell.Tab.0.bottom" timestamp="1597157164961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="280" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596964145179" />
-    <state width="1493" height="280" key="GridCell.Tab.0.center" timestamp="1596964145179">
+    <state width="1493" height="99" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597157164961" />
+    <state width="1493" height="99" key="GridCell.Tab.0.center" timestamp="1597157164961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="280" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596964145179" />
-    <state width="1493" height="280" key="GridCell.Tab.0.left" timestamp="1596964145179">
+    <state width="1493" height="99" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597157164961" />
+    <state width="1493" height="99" key="GridCell.Tab.0.left" timestamp="1597157164961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="280" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596964145179" />
-    <state width="1493" height="280" key="GridCell.Tab.0.right" timestamp="1596964145179">
+    <state width="1493" height="99" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597157164961" />
+    <state width="1493" height="99" key="GridCell.Tab.0.right" timestamp="1597157164961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="280" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596964145179" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1596961933054">
+    <state width="1493" height="99" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597157164961" />
+    <state x="270" y="57" key="SettingsEditor" timestamp="1598090036892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596961933054" />
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598090036892" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596963903244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -289,6 +275,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/docker_py$offContainer.coverage" NAME="offContainer Coverage Results" MODIFIED="1596284178596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/docker_py$getContainer.coverage" NAME="getContainer Coverage Results" MODIFIED="1596105344350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/docker_py$testDocker.coverage" NAME="testDocker Coverage Results" MODIFIED="1597133931139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/docker_py$getImage.coverage" NAME="getImage Coverage Results" MODIFIED="1596220729153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/docker_py$openTest.coverage" NAME="openTest Coverage Results" MODIFIED="1596104916689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/docker_py$checkService.coverage" NAME="checkService Coverage Results" MODIFIED="1596960296846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

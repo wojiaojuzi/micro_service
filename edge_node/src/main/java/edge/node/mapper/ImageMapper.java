@@ -13,6 +13,8 @@ public interface ImageMapper {
                             @Param("imageShortId")String imageShortId, @Param("imageRepository")String imageRepository,
                             @Param("imageTag")String imageTag, @Param("imageStatus")String imageStatus,
                             @Param("serviceName") String serviceName);
+    @Select("Select * from image")
+    public  List<Image> getAll();
 
     @Select("Select * from image where nodeName=#{nodeName}")
     public List<Image> getAllImage(@Param("nodeName") String nodeName);

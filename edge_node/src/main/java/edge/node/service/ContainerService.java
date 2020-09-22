@@ -54,9 +54,15 @@ public class ContainerService {
                         imageMapper.updataImageIdByNodeNameAndServiceName(nodeName,serviceName,recv[0]);
                         imageMapper.updataImageShortIdByNodeNameAndServiceName(nodeName,serviceName,recv[1]);
                         imageMapper.updataImageStatusByNodeNameAndServiceName(nodeName,serviceName,"已下载");
+                        in.close();
+                        return true;
                     }
+                    else {
+                        in.close();
+                        return false;
+                    }
+
                 }
-                in.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

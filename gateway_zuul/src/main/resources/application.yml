@@ -28,13 +28,20 @@ management:
     health:
       show-details: ALWAYS
 
-ribbon:
-  ReadTimeout: 120000
-  ConnectTimeout: 120000
+zuul:
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+
 hystrix:
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 120000
+            timeoutInMilliseconds: 1000000
+ribbon:
+  ConnectTimeout: 500000 # 连接超时时间(ms)
+  ReadTimeout: 500000 # 通信超时时间(ms)
+  MaxAutoRetries: 0  #不重试
+  MaxAutoRetriesNextServer: 0 #不尝试下一台机器

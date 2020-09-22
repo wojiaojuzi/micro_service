@@ -37,6 +37,7 @@ public class PreRequestFilter extends ZuulFilter {
         this.uri.add("/manager-service/admins/login");
         this.uri.add("/loger/log/addLog");
         this.uri.add("/loger/log/getLogByDate");
+        this.uri.add("/edge-node/service/pullImage");
         //this.mqSender = mqSender;
         //this.zuulMapper = zuulMapper;
     }
@@ -96,6 +97,7 @@ public class PreRequestFilter extends ZuulFilter {
             //}
 
         } catch (TokenExpiredException e) {
+            System.out.println("超时");
             e.printStackTrace();
             RequestContext.getCurrentContext().setSendZuulResponse(false);
             HttpServletResponse response = ctx.getResponse();

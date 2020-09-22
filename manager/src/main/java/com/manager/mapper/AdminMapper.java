@@ -7,7 +7,11 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import java.util.List;
+
 public interface AdminMapper {
+    @Select("Select * from admin")
+    List<Admin> getAll();
 
     @Select("SELECT * FROM admin WHERE account=#{account} AND password=#{password};")//账号+密码获取用户所有信息
     Admin getByAccountAndPassword(@Param("account") String account, @Param("password") String password);
