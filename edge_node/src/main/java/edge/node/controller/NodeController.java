@@ -2,6 +2,7 @@ package edge.node.controller;
 
 
 import edge.node.model.Node;
+import edge.node.model.Request.NodeRegisterRequest;
 import edge.node.model.Response.HttpResponseContent;
 import edge.node.model.Response.ResponseEnum;
 import edge.node.service.NodeService;
@@ -26,15 +27,13 @@ public class NodeController {
     @ApiOperation(value = "节点注册")
     @RequestMapping(path = "/register", method = RequestMethod.POST)
     @CrossOrigin
-    public HttpResponseContent nodeRegister(@RequestParam("nodeName") String node_name,
-                                            @RequestParam("account") String account,
-                                            @RequestParam("cpu") String cpu,
-                                            @RequestParam("memory") String memory,
-                                            @RequestParam("ip") String ip,
-                                            @RequestParam("remark") String remark){
+    public HttpResponseContent nodeRegister(@RequestBody NodeRegisterRequest nodeRegisterRequest){
+        System.out.println("注册");
         HttpResponseContent response = new HttpResponseContent();
-        Node node = new Node(node_name, "","","",false,"","","",cpu, 0,memory,0,ip, remark);
-        Node res = nodeService.nodeRegister(node,account);
+        Node node = new Node(nodeRegisterRequest.getNodeName(),nodeRegisterRequest.getArea(),nodeRegisterRequest.getLocation(),
+                nodeRegisterRequest.getLon(),nodeRegisterRequest.getLat(),nodeRegisterRequest.getIp(),nodeRegisterRequest.getCpu(),0,
+                nodeRegisterRequest.getMemory(),0,nodeRegisterRequest.getFerquence(),false,"");
+        Node res = nodeService.nodeRegister(node,nodeRegisterRequest.getAccount());
         if (res == null) {
             response.setCode(ResponseEnum.ERROR.getCode());
             response.setMessage(ResponseEnum.ERROR.getMessage());
@@ -77,5 +76,21 @@ public class NodeController {
         return nodeService.get_all();
     }
 
+    @ApiOperation(value = "测试节点IP连通性")
+    @RequestMapping(path = "/getPing", method = RequestMethod.GET)
+    @CrossOrigin
+    public HttpResponseContent get_ping(@RequestParam(value="ip") String ip) {
+        System.out.println(ip);
+        HttpResponseContent response = new HttpResponseContent();
+        if(nodeService.isPing(ip)){
+            response.setCode(ResponseEnum.SUCCESS.getCode());
+            response.setMessage(ResponseEnum.SUCCESS.getMessage());
+        }
+        else{
+            response.setCode(ResponseEnum.ERROR.getCode());
+            response.setMessage(ResponseEnum.ERROR.getMessage());
+        }
+        return response;
+    }
 
 }

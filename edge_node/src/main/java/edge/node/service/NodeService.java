@@ -41,18 +41,12 @@ public class NodeService {
         Date createTime = new Date();
         SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
         node.setNodeCreateAt(mysqlSdf.format(createTime));
-
-        if(isPing(node.getIp())) {
-            LocBody loc = getLocByIpApi(node.getIp());
-            //LocBody loc = getLocByGD(node.getIp());
-            node.setLocation(loc.getCity());
-            node.setLon(loc.getLon());
-            node.setLat(loc.getLat());
-            nodeMapper.create_node(node.getNodeName(), node.getLocation(), node.getLon(),
-                    node.getLat(), node.getNodeStatus(), node.getNodeCreateAt(),
-                    node.getRunAt(), node.getEndLastAt(),
-                    node.getCpu(), 0, node.getMemory(), 0, node.getIp(),
-                    node.getRemark());
+        System.out.println(node);
+        //if(isPing(node.getIp())) {
+            nodeMapper.create_node(node.getNodeName(), node.getArea(), node.getLocation(), node.getLon(),
+                    node.getLat(), node.getIp(), node.getCpu(),
+                    node.getCpuRate(), node.getMemory(),
+                    node.getMemRate(), node.getFrequence(), false,node.getNodeCreateAt());
             imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/eureka","latest","未下载","eureka");
             imageMapper.createImage(node.getNodeName(),null,null,"registry.cn-hangzhou.aliyuncs.com/edge_node/zuul","latest","未下载","zuul");
             containerMapper.createContainer(node.getNodeName(),"eureka","","eureka",null,null,"uncreated",false);
@@ -64,9 +58,9 @@ public class NodeService {
                 logFeign.addLog(account, "注册节点:  节点名=" + node.getNodeName() + " , 位置=" + node.getLocation());
                 return test;
             }
-        }
-        System.out.println("ip不可用");
-        return null;
+        //}
+        //System.out.println("ip不可用");
+        //return null;
     }
 
     public static boolean isPing(String ip) {
@@ -151,7 +145,7 @@ public class NodeService {
 
 
 
-    private String getLocByFree(String ip){//简单的免费接口
+/*    private String getLocByFree(String ip){//简单的免费接口
         RestTemplate restTmpl = new RestTemplate();
         String url = "http://freeapi.ipip.net/"+ip;
         String str = restTmpl.getForObject(url, String.class);
@@ -169,7 +163,7 @@ public class NodeService {
         LocBody loc = new LocBody(str.regionName, str.city, str.lon, str.lat);
         System.out.println(loc);
         return loc;
-    }
+    }*/
 
     public void getImage(String nodeName){
         String ip = nodeMapper.getNodeByNodeName(nodeName).getIp();

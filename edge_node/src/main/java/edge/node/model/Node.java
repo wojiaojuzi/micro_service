@@ -5,19 +5,13 @@ import java.sql.Timestamp;
 public class Node {
     private String nodeName;
 
+    private String area;
+
     private String location;
 
     private String lon;
 
     private String lat;
-
-    private boolean nodeStatus;
-
-    private String nodeCreateAt;
-
-    private String runAt;
-
-    private String endLastAt;
 
     private String ip;
 
@@ -29,86 +23,148 @@ public class Node {
 
     private double memRate;
 
-    private String remark;
+    private String frequence;
 
-    public Node(String nodeName, String location, String lon, String lat, boolean nodeStatus, String nodeCreateAt, String runAt, String endLastAt, String cpu, double cpuRate, String memory, double memRate, String ip, String remark) {
+    private boolean nodeStatus;
+
+    private String nodeCreateAt;
+
+    public Node(String nodeName, String area, String location, String lon, String lat, String ip, String cpu, double cpuRate, String memory, double memRate, String frequence, boolean nodeStatus, String nodeCreateAt) {
         this.nodeName = nodeName;
+        this.area = area;
         this.location = location;
         this.lon = lon;
         this.lat = lat;
-        this.nodeStatus = nodeStatus;
-        this.nodeCreateAt = nodeCreateAt;
-        this.runAt = runAt;
-        this.endLastAt = endLastAt;
         this.ip = ip;
         this.cpu = cpu;
         this.cpuRate = cpuRate;
         this.memory = memory;
         this.memRate = memRate;
-        this.remark = remark;
+        this.frequence = frequence;
+        this.nodeStatus = nodeStatus;
+        this.nodeCreateAt = nodeCreateAt;
     }
 
+    public String getNodeName() {
+        return nodeName;
+    }
 
-    /*-------------------------*/
-    public String getLocation(){ return this.location; }
-    public void setLocation(String location){ this.location = location; }
+    public void setNodeName(String nodeName) {
+        this.nodeName = nodeName;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
     public String getLon() {
-        return this.lon;
+        return lon;
     }
+
     public void setLon(String lon) {
         this.lon = lon;
     }
 
     public String getLat() {
-        return this.lat;
+        return lat;
     }
+
     public void setLat(String lat) {
         this.lat = lat;
     }
 
-    public String getNodeName() { return this.nodeName; }
-    public void setNodeName(String nodeName) { this.nodeName = nodeName; }
+    public String getIp() {
+        return ip;
+    }
 
-    public boolean getNodeStatus() { return this.nodeStatus; }
-    public void setNodeStatus(boolean nodeStatus) { this.nodeStatus = nodeStatus; }
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
 
-    public String getNodeCreateAt() { return this.nodeCreateAt; }
-    public void setNodeCreateAt(String nodeCreateAt) { this.nodeCreateAt = nodeCreateAt; }
+    public String getCpu() {
+        return cpu;
+    }
 
-    public String getRunAt() { return this.runAt; }
-    public void setRunAt(String runAt) { this.runAt = runAt; }
-
-    public String getEndLastAt() { return this.endLastAt; }
-    public void setEndLastAt(String endLastAt) { this.endLastAt = endLastAt; }
-
-    public String getCpu(){ return this.cpu; }
-    public void setCpu(String cpu){ this.cpu = cpu; }
-
-    public String getMemory(){ return this.memory; }
-    public void setMemory(String memory){ this.memory = memory; }
-
-    public String getIp(){ return this.ip; }
-    public void setIp(String ip){ this.ip = ip; }
+    public void setCpu(String cpu) {
+        this.cpu = cpu;
+    }
 
     public double getCpuRate() {
-        return this.cpuRate;
+        return cpuRate;
     }
+
     public void setCpuRate(double cpuRate) {
         this.cpuRate = cpuRate;
     }
 
-    public double getMemRate() {
-        return this.memRate;
+    public String getMemory() {
+        return memory;
     }
+
+    public void setMemory(String memory) {
+        this.memory = memory;
+    }
+
+    public double getMemRate() {
+        return memRate;
+    }
+
     public void setMemRate(double memRate) {
         this.memRate = memRate;
     }
 
-    public String getRemark() {
-        return this.remark;
+    public String getFrequence() {
+        return frequence;
     }
-    public void setRemark(String remark) {
-        this.remark = remark;
+
+    public void setFrequence(String frequence) {
+        this.frequence = frequence;
+    }
+
+    public boolean isNodeStatus() {
+        return nodeStatus;
+    }
+
+    public void setNodeStatus(boolean nodeStatus) {
+        this.nodeStatus = nodeStatus;
+    }
+
+    public String getNodeCreateAt() {
+        return nodeCreateAt;
+    }
+
+    public void setNodeCreateAt(String nodeCreateAt) {
+        this.nodeCreateAt = nodeCreateAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "nodeName='" + nodeName + '\'' +
+                ", area='" + area + '\'' +
+                ", location='" + location + '\'' +
+                ", lon='" + lon + '\'' +
+                ", lat='" + lat + '\'' +
+                ", ip='" + ip + '\'' +
+                ", cpu='" + cpu + '\'' +
+                ", cpuRate=" + cpuRate +
+                ", memory='" + memory + '\'' +
+                ", memRate=" + memRate +
+                ", frequence='" + frequence + '\'' +
+                ", nodeStatus=" + nodeStatus +
+                ", nodeCreateAt='" + nodeCreateAt + '\'' +
+                '}';
     }
 }

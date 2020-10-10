@@ -12,20 +12,20 @@ package com.manager.model.Request;
  */
 public class LoginRequest {
 
-    private String userName;
+    private String account;
     private String password;
 
-    public LoginRequest(String userName, String password) {
-        this.userName = userName;
+    public LoginRequest(String account, String password) {
+        this.account = account;
         this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getAccount() {
+        return account;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public String getPassword() {
@@ -35,5 +35,4 @@ public class LoginRequest {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }

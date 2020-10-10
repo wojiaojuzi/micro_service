@@ -1,0 +1,6 @@
+[2020-10-06 20:31:48] [hejunb] [http://localhost:2999/edge-node/node/getAll GET Remote:127.0.0.1]
+[2020-10-06 20:32:45] [hejunb] [http://localhost:2999/edge-node/node/getAll GET Remote:127.0.0.1]
+[2020-10-06 20:33:04] [hejunb] [http://localhost:2999/edge-node/node/getAll GET Remote:127.0.0.1]
+[2020-10-06 20:33:52] [hejunb] [http://localhost:2999/edge-node/node/getAll GET Remote:127.0.0.1]
+[2020-10-06 20:33:57] [hejunb] [http://localhost:2999/edge-node/node/getAll GET Remote:127.0.0.1]
+[2020-10-06 20:55:54] [hejunb] [http://localhost:2999/manager-service/admins/getAboutInformation GET Remote:127.0.0.1]

@@ -7,59 +7,68 @@ package com.manager.model.Request;
  */
 public class UserRegisterRequest {
 
-    private String userName;
+    private String account;
     private String password;
-    private String confirmPassword;
-    private String userId;
-    private String idCard;
+    private String email;
+    private String position;
+    private String ministry;
 
-
-    public UserRegisterRequest(String userName, String password, String confirmPassword, String userId, String idCard) {
-        this.userName = userName;
+    public UserRegisterRequest(String account, String password, String email, String position, String ministry) {
+        this.account = account;
         this.password = password;
-        this.confirmPassword = confirmPassword;
-        this.userId = userId;
-        this.idCard = idCard;
+        this.email = email;
+        this.position = position;
+        this.ministry = ministry;
     }
 
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getAccount() {
+        return account;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
+    public String getEmail() {
+        return email;
     }
 
-    public String getUserId() {
-        return userId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public String getPosition() {
+        return position;
     }
 
-    public String getIdCard() {
-        return idCard;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public String getMinistry() {
+        return ministry;
+    }
+
+    public void setMinistry(String ministry) {
+        this.ministry = ministry;
+    }
+
+    @Override
+    public String toString() {
+        return "UserRegisterRequest{" +
+                "account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", position='" + position + '\'' +
+                ", ministry='" + ministry + '\'' +
+                '}';
     }
 }

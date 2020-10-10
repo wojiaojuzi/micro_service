@@ -8,16 +8,15 @@ import java.util.List;
 
 @Mapper
 public interface NodeMapper {
-    @Insert("INSERT INTO node(nodeName,location,lon,lat,nodeStatus,nodeCreateAt,runAt,endLastAt,cpu,cpuRate,memory,memRate,ip,remark)" +
-            " VALUES(#{nodeName},#{location},#{lon},#{lat},#{nodeStatus},#{nodeCreateAt},#{runAt},#{endLastAt},#{cpu},#{cpuRate},#{memory},#{memRate},#{ip},#{remark})")
-      public void create_node(@Param("nodeName")String nodeName, @Param("location")String location,
-                              @Param("lon")String lon,@Param("lat")String lat,
-                            @Param("nodeStatus")boolean nodeStatus,
-                            @Param("nodeCreateAt")String nodeCreateAt, @Param("runAt")String runAt,
-                            @Param("endLastAt")String endLastAt, @Param("cpu")String cpu,
+    @Insert("INSERT INTO node(nodeName,provinceAndCityAndArea,location,lon,lat,ip,cpu,cpuRate,memory,memRate,frequence,nodeStatus,nodeCreateAt)" +
+            " VALUES(#{nodeName},#{provinceAndCityAndArea},#{location},#{lon},#{lat},#{ip},#{cpu},#{cpuRate},#{memory},#{memRate},#{frequence},#{nodeStatus},#{nodeCreateAt})")
+      public void create_node(@Param("nodeName")String nodeName, @Param("provinceAndCityAndArea")String provinceAndCityAndArea,
+                              @Param("location")String location, @Param("lon")String lon, @Param("lat")String lat,
+                            @Param("ip")String ip,@Param("cpu")String cpu,
                               @Param("cpuRate")double cpuRate, @Param("memory")String memory,
-                              @Param("memRate")double memRate, @Param("ip")String ip,
-                              @Param("remark") String remark);
+                              @Param("memRate")double memRate,@Param("frequence")String frequence,
+                              @Param("nodeStatus")boolean nodeStatus, @Param("nodeCreateAt")String nodeCreateAt
+                              );
 
 
     /*-------select--------------*/

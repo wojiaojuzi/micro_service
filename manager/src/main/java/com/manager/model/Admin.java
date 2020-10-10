@@ -23,6 +23,15 @@ public class Admin implements Serializable {
     @ApiModelProperty(value = "登录token")
     private String tokenCreateAt;
 
+    @ApiModelProperty(value = "邮箱")
+    private String email;
+
+    @ApiModelProperty(value = "职位")
+    private String position;
+
+    @ApiModelProperty(value = "隶属部门")
+    private String ministry;
+
     public String getTokenCreateAt() {
         return tokenCreateAt;
     }
@@ -64,6 +73,29 @@ public class Admin implements Serializable {
     public void setCreateAt(String createAt){ this.createAt = createAt; }
     public String getCreateAt(){ return this.createAt; }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getMinistry() {
+        return ministry;
+    }
+
+    public void setMinistry(String ministry) {
+        this.ministry = ministry;
+    }
 
     @Override
     public String toString() {
@@ -74,6 +106,9 @@ public class Admin implements Serializable {
                 ", createAt='" + createAt + '\'' +
                 ", LoginToken='" + LoginToken + '\'' +
                 ", tokenCreateAt='" + tokenCreateAt + '\'' +
+                ", email='" + email + '\'' +
+                ", position='" + position + '\'' +
+                ", ministry='" + ministry + '\'' +
                 '}';
     }
 }

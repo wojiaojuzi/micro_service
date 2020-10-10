@@ -79,7 +79,7 @@ public class AdminService {
         }
     }
 
-    public String adminRegister(String account, String password)
+    public String adminRegister(String account, String password,String email, String position, String ministry)
             throws Exception{
         if(account == null || password == null) {
             throw new EdgeComputingServiceException(ResponseEnum.LOGIN_FAILED.getCode(), ResponseEnum.LOGIN_FAILED.getMessage());
@@ -90,7 +90,7 @@ public class AdminService {
             } else {
                 Date createTime = new Date();
                 SimpleDateFormat mysqlSdf = new SimpleDateFormat(mysqlSdfPatternString);
-                adminMapper.creatAdmin(null, account, password, null, null,mysqlSdf.format(createTime));
+                adminMapper.creatAdmin(null, account, password, null, null,mysqlSdf.format(createTime),email,position,ministry);
 
                 /*----日志---*/
                 MsgInfo msgInfo = new MsgInfo("eventLog",mysqlSdf.format(createTime),"","注册账号:"+account);

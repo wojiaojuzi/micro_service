@@ -1,6 +1,8 @@
 package com.manager.controller;
 
 import com.manager.model.Admin;
+import com.manager.model.Request.LoginRequest;
+import com.manager.model.Request.UserRegisterRequest;
 import com.manager.model.Response.HttpResponseContent;
 import com.manager.model.Response.ResponseEnum;
 import com.manager.service.AdminService;
@@ -34,10 +36,10 @@ public class AdminController {
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     @ResponseBody
     @CrossOrigin
-    public HttpResponseContent adminLogin(@RequestParam("account") String account, @RequestParam("password") String password)
+    public HttpResponseContent adminLogin(@RequestBody LoginRequest loginRequest)
             throws Exception {
         HttpResponseContent response = new HttpResponseContent();
-        Admin admin = adminService.adminLogin(account,password);
+        Admin admin = adminService.adminLogin(loginRequest.getAccount(),loginRequest.getPassword());
         if (admin == null) {
             response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
             response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
@@ -65,11 +67,12 @@ public class AdminController {
     @RequestMapping(path = "/register", method = RequestMethod.POST)
     @ResponseBody
     @CrossOrigin
-    public HttpResponseContent adminRegister(@RequestParam("account") String account,
-                                             @RequestParam("password") String password)
+    public HttpResponseContent adminRegister(@RequestBody UserRegisterRequest userRegisterRequest)
             throws Exception {
+        System.out.println(userRegisterRequest);
         HttpResponseContent response = new HttpResponseContent();
-        if(adminService.adminRegister(account,password)=="error"){
+        if(adminService.adminRegister(userRegisterRequest.getAccount(),userRegisterRequest.getPassword(),
+                userRegisterRequest.getEmail(),userRegisterRequest.getPosition(),userRegisterRequest.getMinistry())=="error"){
             response.setCode(ResponseEnum.LOGIN_FAILED.getCode());
             response.setMessage(ResponseEnum.LOGIN_FAILED.getMessage());
         }

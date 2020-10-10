@@ -20,30 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5ec82be-9355-46e7-b52d-dfed2e9cdb64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_google_guava_guava_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testDocker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/model/EdgeComputingServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/utils/SqlUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Request/NodeRegisterRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/ContainerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/ContainerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/gateway_zuul.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/gateway_zuul.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/ZuulApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/ZuulApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/java/gateways/zuul/filter/PreRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/ZuulApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/ZuulApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/classes/gateways/zuul/filter/PreRequestFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/TEST-gateways.zuul.ZuulApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/TEST-gateways.zuul.ZuulApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/gateways.zuul.ZuulApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/surefire-reports/gateways.zuul.ZuulApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/zuul-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/target/zuul-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/target/zuul-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway_zuul/zuul-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway_zuul/zuul-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../loger/src/main/resources/logFile/2020-08-09.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/controller/NodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/NodeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/mapper/NodeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/src/main/java/edge/node/service/NodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/controller/NodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/controller/NodeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/mapper/ImageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/mapper/ImageMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/mapper/NodeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/mapper/NodeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/model/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/NodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../edge_node/target/classes/edge/node/service/NodeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/src/main/java/com/manager/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/src/main/java/com/manager/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/src/main/java/com/manager/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/src/main/java/com/manager/model/Request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/model/Request/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/src/main/java/com/manager/model/Request/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/model/Request/UserRegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/src/main/java/com/manager/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/src/main/java/com/manager/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/target/classes/com/manager/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/target/classes/com/manager/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/target/classes/com/manager/mapper/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/target/classes/com/manager/mapper/AdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/target/classes/com/manager/model/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/target/classes/com/manager/model/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/target/classes/com/manager/model/Request/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/target/classes/com/manager/model/Request/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/target/classes/com/manager/model/Request/UserRegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/target/classes/com/manager/model/Request/UserRegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manager/target/classes/com/manager/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../manager/target/classes/com/manager/service/AdminService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/xuetangyun" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.testDocker">
@@ -224,6 +223,7 @@
       <workItem from="1597131755549" duration="3432000" />
       <workItem from="1598090012011" duration="27000" />
       <workItem from="1600178171422" duration="606000" />
+      <workItem from="1601387599381" duration="486000" />
     </task>
     <servers />
   </component>
@@ -243,10 +243,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="162" y="161" key="FileChooserDialogImpl" timestamp="1596041623992">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="216" y="217" key="FileChooserDialogImpl" timestamp="1601387687179">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="162" y="161" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596041623992" />
+    <state x="216" y="217" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1601387687179" />
     <state width="1493" height="99" key="GridCell.Tab.0.bottom" timestamp="1597157164961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
