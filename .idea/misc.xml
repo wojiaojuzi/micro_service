@@ -11,7 +11,6 @@
         <option value="$PROJECT_DIR$/manager/pom.xml" />
         <option value="$PROJECT_DIR$/edge_node/pom.xml" />
         <option value="$PROJECT_DIR$/loger/pom.xml" />
-        <option value="$PROJECT_DIR$/DeviceMonitor/pom.xml" />
       </list>
     </option>
   </component>

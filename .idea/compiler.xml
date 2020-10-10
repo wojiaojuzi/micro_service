@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka_server" />
-        <module name="DeviceMonitor" />
         <module name="edge_node" />
         <module name="gateway_zuul" />
         <module name="manager" />
