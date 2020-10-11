@@ -133,8 +133,8 @@ public class NodeService {
             }
         }
         nodeMapper.deleteNodeByNodeName(nodeName);
-        imageMapper.deleteByNodeName(nodeName);
-        containerMapper.deleteContainerByNodeName(nodeName);
+        //imageMapper.deleteByNodeName(nodeName);
+        //containerMapper.deleteContainerByNodeName(nodeName);
         logFeign.addLog(account,"删除节点:  节点名="+nodeName);
         return true;
     }

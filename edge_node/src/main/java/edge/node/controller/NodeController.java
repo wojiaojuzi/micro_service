@@ -28,11 +28,11 @@ public class NodeController {
     @RequestMapping(path = "/register", method = RequestMethod.POST)
     @CrossOrigin
     public HttpResponseContent nodeRegister(@RequestBody NodeRegisterRequest nodeRegisterRequest){
-        System.out.println("注册");
+        System.out.println("注册:"+nodeRegisterRequest);
         HttpResponseContent response = new HttpResponseContent();
         Node node = new Node(nodeRegisterRequest.getNodeName(),nodeRegisterRequest.getArea(),nodeRegisterRequest.getLocation(),
                 nodeRegisterRequest.getLon(),nodeRegisterRequest.getLat(),nodeRegisterRequest.getIp(),nodeRegisterRequest.getCpu(),0,
-                nodeRegisterRequest.getMemory(),0,nodeRegisterRequest.getFerquence(),false,"");
+                nodeRegisterRequest.getMemory(),0,nodeRegisterRequest.getFreq(),false,"");
         Node res = nodeService.nodeRegister(node,nodeRegisterRequest.getAccount());
         if (res == null) {
             response.setCode(ResponseEnum.ERROR.getCode());
