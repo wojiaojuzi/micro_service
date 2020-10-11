@@ -8,9 +8,9 @@ import java.util.List;
 
 @Mapper
 public interface NodeMapper {
-    @Insert("INSERT INTO node(nodeName,provinceAndCityAndArea,location,lon,lat,ip,cpu,cpuRate,memory,memRate,frequence,nodeStatus,nodeCreateAt)" +
-            " VALUES(#{nodeName},#{provinceAndCityAndArea},#{location},#{lon},#{lat},#{ip},#{cpu},#{cpuRate},#{memory},#{memRate},#{frequence},#{nodeStatus},#{nodeCreateAt})")
-      public void create_node(@Param("nodeName")String nodeName, @Param("provinceAndCityAndArea")String provinceAndCityAndArea,
+    @Insert("INSERT INTO node(nodeName,Area,location,lon,lat,ip,cpu,cpuRate,memory,memRate,frequence,nodeStatus,nodeCreateAt)" +
+            " VALUES(#{nodeName},#{Area},#{location},#{lon},#{lat},#{ip},#{cpu},#{cpuRate},#{memory},#{memRate},#{frequence},#{nodeStatus},#{nodeCreateAt})")
+      public void create_node(@Param("nodeName")String nodeName, @Param("Area")String Area,
                               @Param("location")String location, @Param("lon")String lon, @Param("lat")String lat,
                             @Param("ip")String ip,@Param("cpu")String cpu,
                               @Param("cpuRate")double cpuRate, @Param("memory")String memory,
